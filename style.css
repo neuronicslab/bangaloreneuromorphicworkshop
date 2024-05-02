@@ -475,8 +475,7 @@ p{
 }
 
 .committee-details {
-    width: calc(20% - 20px); /* Set the width to one-fifth of the container width */
-    margin-right: 20px; /* Add margin between the elements */
+    width: calc(50% - 20px); /* Set the width to half of the container width */
     margin-bottom: 20px; /* Add margin at the bottom of each element */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     background: #FFF0F0; /* Set background color of the committee details to very very light blue */
@@ -485,15 +484,15 @@ p{
     transition: box-shadow 0.3s; /* Add transition for box-shadow */
 }
 
-.committee-details:nth-child(5n) {
-    margin-right: 0; /* Remove the right margin for every fifth element to prevent wrapping */
+.committee-details:nth-child(odd) {
+    margin-right: 20px; /* Add margin between the elements */
 }
 
 .committee .committee-members {
     display: flex;
     flex-wrap: wrap; /* Allow elements to wrap to the next line */
     justify-content: center; /* Center align committee members */
-    padding: 0 20px; /* Add padding to the sides to ensure space between elements */
+    padding: 0 10px; /* Add padding to the sides to ensure space between elements */
 }
 
 .committee-details:hover {
@@ -518,24 +517,22 @@ p{
     border-radius: 50%; /* Add border radius for rounded corners */
 }
 
-@media only screen and (max-width: 1200px) {
-    .committee-details {
-        width: calc(20% - 15px); /* Adjust width to compensate for reduced margin */
-        margin-right: 15px; /* Adjust margin for larger screens */
-    }
-}
-
 @media only screen and (max-width: 768px) {
     .committee-details {
-        width: calc(33.33% - 15px); /* Adjust width for medium screens */
-        margin-right: 15px; /* Adjust margin for medium screens */
+        width: calc(50% - 20px); /* Set the width to half of the container width for mid-resolution screens */
     }
 }
 
 @media only screen and (max-width: 576px) {
     .committee-details {
-        width: calc(50% - 10px); /* Adjust width for small screens */
-        margin-right: 10px; /* Adjust margin for small screens */
+        width: calc(100% - 20px); /* Set the width to full container width for mobile screens */
+        margin-right: 0; /* Remove margin on small screens */
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .committee-details {
+        width: calc(33.33% - 20px); /* Set the width to one-third of the container width for high-resolution screens */
     }
 }
 
