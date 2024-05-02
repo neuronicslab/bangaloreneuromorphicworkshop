@@ -358,23 +358,24 @@ p{
 }
 
 /* Set responsive layout for smaller screens */
-@media only screen and (min-width: 576px) {
+@media only screen and (max-width: 575px) {
     .course-details {
-        width: calc(50% - 20px); /* Set the width to half of the container width with margin */
+        width: calc(100% - 20px); /* Set the width to full container width for mobile screens */
+        margin-right: 0; /* Remove margin on small screens */
     }
 }
 
 /* Set responsive layout for medium screens */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 576px) and (max-width: 991px) {
     .course-details {
-        width: calc(33.33% - 20px); /* Set the width to one-third of the container width with margin */
+        width: calc(50% - 20px); /* Set the width to half of the container width with margin for medium screens */
     }
 }
 
 /* Set responsive layout for large screens */
 @media only screen and (min-width: 992px) {
     .course-details {
-        width: calc(25% - 20px); /* Set the width to one-fourth of the container width with margin */
+        width: calc(33.33% - 20px); /* Set the width to one-third of the container width with margin for large screens */
     }
 }
 
