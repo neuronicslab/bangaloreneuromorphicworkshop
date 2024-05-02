@@ -437,19 +437,20 @@ p{
 /* Adjustments for responsiveness */
 @media only screen and (max-width: 1200px) {
     .course-details1 {
-        width: calc(25% - 20px); /* Adjust width for medium screens */
+         width: calc(33.33% - 20px); /* Set the width to one-third of the container width for high-resolution screens */
     }
 }
 
 @media only screen and (max-width: 768px) {
     .course-details1 {
-        width: calc(33.33% - 20px); /* Adjust width for small screens */
+        width: calc(50% - 20px); /* Set the width to half of the container width for mid-resolution screens */
     }
 }
 
 @media only screen and (max-width: 576px) {
     .course-details1 {
-        width: calc(50% - 20px); /* Adjust width for extra small screens */
+       width: calc(100% - 20px); /* Set the width to full container width for mobile screens */
+       margin-right: 0; /* Remove margin on small screens */
     }
 }
 
