@@ -657,23 +657,31 @@ p{
 }
 
 .sponsor-logo img {
-    max-width: 400px;
-    height: auto;
+    max-width: 400px; /* Set maximum width for the images */
+    height: auto; /* Maintain aspect ratio */
 }
 
-/* Adjustments for smaller screens */
+/* Adjustments for medium screens */
+@media (max-width: 992px) {
+    .sponsor-logo img {
+        max-width: 300px; /* Reduce max-width for medium-sized screens */
+    }
+}
+
+/* Adjustments for small screens */
 @media (max-width: 768px) {
     .sponsor-logo img {
-        max-width: 300px;
+        max-width: 200px; /* Further reduce max-width for small screens */
     }
 }
 
-/* Adjustments for even smaller screens */
+/* Adjustments for extra small screens (mobile) */
 @media (max-width: 576px) {
     .sponsor-logo img {
-        max-width: 200px;
+        max-width: 150px; /* Reduce max-width for mobile screens */
     }
 }
+
 
 /* Styling for underlined headings */
 .heading h2 {
