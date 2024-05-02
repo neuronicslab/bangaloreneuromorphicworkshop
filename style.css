@@ -1,0 +1,980 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --red-color: #f44336;
+}
+
+body{
+    background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("./images/bangalore.jpg");
+    background-size: contain;
+    object-fit: contain; 
+    overflow-x: hidden;
+}
+
+/* -------   Essentials   ------ */
+
+.logo_color {
+    color: #A7BEAE; /* Sets the color of the first line to white */
+}
+
+.white {
+    color: #FFFFFF; /* Sets the color of the first line to white */
+}
+
+.yellow {
+    color: yellow; /* Sets the color of the second line to yellow */
+}
+
+.terracotta_red {
+    color: #B85042; /* Sets the color of the second line to yellow */
+}
+.off_white {
+    color: #fcf6f5; /* Sets the color of the second line to yellow */
+}
+
+h1{
+    font-size: 3.5rem;
+    text-align: center;
+    margin: 2rem;
+    color: #fff;
+}
+
+h2{
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
+}
+
+h3{
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 1rem;
+    text-align: center;
+}
+
+h4{
+    font-size: 1.3rem;
+    color: black;
+    margin: 1rem;
+    text-align: center;
+}
+
+p{
+    font-size: 15px;
+    color: #fff;
+    margin: .5rem 1rem;
+    text-align: center;
+}
+
+
+/* INTRO [ANIMATIONS]*/
+
+.intro{
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    /* transform: translateY(100%); */
+}
+
+.intro-text h1{
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+/* HIDE [h1 or text] */
+
+.hide{
+    overflow: hidden;
+}
+
+.hide span{
+    display: inline-block;
+    transform: translateY(100%);
+}
+
+/* SLIDER [ANIMATIONS] */
+
+.slider{
+    background: #2a2e33;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateY(100%);
+}
+
+ /* Base styles */
+  /* Base styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./images/iisc.jpg");
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding-top: 150px; /* Add space after the navbar */
+            padding-bottom: 100px; /* Add space at the bottom */
+            text-align: center;
+            min-height: 100vh; /* Ensure full viewport height */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: left; /* Align logo text to the left */
+            padding-left: 20px; /* Add left padding */
+        }
+
+        .nav-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #ff7f00;
+        }
+
+        .content {
+            flex-grow: 1; /* Take remaining space */
+            text-align: left; /* Align content text to the left */
+            padding: 0 20px; /* Add horizontal padding */
+            margin-top: 50px; /* Add space between navbar and content */
+        }
+
+        .content h1 {
+            margin-top: 20px;
+            color: #ff7f00;
+            text-align: center; /* Center align heading */
+        }
+
+        .content p {
+            text-align: center; /* Justify paragraph text */
+            margin-top: 20px;
+            line-height: 1.5;
+            color:#fff2cc; /* Change paragraph text color */;
+        }
+
+        /* Responsive layout adjustments */
+        @media only screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                margin-top: 20px;
+            }
+
+            .nav-links ul {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+
+        /* Adjustments for higher resolutions */
+        @media only screen and (min-width: 1000px) {
+            main {
+                padding: 150px 20px 200px;
+            }
+
+            .content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content p {
+                font-size: 1.2rem;
+            }
+        }
+
+#workshop-description {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+#workshop-description h2 {
+    color: black;
+    text-align: center;
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#workshop-description .content-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Add space between each row */
+}
+
+#workshop-description .text-block {
+    flex: 1;
+    margin-right: 20px;
+}
+
+#workshop-description .image {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+#workshop-description .image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 250px;
+	margin: 20px 0; /* Add margin of 20px to the top and bottom */
+}
+
+#workshop-description .text-block h4 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#workshop-description .text-block p {
+    margin-bottom: 0;
+    text-align: justify;
+    color: black;
+}
+
+#workshop-description .text-block {
+    max-width: 600px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 1024px) {
+    #workshop-description .content-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #workshop-description .text-block,
+    #workshop-description .image {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #workshop-description .text-block h4 {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1600px) {
+    #workshop-description .content-block {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* ----  SECTION [COURSE]   ---- */
+.course {
+    background: #ffffff; /* Set background color of the course section to white */
+    padding: 3rem 0 1rem 0;
+}
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center-align all elements */
+    padding: 0 20px; /* Add padding to the sides to ensure space between elements */
+}
+
+.course-details {
+    width: calc(50% - 20px); /* Set the width to half of the container width with margin */
+    margin-bottom: 30px; /* Add margin at the bottom of each element */
+    margin-right: 20px; /* Add margin between the elements */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: #ffffcc; /* Set background color of the course details to very light yellow */
+    border-radius: 1rem; /* Add border radius for rounded corners */
+    padding: 1.5rem; /* Add padding to the elements */
+    transition: box-shadow 0.3s; /* Add transition for box-shadow */
+}
+
+.course-details:nth-child(2n) {
+    margin-right: 0; /* Remove the right margin for every even-indexed element to prevent wrapping */
+}
+
+.course-details h3 {
+    color: #333333; /* Set heading color */
+    margin-bottom: 1rem; /* Add margin-bottom to the heading */
+}
+
+.course-details p {
+    color: #666666; /* Set paragraph color */
+    margin-bottom: 0; /* Remove default margin-bottom */
+}
+
+/* Set responsive layout for smaller screens */
+@media only screen and (min-width: 576px) {
+    .course-details {
+        width: calc(50% - 20px); /* Set the width to half of the container width with margin */
+    }
+}
+
+/* Set responsive layout for medium screens */
+@media only screen and (min-width: 768px) {
+    .course-details {
+        width: calc(33.33% - 20px); /* Set the width to one-third of the container width with margin */
+    }
+}
+
+/* Set responsive layout for large screens */
+@media only screen and (min-width: 992px) {
+    .course-details {
+        width: calc(25% - 20px); /* Set the width to one-fourth of the container width with margin */
+    }
+}
+
+.course-details:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+
+
+
+
+
+
+
+.course1 {
+    background: #ffffff; /* Set background color of the course section to white */
+    padding: 3rem 0 1rem 0;
+}
+
+.courses1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.course-details1 {
+    width: calc(20% - 20px); /* Set the width to one-fifth of the container width */
+    margin-bottom: 20px; /* Add margin at the bottom of each element */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: #f0f0ff; /* Set background color of the course details to very very light blue */
+    border-radius: 1rem; /* Add border radius for rounded corners */
+    padding: 1.5rem; /* Add padding to the elements */
+    transition: box-shadow 0.3s; /* Add transition for box-shadow */
+}
+
+.course-details1:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.course-details1 h3 {
+    color: #333333; /* Set heading color */
+    margin-bottom: 1rem; /* Add margin-bottom to the heading */
+}
+
+.course-details1 p {
+    color: #666666; /* Set paragraph color */
+    margin-bottom: 0; /* Remove default margin-bottom */
+}
+
+.course-details1 img {
+    display: block;
+    margin: 0 auto 1rem; /* Add margin below the image */
+    width: 80%; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio of the image */
+    max-height: 350px; /* Set maximum height for the image */
+    border-radius: 50%; /* Add border radius for rounded corners */
+}
+
+/* Adjustments for responsiveness */
+@media only screen and (max-width: 1200px) {
+    .course-details1 {
+        width: calc(25% - 20px); /* Adjust width for medium screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .course-details1 {
+        width: calc(33.33% - 20px); /* Adjust width for small screens */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .course-details1 {
+        width: calc(50% - 20px); /* Adjust width for extra small screens */
+    }
+}
+	
+	
+
+.committee {
+    background: #ffffff; /* Set background color of the committee section to white */
+    padding: 3rem 0 1rem 0; 
+}
+
+.committee .heading {
+    text-align: center; /* Center align the heading and paragraph */
+}
+
+.committee .heading h2 {
+    color: #333333; /* Set heading color */
+    margin-bottom: 1rem; /* Add margin-bottom to the heading */
+}
+
+.committee .heading p {
+    color: #666666; /* Set paragraph color */
+    margin-bottom: 2rem; /* Add margin-bottom to the paragraph */
+}
+
+.committee-details {
+    width: calc(20% - 20px); /* Set the width to one-fifth of the container width */
+    margin-right: 20px; /* Add margin between the elements */
+    margin-bottom: 20px; /* Add margin at the bottom of each element */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: #FFF0F0; /* Set background color of the committee details to very very light blue */
+    border-radius: 1rem; /* Add border radius for rounded corners */
+    padding: 1.5rem; /* Add padding to the elements */
+    transition: box-shadow 0.3s; /* Add transition for box-shadow */
+}
+
+.committee-details:nth-child(5n) {
+    margin-right: 0; /* Remove the right margin for every fifth element to prevent wrapping */
+}
+
+.committee .committee-members {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap to the next line */
+    justify-content: center; /* Center align committee members */
+    padding: 0 20px; /* Add padding to the sides to ensure space between elements */
+}
+
+.committee-details:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.committee-details h3 {
+    color: #333333; /* Set heading color */
+    margin-bottom: 1rem; /* Add margin-bottom to the heading */
+}
+
+.committee-details p {
+    color: #666666; /* Set paragraph color */
+    margin-bottom: 0; /* Remove default margin-bottom */
+}
+
+.committee-details img {
+    display: block;
+    margin: 0 auto 1rem; /* Add margin below the image */
+    width: 80px; /* Set the width of the image */
+    height: 80px; /* Set the height of the image */
+    border-radius: 50%; /* Add border radius for rounded corners */
+}
+
+@media only screen and (max-width: 1200px) {
+    .committee-details {
+        width: calc(20% - 15px); /* Adjust width to compensate for reduced margin */
+        margin-right: 15px; /* Adjust margin for larger screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .committee-details {
+        width: calc(33.33% - 15px); /* Adjust width for medium screens */
+        margin-right: 15px; /* Adjust margin for medium screens */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .committee-details {
+        width: calc(50% - 10px); /* Adjust width for small screens */
+        margin-right: 10px; /* Adjust margin for small screens */
+    }
+}
+
+
+
+/* ---  SECTION [CAMPUS]    --- */
+
+.campus{
+    background: #fff;
+    padding: 5rem 0 3rem 0;
+}
+
+.all-campus{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.campus-details{
+    flex-basis: 31%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+}
+
+.campus-details img{
+    width: 100%;
+    height: 350px;
+    object-fit: fill;
+    display: block;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+    transition: 1s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/* ----    SECTION  FACILITIES    ---- */
+.facilities{
+    background: #fff;
+    padding: 2rem 0;
+    padding-top: 7rem;
+}
+
+.all-facilities{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+    margin-top: 3rem;
+}
+
+.facility{
+    flex-basis: 31%;
+}
+
+.facility img{
+    width: 80%;
+    border-radius: 2rem;
+}
+/* SECTION SPONSORS */
+.Sponsors {
+    
+    background-color: #FFFFFF;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.heading p {
+    color: #666;
+}
+
+/* Default styling */
+.sponsor-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.sponsor-logo {
+    margin: 0 10px;
+}
+
+.sponsor-logo img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .sponsor-logo img {
+        max-width: 300px;
+    }
+}
+
+/* Adjustments for even smaller screens */
+@media (max-width: 576px) {
+    .sponsor-logo img {
+        max-width: 200px;
+    }
+}
+
+/* Styling for underlined headings */
+.heading h2 {
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: underline;
+}
+
+/* Styling for visible line between sections */
+.section-divider {
+	background-color: #f9f9f9;
+    margin:0;
+}
+
+/* SECTION [CALL-TO-ACTION] */
+
+.call-to-action{
+    background: #FFFFFF;
+}
+
+
+
+.items{
+    background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('./images/banner2.jpg');
+    background-size: cover;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.items h3{
+    color: #fff;
+    width: 60%;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #FFFFFF; /* Black background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading p{
+    width: 70%;
+    margin: 1rem;
+}
+
+.footer{
+    padding-top: 1rem;
+    text-align: center;
+}
+
+
+
+
+
+
+@media(max-width: 676px){
+    
+    /* Essentials */
+
+    h1{
+        font-size: 2rem;
+        margin: 2rem;
+    }
+
+    h2{
+        font-size: 1.7rem;
+    }
+
+    h3{
+        font-size: 1.2rem;
+    }
+
+    p
+     {
+        font-size: .8rem;
+     } 
+
+   /* NAVBAR */
+    
+    .navbar{
+        padding: 0rem 2rem; 
+        margin: 0;
+    }
+    
+    .nav-links ul li{
+        display: block;
+    }
+    
+    .nav-links{
+        top: 0;
+        left: -60%;
+        height: 105%;
+        background:#f44336;
+        width: 60%;
+        position: absolute;
+        z-index: 2;
+        text-align: left;
+        padding: 1rem;
+        transition: .5s linear;
+        transform: translateY(-5%);
+        overflow: hidden;
+    }
+
+    .show-navbar{
+        left: 0;
+    }
+    
+    nav .fa{
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        float: right;
+        transition: .5s;
+    }
+    
+    nav .fa:hover{
+        transform: rotate(360deg);
+    }
+    
+    .nav-links ul{
+        margin-top: .7rem;
+        padding: 2rem 1rem;
+    }
+    
+    .nav-links ul li a{
+        line-height: 2rem;
+        font-size: 20px;
+    }
+
+    .nav-links li a::after{
+        background: #fff;
+    }  
+    /* MAIN SECTION */
+    
+    
+    
+    main p{
+        width: 100%;
+        margin: .7rem 0;
+    }
+    
+    
+    /* SECTION [COURSE] */
+    
+    section .courses{
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+    }
+    
+    .course-details{
+        margin: 1rem 1rem;
+        padding: 2rem 0;
+    }
+    
+    
+    /* SECTION [CAMPUS] */
+    
+    .all-campus{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .campus-details{
+        width: 70%;
+        margin: 2rem;
+    }
+    
+    .campus-details img{
+        opacity: .7;
+    }
+    
+    .layer h3{
+        bottom: 49%;
+        opacity: 1;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* ----  SECTION FACILITIES   ---- */
+
+    .all-facilities{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .facility{
+        margin: 2rem 0;
+    }
+
+    .facility img{
+        width: 70%;
+        margin: 2rem 0;
+    }
+
+
+    /* SECTION [TESTIMONIALS] */
+
+    .rating{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .rating img{
+        width: 40%;
+    }
+
+    .rating p{
+        text-align: center;
+        margin: 1rem 0;
+        width: 100%;
+    }
+
+    .rating h4{
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+
+    /* SECTION [CALL-TO-ACTION] */
+
+    .items{
+        border-radius: 1rem;
+    }
+
+    .items h3{
+        width: 95%;
+    }
+
+
+    /* FOOTER */
+.footer {
+    background-color: #222; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 20px; /* Padding for spacing */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-heading,
+.contact-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+
+.contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+    .heading p{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 677px) {
+    .showMenu{
+        display: none;
+    }
+
+    #hideMenu{
+        display: none;
+    }
+  }
+  
