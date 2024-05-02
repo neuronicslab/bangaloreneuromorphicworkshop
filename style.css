@@ -479,7 +479,7 @@ p{
     width: calc(50% - 20px); /* Set the width to half of the container width */
     margin-bottom: 20px; /* Add margin at the bottom of each element */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    background: #FFF0F0; /* Set background color of the committee details to very very light blue */
+    background: #FFFFFF; /* Set background color of the committee details to very very light blue */
     border-radius: 1rem; /* Add border radius for rounded corners */
     padding: 1.5rem; /* Add padding to the elements */
     transition: box-shadow 0.3s; /* Add transition for box-shadow */
