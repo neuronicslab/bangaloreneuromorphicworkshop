@@ -11,7 +11,7 @@
 }
 
 body{
-    background: linear-gradient( rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url("./images/bangalore.jpg");
+    background: #FFFFFF;
     background-size: contain;
     object-fit: contain; 
     overflow-x: hidden;
@@ -124,200 +124,258 @@ p{
             font-family: Arial, sans-serif;
         }
 
-        main {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url("./images/iisc.jpg");
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            padding-top: 150px; /* Add space after the navbar */
-            padding-bottom: 100px; /* Add space at the bottom */
-            text-align: center;
-            min-height: 100vh; /* Ensure full viewport height */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .navbar {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-        }
-
-        .logo {
-            color: #fff;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: left; /* Align logo text to the left */
-            padding-left: 20px; /* Add left padding */
-        }
-
-        .nav-links ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-links li {
-            display: inline-block;
-            margin: 0 10px;
-        }
-
-        .nav-links li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s;
-        }
-
-        .nav-links li a:hover {
-            color: #ff7f00;
-        }
-
-        .content {
-            flex-grow: 1; /* Take remaining space */
-            text-align: left; /* Align content text to the left */
-            padding: 0 20px; /* Add horizontal padding */
-            margin-top: 50px; /* Add space between navbar and content */
-        }
-
-        .content h1 {
-            margin-top: 20px;
-            color: #ff7f00;
-            text-align: center; /* Center align heading */
-        }
-
-        .content p {
-            text-align: center; /* Justify paragraph text */
-            margin-top: 20px;
-            line-height: 1.5;
-            color:#fff2cc; /* Change paragraph text color */;
-        }
-
-        /* Responsive layout adjustments */
-        @media only screen and (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
-
-            .nav-links {
-                margin-top: 20px;
-            }
-
-            .nav-links ul {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .nav-links li {
-                margin: 10px 0;
-            }
-        }
-
-        /* Adjustments for higher resolutions */
-        @media only screen and (min-width: 1000px) {
-            main {
-                padding: 150px 20px 200px;
-            }
-
-            .content h1 {
-                font-size: 2.5rem;
-            }
-
-            .content p {
-                font-size: 1.2rem;
-            }
-        }
-
-#workshop-description {
-    background-color: #ffffff;
-    padding: 20px;
+header {
+    background-color: #333;
 }
 
-#workshop-description h2 {
-    color: black;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #ff7f00;
+    color: #fff;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 180px;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ff7f00;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+main {
+    margin-top: 70px; /* Adjust space for fixed navbar */
+    padding: 20px;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/iisc.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #fff;
     text-align: center;
-	margin-top: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.content h1 {
+    color: #ff7f00;
+    font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
-#workshop-description .content-block {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 30px; /* Add space between each row */
+.content p {
+    color: #fff2cc;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
-#workshop-description .text-block {
-    flex: 1;
-    margin-right: 20px;
+.content h3 {
+    color: #ff7f00;
+    font-size: 1.5rem;
 }
 
-#workshop-description .image {
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
-}
+/* Responsive design */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: flex;
+    }
 
-#workshop-description .image img {
-    max-width: 100%;
-    height: auto;
-    max-height: 250px;
-	margin: 20px 0; /* Add margin of 20px to the top and bottom */
-}
-
-#workshop-description .text-block h4 {
-    margin-top: 20px;
-    text-align: center;
-}
-
-#workshop-description .text-block p {
-    margin-bottom: 0;
-    text-align: justify;
-    color: black;
-}
-
-#workshop-description .text-block {
-    max-width: 600px;
-}
-
-/* Responsive layout adjustments */
-@media (max-width: 1024px) {
-    #workshop-description .content-block {
+    .nav-links {
+        display: flex;
         flex-direction: column;
-        align-items: center;
-    }
-
-    #workshop-description .text-block,
-    #workshop-description .image {
         width: 100%;
-        margin-right: 0;
-        margin-bottom: 20px;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+        z-index: 1000;
     }
 
-    #workshop-description .text-block h4 {
-        text-align: left;
+    .nav-links.active {
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .dropdown-menu a {
+        padding: 15px;
+    }
+
+    .menu-toggle:checked ~ .nav-links {
+        transform: translateY(0);
+    }
+
+    .hamburger-menu .bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 6px);
+    }
+
+    .hamburger-menu .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu .bar:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
     }
 }
 
-@media (min-width: 1600px) {
-    #workshop-description .content-block {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-}
 
+        #workshop-description {
+            background: #ffffff; /* Set background color of the section to white */
+            padding: 3rem 0 1rem 0;
+        }
 
+        .workshop-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center-align all elements */
+            padding: 0 20px; /* Add padding to the sides to ensure space between elements */
+        }
 
+        .workshop-content {
+            width: calc(33.33% - 20px); /* Set the width to one-third of the container width with margin */
+            margin-bottom: 30px; /* Add margin at the bottom of each element */
+            margin-right: 20px; /* Add margin between the elements */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+            background: #ffffcc; /* Set background color of the content block to very light yellow */
+            border-radius: 1rem; /* Add border radius for rounded corners */
+            padding: 1.5rem; /* Add padding to the elements */
+            transition: box-shadow 0.3s; /* Add transition for box-shadow */
+        }
+
+        .workshop-content:nth-child(3n) {
+            margin-right: 0; /* Remove the right margin for every third element to prevent wrapping */
+        }
+
+        .workshop-content h4 {
+            color: #333333; /* Set heading color */
+            margin-bottom: 1rem; /* Add margin-bottom to the heading */
+            text-align: center; /* Center-align heading */
+        }
+
+        .workshop-content p {
+            color: #666666; /* Set paragraph color */
+            text-align: justify; /* Justify paragraph text */
+            margin-bottom: 0; /* Remove default margin-bottom */
+        }
+
+        .workshop-content:hover {
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+        }
+
+        /* Set responsive layout for smaller screens */
+        @media only screen and (max-width: 575px) {
+            .workshop-content {
+                width: calc(100% - 20px); /* Set the width to full container width for mobile screens */
+                margin-right: 0; /* Remove margin on small screens */
+            }
+        }
+
+        /* Set responsive layout for medium screens */
+        @media only screen and (min-width: 576px) and (max-width: 991px) {
+            .workshop-content {
+                width: calc(50% - 20px); /* Set the width to half of the container width with margin for medium screens */
+            }
+        }
+
+        /* Set responsive layout for large screens */
+        @media only screen and (min-width: 992px) {
+            .workshop-content {
+                width: calc(33.33% - 20px); /* Set the width to one-third of the container width with margin for large screens */
+            }
+        }
 
 /* ----  SECTION [COURSE]   ---- */
 .course {
@@ -333,7 +391,7 @@ p{
 }
 
 .course-details {
-    width: calc(50% - 20px); /* Set the width to half of the container width with margin */
+    width: calc(33% - 20px); /* Set the width to half of the container width with margin */
     margin-bottom: 30px; /* Add margin at the bottom of each element */
     margin-right: 20px; /* Add margin between the elements */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
@@ -402,7 +460,7 @@ p{
 }
 
 .course-details1 {
-    width: calc(20% - 20px); /* Set the width to one-fifth of the container width */
+    width: calc(16.66% - 20px); /* Set the width to one-fifth of the container width */
     margin-bottom: 20px; /* Add margin at the bottom of each element */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     background: #f0f0ff; /* Set background color of the course details to very very light blue */
@@ -454,7 +512,143 @@ p{
     }
 }
 
-	
+.course2 {
+    background: #ffffff; /* Set background color of the course section to white */
+    padding: 3rem 0 1rem 0;
+}
+
+.courses2 {
+    display: flex;
+    justify-content: center; /* Center items */
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.course-details2 {
+    width: calc(16.66% - 20px); /* Set the width to one-fifth of the container width */
+    margin: 10px; /* Add margin to center the tiles properly */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: #fff0f0; /* Set background color of the course details to very very light blue */
+    border-radius: 1rem; /* Add border radius for rounded corners */
+    padding: 1.5rem; /* Add padding to the elements */
+    transition: box-shadow 0.3s; /* Add transition for box-shadow */
+}
+
+.course-details2:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.course-details2 h3 {
+    color: #333333; /* Set heading color */
+    margin-bottom: 1rem; /* Add margin-bottom to the heading */
+}
+
+.course-details2 p {
+    color: #666666; /* Set paragraph color */
+    margin-bottom: 0; /* Remove default margin-bottom */
+}
+
+.course-details2 img {
+    display: block;
+    margin: 0 auto 1rem; /* Add margin below the image */
+    width: 80%; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio of the image */
+    max-height: 300px; /* Set maximum height for the image */
+    border-radius: 50%; /* Add border radius for rounded corners */
+}
+
+/* Adjustments for responsiveness */
+@media only screen and (max-width: 1200px) {
+    .course-details2 {
+         width: calc(33.33% - 20px); /* Set the width to one-third of the container width for high-resolution screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .course-details2 {
+        width: calc(50% - 20px); /* Set the width to half of the container width for mid-resolution screens */
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .course-details2 {
+       width: calc(100% - 20px); /* Set the width to full container width for mobile screens */
+    }
+}
+
+.course3 {
+    background: #ffffff; /* Set background color of the course section to white */
+    padding: 3rem 0 1rem 0;
+}
+
+.courses3 {
+    display: flex;
+    justify-content: center; /* Center items */
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.course-details3 {
+    width: calc(33.33% - 20px); /* Adjust width as needed */
+    margin: 10px; /* Add margin to center the tiles properly */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background: #fff0ff; /* Set background color of the course details to very very light blue */
+    border-radius: 1rem; /* Add border radius for rounded corners */
+    padding: 1.5rem; /* Add padding to the elements */
+    transition: box-shadow 0.3s; /* Add transition for box-shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+}
+
+.course-details3:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2); /* Add box-shadow on hover */
+}
+
+.course-details3 h3 {
+    color: #333333; /* Set heading color */
+    margin-bottom: 1rem; /* Add margin-bottom to the heading */
+}
+
+.course-details3 p {
+    color: #666666; /* Set paragraph color */
+    margin-bottom: 1rem; /* Add some margin-bottom */
+    text-align: center; /* Center align the text */
+}
+
+.course-details3 .read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    background-color: #ff7f00; /* Button color */
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+
+.course-details3 .read-more:hover {
+    background-color: #e66b00; /* Darker button color on hover */
+}
+
+/* Adjustments for responsiveness */
+@media only screen and (max-width: 1200px) {
+    .course-details3 {
+        width: calc(45% - 20px); /* Set the width to nearly half of the container width for high-resolution screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .course-details3 {
+        width: calc(100% - 20px); /* Set the width to full container width for mobile screens */
+    }
+}
+
+/* Ensure odd number of tiles are centered */
+.courses3::after {
+    content: "";
+    flex: auto;
+}
 
 .committee {
     background: #ffffff; /* Set background color of the committee section to white */
@@ -627,8 +821,8 @@ p{
 }
 /* SECTION SPONSORS */
 .Sponsors {
-    
     background-color: #FFFFFF;
+    padding: 20px; /* Add padding for better spacing */
 }
 
 .heading {
@@ -638,47 +832,69 @@ p{
 .heading h2 {
     margin-bottom: 10px;
     color: #333;
+    font-size: 2em; /* Adjust font size for headings */
 }
 
 .heading p {
     color: #666;
+    font-size: 1.2em; /* Adjust font size for paragraph */
 }
 
 /* Default styling */
 .sponsor-logos {
     display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items */
     justify-content: center;
     align-items: center;
     margin-top: 20px;
+    gap: 20px; /* Add gap between items */
 }
 
 .sponsor-logo {
-    margin: 0 10px;
+    flex: 1 1 calc(25% - 40px); /* Adjust to have up to four items per row */
+    max-width: 150px; /* Set maximum width for the logo container */
+    margin: 10px; /* Add margin for spacing */
 }
 
 .sponsor-logo img {
-    max-width: 400px; /* Set maximum width for the images */
+    width: 100%; /* Set width to 100% to fill the container */
     height: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Set maximum height for the images */
 }
 
 /* Adjustments for medium screens */
 @media (max-width: 992px) {
+    .sponsor-logo {
+        flex: 1 1 calc(33.33% - 40px); /* Adjust to have up to three items per row */
+    }
+
     .sponsor-logo img {
-        max-width: 300px; /* Reduce max-width for medium-sized screens */
+        max-width: 120px; /* Reduce max-width for medium-sized screens */
+        max-height: 80px; /* Reduce max-height for medium-sized screens */
     }
 }
 
 /* Adjustments for small screens */
 @media (max-width: 768px) {
+    .sponsor-logo {
+        flex: 1 1 calc(50% - 40px); /* Adjust to have up to two items per row */
+    }
+
     .sponsor-logo img {
-        max-width: 200px; /* Further reduce max-width for small screens */
+        max-width: 100px; /* Further reduce max-width for small screens */
+        max-height: 70px; /* Further reduce max-height for small screens */
     }
 }
 
 /* Adjustments for extra small screens (mobile) */
 @media (max-width: 576px) {
+    .sponsor-logo {
+        flex: 1 1 calc(100% - 40px); /* Adjust to have one item per row */
+    }
+
     .sponsor-logo img {
-        max-width: 150px; /* Reduce max-width for mobile screens */
+        max-width: 80px; /* Reduce max-width for mobile screens */
+        max-height: 60px; /* Reduce max-height for mobile screens */
     }
 }
 
@@ -696,11 +912,419 @@ p{
     margin:0;
 }
 
-/* SECTION [CALL-TO-ACTION] */
 
+.workshop-structure {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 0rem;
+    text-align: left;
+}
+
+.workshop-structure .content {
+    max-width: 1600px;
+    margin: auto;
+    text-align: left;
+}
+
+.workshop-structure h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.details.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.column {
+    flex: 1 1 350px; /* Flexibility with a minimum width of 250px */
+    padding: 20px;
+    margin-bottom: 1rem;
+    background: #f9f9f9; /* Light background color for the column */
+    border: 1px solid #ddd; /* Subtle border for each column */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    text-align: center; /* Justifies text to align both left and right sides */
+}
+
+.workshop-structure h3 {
+    font-size: 1.6rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Ensures the title is aligned left */
+}
+
+.workshop-structure p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: justify; /* Justifies the paragraph text */
+}
+
+
+.workshop-structure1 {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 0rem;
+    text-align: left;
+}
+
+.workshop-structure1 .content {
+    max-width: 1600px;
+    margin: auto;
+    text-align: left;
+}
+
+.workshop-structure1 h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.details.columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.column {
+    flex: 1 1 350px; /* Flexibility with a minimum width of 250px */
+    padding: 20px;
+    margin-bottom: 1rem;
+    background: #f9f9f9; /* Light background color for the column */
+    border: 1px solid #ddd; /* Subtle border for each column */
+    border-radius: 8px; /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    text-align: center; /* Justifies text to align both left and right sides */
+}
+
+.workshop-structure1 h3 {
+    font-size: 1.6rem;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+    text-align: center; /* Ensures the title is aligned left */
+}
+
+.workshop-structure1 p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: justify; /* Justifies the paragraph text */
+}
+
+/* Base styles for all screen sizes */
+.Speakers {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.Speakers #Speakers {
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Speakers .content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.Speakers .heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.Speakers .heading h2 {
+    font-size: 2.5em;
+    color: #333;
+    text-decoration: underline;
+}
+
+.Speakers p {
+    text-align: center;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.Speakers .speaker-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Speakers .speaker-card {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: calc(25% - 20px); /* Four items per row */
+    box-sizing: border-box;
+}
+
+.Speakers .speaker-name {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.Speakers .speaker-institute {
+    font-size: 1em;
+    color: #777;
+}
+
+/* Responsive styles */
+@media (max-width: 1600px) {
+    .Speakers .content {
+        padding: 15px;
+    }
+
+    .Speakers .heading h2 {
+        font-size: 2.2em;
+    }
+
+    .Speakers p {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 1200px) {
+    .Speakers .heading h2 {
+        font-size: 2em;
+    }
+
+    .Speakers p {
+        font-size: 1em;
+    }
+
+    .Speakers .speaker-card {
+        width: calc(33.33% - 20px); /* Three items per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .Speakers .heading h2 {
+        font-size: 1.8em;
+    }
+
+    .Speakers p {
+        font-size: 0.9em;
+    }
+
+    .Speakers .speaker-card {
+        width: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .Speakers .heading h2 {
+        font-size: 1.6em;
+    }
+
+    .Speakers p {
+        font-size: 0.8em;
+    }
+
+    .Speakers .speaker-card {
+        width: calc(50% - 20px); /* Two items per row */
+    }
+}
+
+@media (max-width: 600px) {
+    .Speakers .heading h2 {
+        font-size: 1.4em;
+    }
+
+    .Speakers p {
+        font-size: 0.7em;
+    }
+
+    .Speakers .speaker-card {
+        width: calc(100% - 20px); /* Single column layout */
+    }
+}
+
+@media (max-width: 468px) {
+    .Speakers .heading h2 {
+        font-size: 1.2em;
+    }
+
+    .Speakers p {
+        font-size: 0.6em;
+    }
+
+    .Speakers .speaker-card {
+        padding: 10px;
+    }
+
+    .Speakers .speaker-name {
+        font-size: 1em;
+    }
+
+    .Speakers .speaker-institute {
+        font-size: 0.9em;
+    }
+}
+
+.Travel-Housing {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.Travel-Housing .content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.Travel-Housing .heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.Travel-Housing .heading p {
+    font-size: 1.3em;
+    color: #666;
+    margin-top: 10px;
+}
+
+.Travel-Housing .travel-info, .Travel-Housing .housing-info {
+    margin-bottom: 40px;
+}
+
+.Travel-Housing .travel-grid, .Travel-Housing .housing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.Travel-Housing .travel-method, .Travel-Housing .housing-details {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Travel-Housing h3 {
+    font-size: 2em;
+    color: #0066cc;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 5px;
+}
+
+.Travel-Housing h4 {
+    font-size: 1.5em;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.Travel-Housing p {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.Travel-Housing ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.Travel-Housing ul li {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .Travel-Housing .travel-grid, .Travel-Housing .housing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .Travel-Housing .heading h2 {
+        font-size: 2.5em;
+    }
+
+    .Travel-Housing .heading p {
+        font-size: 1.2em;
+    }
+
+    .Travel-Housing h3 {
+        font-size: 1.8em;
+    }
+
+    .Travel-Housing h4 {
+        font-size: 1.4em;
+    }
+
+    .Travel-Housing p, .Travel-Housing ul li {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 576px) {
+    .Travel-Housing {
+        padding: 30px 10px;
+    }
+
+    .Travel-Housing .heading h2 {
+        font-size: 2.2em;
+    }
+
+    .Travel-Housing .heading p {
+        font-size: 1.1em;
+    }
+
+    .Travel-Housing h3 {
+        font-size: 1.6em;
+    }
+
+    .Travel-Housing h4 {
+        font-size: 1.3em;
+    }
+
+    .Travel-Housing p, .Travel-Housing ul li {
+        font-size: 1em;
+    }
+}
+/* SECTION [CALL-TO-ACTION] */
+/*
 .call-to-action{
     background: #FFFFFF;
 }
+
+
+
+
 
 
 
@@ -721,8 +1345,103 @@ p{
     color: #fff;
     width: 60%;
 }
+*/
+.registration-section {
+    background: #f5f5f5;
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: left; /* Aligns text centrally */
+}
+
+.registration-section .content {
+    max-width: 800px;
+    margin: auto;
+    color: #333;
+    text-align: left; /* Aligns text to the left within the central column */
+}
+
+.registration-section h2 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.registration-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+}
+
+.registration-section .details p {
+    text-align: left; /* Ensures detail paragraphs are aligned to the left */
+    margin-bottom: 0.5rem;
+}
+
+.registration-section .button-container {
+    text-align: center; /* Centers the registration button */
+    margin-top: 2rem;
+}
+
+.registration-section .btn {
+    padding: 0.8rem 1.5rem;
+    background-color: #ff7f00;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.registration-section .btn:hover {
+    background-color: #e66b00;
+}
 
 
+        .tourist-preview, .tourist-attractions {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;            
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .tourist-preview h2, .tourist-attractions h2 {
+            color: #2c3e50;
+            font-size: 2rem;
+        }
+
+        .tourist-preview p, .tourist-attractions p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .tourist-preview h2, .tourist-attractions h2 {
+                font-size: 1.5rem; /* Smaller font size for mobile screens */
+            }
+
+            .btn {
+                padding: 8px 16px; /* Smaller button on mobile */
+            }
+        }
 /* FOOTER */
 
 .footer {
@@ -879,6 +1598,8 @@ p{
     }
 
     /* ----  SECTION FACILITIES   ---- */
+	
+	
 
     .all-facilities{
         display: flex;
@@ -929,7 +1650,7 @@ p{
     .items h3{
         width: 95%;
     }
-
+	
 
     /* FOOTER */
 .footer {

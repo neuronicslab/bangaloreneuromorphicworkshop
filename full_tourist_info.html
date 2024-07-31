@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Bangalore's Heritage and Attractions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem; /* Optimized font size for all devices */
+        }
+
+        .back-home {
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            background-color: #007bff;
+            color: white;
+            padding: 8px 12px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .back-home:hover {
+            background-color: #004a9f;
+        }
+
+        .intro {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: justify;
+        }
+
+        .tourist-attractions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .attraction {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .attraction img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .attraction h3 {
+            margin-top: 1rem;
+            color: #007bff;
+        }
+
+        .btn {
+            display: block;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .back-home {
+                left: 10px; /* Adjust position on smaller screens */
+                font-size: 0.8rem; /* Smaller font size */
+            }
+            header h1 {
+                font-size: 1.5rem; /* Smaller header on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+	 <a href="index.html" class="back-home">Back Home</a>
+        <h1>Explore Bangalore's Rich Heritage and Attractions</h1>
+    </header>
+    <p class="intro">
+                    Bangalore, the capital of Karnataka, is celebrated not just as a modern technology nexus but also as a bastion of rich cultural heritage and expansive greenery. Its year-round pleasant climate beckons visitors to explore its majestic colonial architecture, tranquil parks, bustling markets, and serene temples. This guide delves into the city's must-visit attractions that truly encapsulate the essence of Bangalore, offering a vibrant tapestry of history, culture, and nature.
+
+    </p>
+    <div class="tourist-attractions">
+        <div class="attraction">
+            <img src="./images/Bangalore_Palace.jpg" alt="Bangalore Palace">
+            <h3>Bangalore Palace</h3>
+            <p>An architectural marvel reflecting the opulence of a bygone era, Bangalore Palace stands out with its Gothic windows, turrets, and woodcarvings in nearly every room, making it a key site of historical importance in Bangalore.</p>
+            <a href="https://karnatakatourism.org/tour-item/bangalore-palace/" class="btn">Read More</a>
+        </div>
+        <div class="attraction">
+            <img src="./images/Lalbagh.jpg" alt="Lalbagh Botanical Garden">
+            <h3>Lalbagh Botanical Garden</h3>
+            <p>Lalbagh remains a major cultural attraction in Bangalore, covering 240 acres with a wide variety of plants that attract both botanists and tourists. The garden is also home to a lake and one of the most historically significant glasshouses in the world.</p>
+            <a href="https://karnatakatourism.org/tour-item/lalbagh-botanical-garden/" class="btn">Read More</a>
+        </div>
+        <div class="attraction">
+            <img src="./images/ISKCON.jpg" alt="ISKCON Temple">
+            <h3>ISKCON Temple</h3>
+            <p>This modern temple, built in 1997, is a spiritual oasis in the bustling city, renowned for its serene environment and intricate Vedic painting galleries that attract devotees and tourists alike.</p>
+            <a href="https://www.iskconbangalore.org/" class="btn">Read More</a>
+        </div>
+        <div class="attraction">
+            <img src="./images/Bangalore_museum.jpg" alt="Visvesvaraya Industrial and Technological Museum">
+            <h3>Visvesvaraya Museum</h3>
+            <p>This interactive museum is dedicated to the field of science and technology and is named after one of India's most celebrated engineers, M. Visvesvaraya. It offers a multitude of experiential learning opportunities through its various technological exhibits.</p>
+            <a href="https://karnatakatourism.org/tour-item/visvesvaraya-industrial-and-technological-museum-bengaluru/" class="btn">Read More</a>
+        </div>
+        <div class="attraction">
+            <img src="./images/Cubbon_Park.jpg" alt="Cubbon Park">
+            <h3>Cubbon Park</h3>
+            <p>Spanning over 300 acres in the heart of the city, Cubbon Park is a green haven amidst the urban sprawl, offering walking pathways, a bamboo grove, and numerous statues and buildings of historical and architectural significance.</p>
+            <a href="https://karnatakatourism.org/tour-item/cubbon-park/" class="btn">Read More</a>
+        </div>
+        <div class="attraction">
+            <img src="./images/Nandi_Hills.jpg" alt="Nandi Hills">
+            <h3>Nandi Hills</h3>
+            <p>A short drive from Bangalore, Nandi Hills offers breathtaking sunrise views and is a perfect spot for trekking and witnessing the majestic remnants of fortifications dating back to the Chola period.</p>
+            <a href="https://karnatakatourism.org/tour-item/nandi-hills/" class="btn">Read More</a>
+        </div>
+		        <div class="attraction">
+            <img src="./images/Mysore Palace.jpg" alt="Mysore Palace">
+            <h3>Mysore Palace</h3>
+            <p>Mysore Palace, a magnificent example of royal architecture, lights up every Sunday with thousands of bulbs, showcasing its grandeur. Known for its rich history and stunning interiors, it's a major draw for visitors to Mysore.</p>
+            <a href="https://mysorepalace.karnataka.gov.in/" class="btn">Read More</a>
+        </div>
+        <div class="attraction">
+            <img src="./images/Ooty.jpg" alt="Ooty">
+            <h3>Ooty</h3>
+            <p>Ooty, nestled in the Nilgiri hills, is famed for its tea gardens and serene landscapes. The Nilgiri Mountain Railway, a UNESCO World Heritage site, offers breathtaking views and a unique travel experience through the hills.</p>
+            <a href="https://www.tamilnadutourism.tn.gov.in/destinations/ooty" class="btn">Read More</a>
+        </div>
+		        <div class="attraction">
+            <img src="./images/Coorg.jpeg" alt="Coorg">
+            <h3>Coorg</h3>
+            <p>Coorg, or Kodagu, draws visitors with its stunningly verdant hills and sprawling coffee estates. Explore the lush Western Ghats where you can trek through dense forests, visit cascading waterfalls, and relax in serene surroundings. Coorg is also celebrated for its cultural festivals and unique cuisine that offer a glimpse into the local way of life.</p>
+            <a href="https://www.tripadvisor.in/Attractions-g503697-Activities-Kodagu_Coorg_Karnataka.html" class="btn">Read More</a>
+        </div>
+    </div>
+</body>
+</html>
