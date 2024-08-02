@@ -541,6 +541,7 @@ main {
 .course-details2 h3 {
     color: #333333; /* Set heading color */
     margin-bottom: 1rem; /* Add margin-bottom to the heading */
+	font-size: 1.1rem; /* Decrease font size */
 }
 
 .course-details2 p {
