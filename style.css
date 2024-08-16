@@ -493,6 +493,17 @@ main {
     border-radius: 50%; /* Add border radius for rounded corners */
 }
 
+.course-details1 h3 a {
+    text-decoration: none;
+    color: inherit; /* This keeps the color of the link consistent with the surrounding text */
+}
+
+
+.course-details1 h3 a:hover {
+    text-decoration: underline; /* Optional: Adds underline on hover for better accessibility */
+    color: #007bff; /* Optional: Changes color on hover to indicate it's clickable */
+}
+
 /* Adjustments for responsiveness */
 @media only screen and (max-width: 1200px) {
     .course-details1 {
