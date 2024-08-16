@@ -1117,6 +1117,16 @@ main {
     color: #777;
 }
 
+.speaker-card .speaker-name a {
+    text-decoration: none;
+    color: inherit; /* Keeps the link color consistent with surrounding text */
+}
+
+.speaker-card .speaker-name a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+    color: #007bff; /* Optional: Changes color on hover */
+}
+
 /* Responsive styles */
 @media (max-width: 1600px) {
     .Speakers .content {
