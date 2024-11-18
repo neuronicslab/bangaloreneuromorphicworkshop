@@ -928,54 +928,54 @@ main {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping of items */
     justify-content: center; /* Center the logos horizontally */
-    align-items: center;
-    margin-top: 20px;
-    gap: 20px; /* Add gap between items */
+    align-items: center; /* Vertically center the logos */
+    margin: 20px 0; /* Add spacing around the section */
+    gap: 20px; /* Consistent gap between items */
 }
 
 .sponsor-logo {
-    flex: 0 1 auto; /* Adjust flex properties */
+    flex: 0 1 auto; /* Prevent shrinking too much */
     max-width: 150px; /* Set maximum width for the logo container */
     margin: 10px; /* Add margin for spacing */
     text-align: center; /* Center the content inside each sponsor-logo */
 }
 
 .sponsor-logo img {
-    width: 100%; /* Set width to 100% to fill the container */
+    width: 100%; /* Make the image fill the container */
     height: auto; /* Maintain aspect ratio */
-    max-height: 100px; /* Set maximum height for the images */
+    max-height: 100px; /* Set a consistent maximum height */
 }
 
 /* Adjustments for medium screens */
 @media (max-width: 992px) {
     .sponsor-logo {
-        max-width: 120px; /* Reduce max-width for medium-sized screens */
+        max-width: 120px; /* Slightly smaller for medium-sized screens */
     }
 
     .sponsor-logo img {
-        max-height: 80px; /* Reduce max-height for medium-sized screens */
+        max-height: 80px; /* Reduce image height */
     }
 }
 
 /* Adjustments for small screens */
 @media (max-width: 768px) {
     .sponsor-logo {
-        max-width: 100px; /* Further reduce max-width for small screens */
+        max-width: 100px; /* Further reduce max width */
     }
 
     .sponsor-logo img {
-        max-height: 70px; /* Further reduce max-height for small screens */
+        max-height: 70px; /* Further reduce max height */
     }
 }
 
 /* Adjustments for extra small screens (mobile) */
 @media (max-width: 576px) {
     .sponsor-logo {
-        max-width: 80px; /* Reduce max-width for mobile screens */
+        max-width: 80px; /* Smaller width for mobile */
     }
 
     .sponsor-logo img {
-        max-height: 60px; /* Reduce max-height for mobile screens */
+        max-height: 60px; /* Smaller height for mobile */
     }
 }
 
