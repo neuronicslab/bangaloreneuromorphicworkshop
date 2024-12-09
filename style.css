@@ -1110,10 +1110,9 @@ main {
 #schedule {
     padding: 20px;
     background-color: #FFFFFF;
+    box-sizing: border-box; /* Ensure padding is included in width/height */
 }
 
-
-/* Navigation Styling */
 /* Navigation Styling */
 .navigation-container {
     margin: 30px auto;
@@ -1144,7 +1143,7 @@ main {
     padding: 10px 20px;
     border: 2px solid #bd8185;
     border-radius: 8px;
-    width: 80px; /* Fixed width for consistency */
+    min-width: 80px; /* Ensure consistent width */
     text-align: center; /* Center the text */
     transition: all 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
@@ -1168,7 +1167,7 @@ main {
     }
 
     .navigation a {
-        width: calc(25% - 15px); /* Allow 4 buttons per row */
+        width: calc(30% - 15px); /* Allow 3 buttons per row */
         font-size: 0.9rem; /* Slightly smaller font */
         padding: 8px 16px; /* Adjust padding */
     }
@@ -1176,30 +1175,32 @@ main {
 
 @media (max-width: 480px) {
     .navigation {
-        gap: 10px 25px; /* Further adjust gap for very small screens */
+        gap: 10px 20px; /* Further adjust gap for very small screens */
     }
 
     .navigation a {
-        width: calc(33.33% - 10px); /* Allow 3 buttons per row */
+        width: calc(45% - 10px); /* Allow 2 buttons per row */
         font-size: 0.85rem;
         padding: 8px 12px;
     }
 }
+
 /* Day Content */
 .day-content {
     display: none;
     margin: 20px auto;
-    padding: 20px;
+    padding: 15px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    text-align: centre;
+    max-width: 100%; /* Fit content within screen width */
+    text-align: center;
+    box-sizing: border-box; /* Include padding in width/height */
 }
 
 .day-content h3 {
     color: #941326;
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
     font-weight: bold;
     margin-bottom: 20px;
     text-align: center;
@@ -1225,13 +1226,17 @@ main {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduce font size for smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    display: block; /* Allow scrolling */
+    box-sizing: border-box;
 }
 
 .schedule-table th, .schedule-table td {
-    padding: 12px 15px;
+    padding: 10px;
     border: 1px solid #ddd;
     text-align: left;
+    box-sizing: border-box; /* Include padding in cell width */
 }
 
 .schedule-table th {
@@ -1247,6 +1252,27 @@ main {
 
 .schedule-table tbody tr:hover {
     background-color: #e6f7ff;
+}
+
+/* Ensure Responsive Tables on Smaller Screens */
+@media (max-width: 768px) {
+    .schedule-table {
+        font-size: 0.85rem;
+    }
+
+    .schedule-table th, .schedule-table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .schedule-table {
+        font-size: 0.8rem;
+    }
+
+    .schedule-table th, .schedule-table td {
+        padding: 6px;
+    }
 }
 
 
