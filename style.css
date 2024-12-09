@@ -1125,12 +1125,12 @@ main {
     justify-content: center; /* Center the buttons */
     list-style: none;
     padding: 10px;
-    gap: 20px 40px; /* Add more vertical space between rows */
+    gap: 20px; /* Uniform spacing between items */
     max-width: 100%; /* Prevent horizontal scrolling */
 }
 
 .navigation li {
-    margin: 0;
+    margin: 10px 0; /* Add vertical spacing between rows */
 }
 
 /* Navigation Buttons */
@@ -1163,7 +1163,7 @@ main {
 /* Spacing and Wrapping Fixes for Smaller Screens */
 @media (max-width: 768px) {
     .navigation {
-        gap: 15px 30px; /* Adjust gap for smaller screens */
+        gap: 15px 10px; /* Adjust gap for smaller screens */
     }
 
     .navigation a {
@@ -1175,7 +1175,11 @@ main {
 
 @media (max-width: 480px) {
     .navigation {
-        gap: 10px 20px; /* Further adjust gap for very small screens */
+        gap: 10px; /* Adjust gap for very small screens */
+    }
+
+    .navigation li {
+        margin: 8px 0; /* Further adjust vertical spacing */
     }
 
     .navigation a {
@@ -1222,21 +1226,21 @@ main {
 }
 
 /* Schedule Table Styling */
+.schedule-container {
+    overflow-x: auto; /* Add horizontal scrolling for mobile screens */
+    margin-top: 20px;
+}
+
 .schedule-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 0.9rem; /* Reduce font size for smaller screens */
-    overflow-x: auto; /* Enable horizontal scrolling on small screens */
-    display: block; /* Allow scrolling */
-    box-sizing: border-box;
+    font-size: 1rem;
 }
 
 .schedule-table th, .schedule-table td {
-    padding: 10px;
+    padding: 12px 15px;
     border: 1px solid #ddd;
     text-align: left;
-    box-sizing: border-box; /* Include padding in cell width */
 }
 
 .schedule-table th {
@@ -1256,12 +1260,16 @@ main {
 
 /* Ensure Responsive Tables on Smaller Screens */
 @media (max-width: 768px) {
+    .schedule-container {
+        margin: 10px 0; /* Add spacing */
+    }
+
     .schedule-table {
-        font-size: 0.85rem;
+        font-size: 0.85rem; /* Adjust font size for readability */
     }
 
     .schedule-table th, .schedule-table td {
-        padding: 8px;
+        padding: 10px;
     }
 }
 
