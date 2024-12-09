@@ -184,7 +184,7 @@ header {
 }
 
 .nav-links a:hover {
-    background-color: #ff7f00;
+    background-color: #941236;
     color: #fff;
 }
 
@@ -239,7 +239,7 @@ main {
 }
 
 .content h1 {
-    color: #ff7f00;
+    color: #941236;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
@@ -284,7 +284,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Transparent gray mask */
+    background: rgba(0, 0, 0, 0.6); /* Transparent gray mask */
     z-index: -1; /* Place the overlay between the video and content */
 }
 
@@ -296,20 +296,20 @@ main {
 }
 
 .content h1 {
-    color: #ff7f00;
+    color: #f6eaaf;
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
 
 .content p {
-    color: #fff2cc;
+    color: #EAD3C1;
     line-height: 1.6;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
 
 .content h3 {
-    color: #ff7f00;
+    color: #f6eaaf;
     font-size: 1.5rem;
 }
 
@@ -388,7 +388,7 @@ main {
             margin-bottom: 30px; /* Add margin at the bottom of each element */
             margin-right: 20px; /* Add margin between the elements */
             box-sizing: border-box; /* Include padding and border in the element's total width and height */
-            background: #ffffcc; /* Set background color of the content block to very light yellow */
+            background: #f6eaaf; /* Set background color of the content block to very light yellow */
             border-radius: 1rem; /* Add border radius for rounded corners */
             padding: 1.5rem; /* Add padding to the elements */
             transition: box-shadow 0.3s; /* Add transition for box-shadow */
@@ -399,13 +399,13 @@ main {
         }
 
         .workshop-content h4 {
-            color: #333333; /* Set heading color */
+            color: #941236; /* Set heading color */
             margin-bottom: 1rem; /* Add margin-bottom to the heading */
             text-align: center; /* Center-align heading */
         }
 
         .workshop-content p {
-            color: #666666; /* Set paragraph color */
+            color: #000000; /* Set paragraph color */
             text-align: justify; /* Justify paragraph text */
             margin-bottom: 0; /* Remove default margin-bottom */
         }
@@ -522,7 +522,7 @@ main {
     width: calc(16.66% - 20px); /* Set the width to one-fifth of the container width */
     margin-bottom: 20px; /* Add margin at the bottom of each element */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    background: #f0f0ff; /* Set background color of the course details to very very light blue */
+    background: #f6eaaf; /* Set background color of the course details to very very light blue */
     border-radius: 1rem; /* Add border radius for rounded corners */
     padding: 1.5rem; /* Add padding to the elements */
     transition: box-shadow 0.3s; /* Add transition for box-shadow */
@@ -533,13 +533,13 @@ main {
 }
 
 .course-details1 h3 {
-    color: #333333; /* Set heading color */
+    color: #941236; /* Set heading color */
     margin-bottom: 1rem; /* Add margin-bottom to the heading */
     font-size: 1.2rem; /* Decrease font size */
 }
 
 .course-details1 p {
-    color: #666666; /* Set paragraph color */
+    color: #000000; /* Set paragraph color */
     margin-bottom: 0; /* Remove default margin-bottom */
 }
 
@@ -599,7 +599,7 @@ main {
     width: calc(16.66% - 20px); /* Set the width to one-fifth of the container width */
     margin: 10px; /* Add margin to center the tiles properly */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    background: #fff0f0; /* Set background color of the course details to very very light blue */
+    background: #FFF5F6; /* Set background color of the course details to very very light blue */
     border-radius: 1rem; /* Add border radius for rounded corners */
     padding: 1.5rem; /* Add padding to the elements */
     transition: box-shadow 0.3s; /* Add transition for box-shadow */
@@ -610,7 +610,7 @@ main {
 }
 
 .course-details2 h3 {
-    color: #333333; /* Set heading color */
+    color: #941326; /* Set heading color */
     margin-bottom: 1rem; /* Add margin-bottom to the heading */
 	font-size: 1rem; /* Decrease font size */
 }
@@ -688,7 +688,7 @@ main {
 }
 
 .course-details3 h3 {
-    color: #333333; /* Set heading color */
+    color: #941236; /* Set heading color */
     margin-bottom: 1rem; /* Add margin-bottom to the heading */
 }
 
@@ -703,14 +703,14 @@ main {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     color: #ffffff;
-    background-color: #ff7f00; /* Button color */
+    background-color: #941236; /* Button color */
     text-decoration: none;
     border-radius: 0.5rem;
     transition: background-color 0.3s;
 }
 
 .course-details3 .read-more:hover {
-    background-color: #e66b00; /* Darker button color on hover */
+    background-color: #bd8185; /* Darker button color on hover */
 }
 
 /* Adjustments for responsiveness */
@@ -1035,7 +1035,7 @@ main {
 
 .workshop-structure h3 {
     font-size: 1.6rem;
-    color: #007bff;
+    color: #941326;
     margin-bottom: 0.5rem;
     text-align: center; /* Ensures the title is aligned left */
 }
@@ -1104,11 +1104,161 @@ main {
     text-align: justify; /* Justifies the paragraph text */
 }
 
+
+/*******************************************/
+/* General Styling */
+#schedule {
+    padding: 20px;
+    background-color: #FFFFFF;
+}
+
+
+/* Navigation Styling */
+/* Navigation Styling */
+.navigation-container {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center the buttons */
+    list-style: none;
+    padding: 10px;
+    gap: 20px 40px; /* Add more vertical space between rows */
+    max-width: 100%; /* Prevent horizontal scrolling */
+}
+
+.navigation li {
+    margin: 0;
+}
+
+/* Navigation Buttons */
+.navigation a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #bd8185;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid #bd8185;
+    border-radius: 8px;
+    width: 80px; /* Fixed width for consistency */
+    text-align: center; /* Center the text */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.navigation a:hover {
+    background-color: #941326;
+    color: #ffffff;
+    transform: scale(1.05); /* Add scaling on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+.navigation a:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+/* Spacing and Wrapping Fixes for Smaller Screens */
+@media (max-width: 768px) {
+    .navigation {
+        gap: 15px 30px; /* Adjust gap for smaller screens */
+    }
+
+    .navigation a {
+        width: calc(25% - 15px); /* Allow 4 buttons per row */
+        font-size: 0.9rem; /* Slightly smaller font */
+        padding: 8px 16px; /* Adjust padding */
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        gap: 10px 25px; /* Further adjust gap for very small screens */
+    }
+
+    .navigation a {
+        width: calc(33.33% - 10px); /* Allow 3 buttons per row */
+        font-size: 0.85rem;
+        padding: 8px 12px;
+    }
+}
+/* Day Content */
+.day-content {
+    display: none;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    text-align: centre;
+}
+
+.day-content h3 {
+    color: #941326;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Show Only the Target Content */
+#day1:target,
+#day2:target,
+#day3:target,
+#day4:target,
+#day5:target,
+#day6:target,
+#day7:target,
+#day8:target,
+#day9:target,
+#day10:target,
+#day11:target {
+    display: block;
+}
+
+/* Schedule Table Styling */
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.schedule-table th {
+    background-color: #f6eaaf;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.schedule-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: #e6f7ff;
+}
+
+
+/*******************************************/
+
+
+
 /* Base styles for all screen sizes */
 .Speakers {
     font-family: Arial, sans-serif;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #FFFFFF;
 }
 
 .Speakers #Speakers {
@@ -1155,7 +1305,7 @@ main {
 }
 
 .Speakers .speaker-card {
-    background-color: #fff;
+    background-color: #FFF5F6;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -1437,7 +1587,7 @@ main {
 }
 */
 .registration-section {
-    background: #f5f5f5;
+    background: #FFFFFF;
     padding: 3rem;
     border-radius: 10px;
     text-align: left; /* Aligns text centrally */
@@ -1475,7 +1625,7 @@ main {
 
 .registration-section .btn {
     padding: 0.8rem 1.5rem;
-    background-color: #ff7f00;
+    background-color: #941236;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
@@ -1483,7 +1633,7 @@ main {
 }
 
 .registration-section .btn:hover {
-    background-color: #e66b00;
+    background-color: #ead3c1;
 }
 
 
@@ -1510,7 +1660,7 @@ main {
         }
 
         .btn {
-            background-color: #007bff;
+            background-color: #941236;
             color: white;
             text-decoration: none;
             padding: 10px 20px;
@@ -1520,7 +1670,7 @@ main {
         }
 
         .btn:hover {
-            background-color: #0056b3;
+            background-color: #BD8185;
         }
 
         @media (max-width: 768px) {
