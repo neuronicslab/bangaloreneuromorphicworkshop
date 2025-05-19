@@ -1,1319 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neuromorphic Engineering Workshop 2025 | BNEW at IISc Bangalore</title>
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Join BNEW 2025 at IISc Bangalore for top-tier neuromorphic engineering training. Explore AI, brain-computer interfaces, and event-based sensing from Jan 5-15, 2025.">
-    <meta name="keywords" content="BNEW 2025, neuromorphic engineering, workshop, IISc Bangalore, neuromorphic circuits, event-based sensing, brain-computer interfaces, AI, research">
-    <meta name="author" content="NeuRonICS Lab, IISc Bangalore">
-    
-    <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="BNEW 2025 | Neuromorphic Engineering Workshop at IISc Bangalore">
-    <meta property="og:description" content="Experience cutting-edge neuromorphic engineering at BNEW 2025. Join us at IISc Bangalore, Jan 5-15, 2025.">
-    <meta property="og:image" content="https://neuronicslab.github.io/bangaloreneuromorphicworkshop/images/BNEW_Logo.png"> <!-- Replace with the actual image URL -->
-    <meta property="og:url" content="https://neuronicslab.github.io/bangaloreneuromorphicworkshop"> <!-- Replace with the actual page URL -->
-    <meta property="og:type" content="website">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="BNEW 2025 | Neuromorphic Engineering Workshop at IISc Bangalore">
-    <meta name="twitter:description" content="Experience cutting-edge neuromorphic engineering at BNEW 2025. Join us at IISc Bangalore, Jan 5-15, 2025.">
-    <meta name="twitter:image" content="https://neuronicslab.github.io/bangaloreneuromorphicworkshop/images/BNEW_Logo.png"> <!-- Replace with the actual image URL -->
-    
-    <!-- Favicon -->
-    <link rel="icon" href="https://neuronicslab.github.io/bangaloreneuromorphicworkshop/images/favicon.ico" type="image/x-icon"> <!-- Replace with the actual favicon URL -->
-
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Fixed the extra '>' -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Canonical Tag -->
-    <link rel="canonical" href="https://neuronicslab.github.io/bangaloreneuromorphicworkshop/">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Event",
-      "name": "BNEW 2025 - Bangalore Neuromorphic Engineering Workshop",
-      "startDate": "2025-01-05",
-      "endDate": "2025-01-15",
-      "location": {
-        "@type": "Place",
-        "name": "Indian Institute of Science",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Department of Electronic Systems Engineering, IISc",
-          "addressLocality": "Bangalore",
-          "addressRegion": "Karnataka",
-          "postalCode": "560012",
-          "addressCountry": "IN"
-        }
-      },
-      "description": "Join BNEW 2025 at IISc Bangalore for cutting-edge training in neuromorphic engineering. Explore AI, brain-computer interfaces, and event-based sensing from Jan 5-15, 2025.",
-      "image": "https://neuronicslab.github.io/bangaloreneuromorphicworkshop/images/BNEW_Logo.png",
-      "organizer": {
-        "@type": "Organization",
-        "name": "NeuRonICS Lab, IISc Bangalore",
-        "url": "https://neuronicslab.github.io"
-      }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BNEW 2026 | Bangalore Neuromorphic Engineering Workshop</title>
+  <meta name="description" content="Join BNEW 2026 at IISc Bangalore for advanced training in neuromorphic engineering. Explore AI, brain-inspired circuits, and more." />
+  <meta name="author" content="NeuRonICS Lab, IISc Bangalore" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
     }
-    </script>
+    .navbar {
+      background-color: #2b2b2b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .nav-links li a:hover {
+      color: #f6eaaf;
+    }
+    header .logo img {
+      height: 50px;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 2rem;
+      z-index: 2;
+    }
+    .content h1 {
+      color: #f6eaaf;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .content p {
+      color: #ffffff;
+      max-width: 800px;
+      margin: 1rem auto;
+      font-size: 1rem;
+    }
+    .content h3 {
+      color: #f6eaaf;
+      font-weight: 700;
+    }
+    #background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    section {
+      padding: 4rem 2rem;
+    }
+    .heading h2 {
+      text-align: center;
+      color: #f6eaaf;
+      font-size: 2rem;
+    }
+    .workshop-details h4 {
+      color: #f6eaaf;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #941236;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 10px;
+    }
+    footer {
+      background-color: #2b2b2b;
+      text-align: center;
+      color: #ffffff;
+      padding: 2rem;
+    }
+  </style>
 </head>
 <body>
-   <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="./images/BNEW_Logo.png" alt="BNEW Logo" />
-            </div>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </label>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#workshop-description">About BNEW</a></li>
-                <li class="dropdown">
-                    <a href="#courses-section" class="dropdown-toggle">Topic Areas</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="nic25.html">Neuromorphic Integrated Circuits (NIC25)</a></li>
-                        <li><a href="ebs25.html">Event-based Sensing (EBS25)</a></li>
-                        <li><a href="bci25.html">Brain-Computer Interfaces (BCI25)</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#courses-section1" class="dropdown-toggle">People</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#courses-section1">Organizers</a></li>
-                        <li><a href="#committee-section">Steering Committee</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#Workshop-Structure" class="dropdown-toggle">Workshop Details</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#Workshop-Structure">Workshop Structure</a></li>
-                        <li><a href="#Speakers">Speakers</a></li>
-                    </ul>
-                </li>
-                <li><a href="#Registration-section">Registration</a></li>
-                <li><a href="#Sponsors-section">Sponsors</a></li>
-            </ul>
-        </nav>
-    </header>
-<main>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./images/BNEW 2026.png" alt="BNEW Logo" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About BNEW</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#bnew2025">BNEW 2025</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     <video autoplay muted loop id="background-video">
-        <source src="./videos/iisc.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+      <source src="./videos/iisc.mp4" type="video/mp4" />
     </video>
-    <div class="overlay"></div>
+    <div class="video-overlay"></div>
     <div class="content">
-        <h1>Bangalore Neuromorphic Engineering Workshop</h1>
-        <p>Top-tier training awaits the next generation of researchers. Inspired by Telluride (est. 1993) and Capo Caccia (est. 2007), we aim to expand their legacy into Asia-Pacific. Our objective: equip individuals with essential neuromorphic engineering skills and foster global advancement.</p>
-        <h3>Date: Jan 5 - Jan 15, 2025</h3>
-        <h3>Venue: Indian Institute of Science, Bangalore</h3>
+      <h1>Bangalore Neuromorphic Engineering Workshop</h1>
+      <p>
+        Top-tier training awaits the next generation of researchers. Inspired by Telluride (est. 1993) and Capo Caccia (est. 2007), we aim to expand their legacy into Asia-Pacific. Our objective: equip individuals with essential neuromorphic engineering skills and foster global advancement.
+      </p>
+      <h3>January 2026</h3>
+      <h3>Venue: Indian Institute of Science, Bangalore</h3>
     </div>
-</main>
-    
-    
+  </main>
 
+<section id="about" style="background-color: #f6f6f6; padding: 60px 20px; color: black;">
+  <div class="heading">
+    <h2 style="color: #1f1f1f; text-align: center; font-size: 2.2rem; font-weight: 700; text-decoration: underline;">About Bangalore Neuromorphic Engineering Workshop</h2>
+  </div>
+  <div class="workshop-details" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1400px; margin: 40px auto;">
+    <div class="workshop-content" style="background-color: #f6eaaf; border-radius: 20px; padding: 30px; flex: 1 1 300px; max-width: 420px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h4 style="color: #941236; text-align: center; font-size: 1.2rem; font-weight: 700;">Aim and Vision</h4>
+      <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">The Bangalore Neuromorphic Engineering Workshop is designed to provide first-rate training to upcoming researchers in neuromorphic technologies, building upon the legacy of influential workshops like Telluride and Capo Caccia. These workshops have significantly contributed to the development of vibrant research communities in the US and Europe. Our goal is to replicate this success in the Asia-Pacific region. We aim to equip participants with advanced skills in neuromorphic engineering and to enhance the growth of this critical field on an international scale.</p>
+    </div>
+    <div class="workshop-content" style="background-color: #f6eaaf; border-radius: 20px; padding: 30px; flex: 1 1 300px; max-width: 420px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h4 style="color: #941236; text-align: center; font-size: 1.2rem; font-weight: 700;">Neuromorphic Engineering Origins</h4>
+      <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">Originating from the innovative work of Carver Mead and Misha Mahowald at Caltech in the 1990s, neuromorphic started with creating brain-like models of neural computation and sensing using traditional VLSI CMOS technologies. The field has expanded to include studies on new memory technologies, development of large-scale spiking neural network chips for advanced computing, and exploring theories of plasticity, learning, and both artificial and natural intelligence.</p>
+    </div>
+    <div class="workshop-content" style="background-color: #f6eaaf; border-radius: 20px; padding: 30px; flex: 1 1 300px; max-width: 420px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h4 style="color: #941236; text-align: center; font-size: 1.2rem; font-weight: 700;">Industry and Academic Impact</h4>
+      <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">Today, the field of neuromorphic engineering is experiencing widespread adoption by major corporations such as Samsung, Sony, Intel, and IBM, alongside significant support from governmental funding agencies. Recognized as a promising avenue for developing AI computing technologies, neuromorphic approaches offer potential solutions to the inherent limitations and critical challenges faced by conventional computing systems and deep learning methodologies. By leveraging principles inspired by the brain's architecture, neuromorphic engineering endeavors to revolutionize the landscape of artificial intelligence, paving the way for more efficient, adaptive, and intelligent computing systems.</p>
+    </div>
+  </div>
+  </section>
 
-<!--     <div class="intro">
-        <div class="intro-text">
-            <h1 class="hide">
-                <span class="text">The best university</span>
-            </h1>
-            <h1 class="hide">
-                <span class="text">is the university</span>
-            </h1>
-            <h1 class="hide">
-                <span class="text">of life.</span>
-            </h1>
-        </div>
+  <section id="organizers" style="background-color: #f6f6f6; padding: 00px 10px; color: black;">
+  <div class="heading">
+    <h2 style="color: #1f1f1f; text-align: center; font-size: 2rem; font-weight: 700; margin-top: 1rem;">Organizers</h2>
+  </div>
+  <div class="workshop-details" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 40px auto;">
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/AVS.jpg" alt="Andre van Schaik" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://www.westernsydney.edu.au/icns/about/people/researchers/professor_andre_van_schaik" target="_blank" style="color: #941236; text-decoration: none;">Andre van Schaik</a></h4>
+      <p style="text-align: center;">Western Sydney University, Australia</p>
     </div>
-	 -->
-<section class="previous-videos" style="background-color: #f6f6f6; padding: 40px 20px; text-align: center; color: black;">
-    <div class="heading">
-        <h2 style="color: black;">Explore Previous BNEW Sessions</h2>
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/SC.jpg" alt="Shantanu Chakrabartty" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://engineering.wustl.edu/faculty/Shantanu-Chakrabartty.html" target="_blank" style="color: #941236; text-decoration: none;">Shantanu Chakrabartty</a></h4>
+      <p style="text-align: center;">Washington University St. Louis, USA</p>
     </div>
-    <p style="color: black;">Get a glimpse of the engaging sessions and expert talks from our previous editions by visiting our official YouTube channel.</p>
-    <a href="https://www.youtube.com/@BNEW2025" target="_blank" class="btn" style="display: inline-block; margin-top: 20px; padding: 12px 24px; background-color: #941236; color: white; border-radius: 8px; text-decoration: none; font-weight: 500;">
-        Watch on YouTube
-    </a>
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/CST.jpg" alt="Chetan Singh Thakur" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://eecs.iisc.ac.in/people/chetan-singh-thakur/" target="_blank" style="color: #941236; text-decoration: none;">Chetan Singh Thakur</a></h4>
+      <p style="text-align: center;">Indian Institute of Science, India</p>
+    </div>
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/AB.jpg" alt="Arindam Basu" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://scholars.cityu.edu.hk/en/persons/arindam-basu(5bd82af7-4b46-4884-9824-7bf23bd00473).html" target="_blank" style="color: #941236; text-decoration: none;">Arindam Basu</a></h4>
+      <p style="text-align: center;">City University of Hong Kong</p>
+    </div>
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/Chaira.jpg" alt="Chiara Bartolozzi" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://www.iit.it/people-details/-/people/chiara-bartolozzi" target="_blank" style="color: #941236; text-decoration: none;">Chiara Bartolozzi</a></h4>
+      <p style="text-align: center;">Italian Institute of Technology</p>
+    </div>
+  </div>
+  </section>
+
+<section id="bnew2025"  section class="previous-bnew" style="background-color: #111; color: white; padding: 60px 20px;">
+  <div class="heading">
+    <h2 style="color: #f6eaaf; text-align: center; font-size: 2.2rem; font-weight: 700;">Look Back at BNEW 2025</h2>
+  </div>
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <p style="font-size: 1rem; line-height: 1.6; margin: 20px auto; max-width: 800px; color: #eee;">
+      BNEW 2025 was a landmark gathering of researchers, students, and industry professionals passionate about brain-inspired computing. Over 11 days, the workshop hosted inspiring keynote talks, collaborative project work, and hands-on neuromorphic systems demonstrations.
+    </p>
+    <div class="carousel" style="position: relative; overflow: hidden; border-radius: 12px; margin: 40px auto; max-width: 1000px;">
+      <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
+        <img src="./images/bnew2025-1.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-2.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-3.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-4.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-5.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-6.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+      </div>
+    </div>
+    <div style="margin-bottom: 30px;">
+      <a href="https://www.youtube.com/@BNEW2025" target="_blank" class="btn" style="display: inline-block; margin: 10px; padding: 12px 24px; background-color: #f6eaaf; color: #111; text-decoration: none; border-radius: 6px; font-weight: 600;">Watch BNEW 2025 Lectures</a>
+      <a href="bnew2025.html" class="btn" style="display: inline-block; margin: 10px; padding: 12px 24px; background-color: #f6eaaf; color: #111; text-decoration: none; border-radius: 6px; font-weight: 600;">Visit BNEW 2025 Website</a>
+    </div>
+  </div>
 </section>
 
-    <div class="slider"></div>
-<section id="workshop-description">
- <div class="heading">
-        <h2>About Bangalore Neuromorphic Engineering Workshop</h2>
-</div>		
-        <div class="workshop-details">
-            <div class="workshop-content">
-                <h4>Aim and Vision</h4>
-                <p>The Bangalore Neuromorphic Engineering Workshop is designed to provide first-rate training to 
-				upcoming researchers in neuromorphic technologies, building upon the legacy of influential workshops like 
-				Telluride and Capo Caccia, these workshops have significantly contributed to the development of vibrant research communities in the US and Europe. 
-				Our goal is to replicate this success in the Asia-Pacific region. 
-				We aim to equip participants with advanced skills in neuromorphic engineering and to enhance the growth of this 
-				critical field on an international scale.</p>
-            </div>
-            <div class="workshop-content">
-                <h4>Neuromorphic Engineering Origins</h4>
-                <p>Originating from the innovative work of Carver Mead and Misha Mahowald at Caltech in the 1990s, 
-				neuromorphic started with creating brain-like models of neural computation and sensing using 
-				traditional VLSI CMOS technologies. The field has expanded to include studies on new memory technologies, 
-				development of large-scale spiking neural network chips for advanced computing, and exploring theories of plasticity, 
-				learning, and both artificial and natural intelligence.</p>
-            </div>
-            <div class="workshop-content">
-                <h4>Industry and Academic Impact</h4>
-                <p>Today, the field of neuromorphic engineering is experiencing widespread adoption by major corporations such as Samsung, Sony, Intel, and IBM, alongside significant support from governmental funding agencies. Recognized as a promising avenue for developing AI computing technologies, neuromorphic approaches offer potential solutions to the inherent limitations and critical challenges faced by conventional computing systems and deep learning methodologies. By leveraging principles inspired by the brain's architecture, neuromorphic engineering endeavors to revolutionize the landscape of artificial intelligence, paving the way for more efficient, adaptive, and intelligent computing systems.</p>
-            </div>
-        </div>
-    </section>
+<script>
+  const track = document.querySelector('.carousel-track');
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % 6;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 8000);
+</script>
 
-<section class="course" id="courses-section">
-    <div class="heading">
-        <h2>Topic Areas of BNEW-2025 </h2>
-        <p>Get ready for an immersive experience at the Bangalore Neuromorphic Engineering Workshop, where you'll engage in lively discussions, hands-on sessions, and much more, exploring cutting-edge topics like:</p>
+
+
+  <footer id="contact">
+    <div>
+      <h2 style="color: #f6eaaf;">Contact Us</h2>
+      <p>NeuRonICS Lab, Department of Electronic Systems Engineering,<br />IISc, Bangalore, Karnataka, India.</p>
+      <p>Email: neuronicslabdese@gmail.com</p>
+      <p>We look forward to your participation in BNEW 2026.</p>
     </div>
-    <div class="courses3">
-        <div class="course-details3">
-            <h3>Neuromorphic Integrated Circuits (NIC25)</h3>
-            <p>
-			Exploring novel neuromorphic architectures, circuits, and hardware that could 
-			demonstrate neuromorphic performance advantages when compared to 
-            conventional computing architectures like central processing units (CPUs), 
-			graphical processing units (GPUs).
-			
-			<br><br>	
-			Topic leaders - Shantanu Chakrabartty (Washington University St. Louis), Chetan Singh Thakur (IISc)</p>
-            <a href="nic25.html" class="read-more">Read More</a>
-        </div>
-        <div class="course-details3">
-            <h3>Event-based Sensing (EBS25)</h3>
-            <p>
-Explore the latest developments in neuromorphic sensors that mimic the human senses, 
-including dynamic vision sensors, SCAMP, neuromorphic radar, olfactory sensors, and more. 
-These innovative sensors are transforming industries and applications by providing more efficient,
-adaptive, and human-like sensing capabilities, 
-enabling new possibilities for robotics, autonomous systems, healthcare, and the Internet of Things (IoT).
-			<br><br>
-            Topic leaders - Piotr Dudek (University of Manchester), Alexandre Marcireau (Western Sydney University)</p>
-            <a href="ebs25.html" class="read-more">Read More</a>
-        </div>
-        <div class="course-details3">
-            <h3>Brain-Computer Interfaces (BCI25)</h3>
-            <p>
-			
-Unlock the potential of brain-computer interfaces through the application of neuromorphic principles, 
-innovative signal processing algorithms for real-time decoding, and cutting-edge hardware development, 
-enabling faster and more accurate communication between the human brain and machines.
-			
-			<br><br>
-            Topic leaders - Arindam Basu (City University of Hong Kong), Pao-Sheng Vincent Sun (City University of Hong Kong), Sridhar Devarajan (Indian Institute of Science)</p>
-            <a href="bci25.html" class="read-more">Read More</a>
-        </div>
-    </div>
-</section>
-
-<!--
-<section class="course" id="courses-section">
-    <div class="heading">
-        <h2>Theme of the Workshop</h2>
-        <p>Get ready for an immersive experience at the Bangalore Neuromorphic Engineering Workshop, where you'll engage in lively discussions, hands-on sessions, and much more, exploring cutting-edge topics like:</p>
-    </div>
-    <div class="courses">
-        
-        <div class="course-details">
-            <h3>Brain-inspired AI algorithms</h3>
-            <p>Explore the development of AI algorithms inspired by the principles of the human brain.</p>
-        </div>
-        <div class="course-details">
-            <h3>Brain-inspired integrated circuit (IC) design</h3>
-            <p>Dive into the design of integrated circuits inspired by the structure and function of the brain.</p>
-        </div>
-        <div class="course-details">
-            <h3>Computational neuroscience</h3>
-            <p>Delve into computational models of neural pathways such as visual, acoustic, and olfaction, inspired by the brain's biological processes.</p>
-        </div>
-        <div class="course-details">
-            <h3>Brain-inspired event-based sensors</h3>
-            <p>Investigate sensors designed to mimic the brain's event-based processing, enabling efficient and low-power sensing.</p>
-        </div>
-        <div class="course-details">
-            <h3>Brain-inspired robotics</h3>
-            <p>Explore robotics systems inspired by the principles of neural computation, enabling adaptive and intelligent behavior.</p>
-        </div>
-        <div class="course-details center">
-            <h3>Event-based spiking algorithms/systems</h3>
-            <p>Examine algorithms and systems based on spiking neural networks, mirroring the brain's asynchronous and event-driven processing.</p>
-        </div>
-    </div>
-</section>
-
--->
-   
-	
-<section class="course1" id="courses-section1">
-    <div class="heading">
-        <h2>Organizers</h2>
-    </div>
-    <div class="courses1">
-        
-        <div class="course-details1">
-            <img src="./images/AVS.jpg" alt="Andre van Schaik">
-            <h3><a href="https://www.westernsydney.edu.au/icns/about/people/researchers/professor_andre_van_schaik" target="_blank">Andre van Schaik</a></h3>
-            <p>Director ICNS, Western Sydney University, Australia</p>
-        </div>
-        <div class="course-details1">
-            <img src="./images/SC.jpg" alt="Shantanu Chakrabartty">
-            <h3><a href="https://engineering.wustl.edu/faculty/Shantanu-Chakrabartty.html" target="_blank">Shantanu Chakrabartty</a></h3>
-            <p>Washington University St. Louis, USA</p>
-        </div>
-        <div class="course-details1">
-            <img src="./images/PD.jpg" alt="Piotr Dudek">
-            <h3><a href="https://personalpages.manchester.ac.uk/staff/p.dudek/pdudek.htm" target="_blank">Piotr Dudek</a></h3>
-            <p>University of Manchester, UK</p>
-        </div>
-		        <div class="course-details1">
-            <img src="./images/CST.jpg" alt="Chetan Singh Thakur">
-            <h3><a href="https://eecs.iisc.ac.in/people/chetan-singh-thakur/" target="_blank">Chetan Singh Thakur</a></h3>
-            <p>Indian Institute of Science, India</p>
-        </div>
-
-        <div class="course-details1">
-            <img src="./images/AB.jpg" alt="Arindam Basu">
-            <h3><a href="https://scholars.cityu.edu.hk/en/persons/arindam-basu(5bd82af7-4b46-4884-9824-7bf23bd00473).html" target="_blank">Arindam Basu</a></h3>
-            <p>City University of Hong Kong</p>
-        </div>
-		<div class="course-details1">
-		 
-            <img src="./images/BES.jpeg" alt="Bertram Emil SHI">
-             <h3><a href="https://seng.hkust.edu.hk/about/people/faculty/bertram-emil-shi" target="_blank">Bert Shi</a></h3>
-            <p>The Hong Kong University of Science and Technology</p>
-        </div>
-
-
-    </div>
-</section>
-
-<section class="committee" id="committee-section">
-    <div class="heading">
-        <h2>Steering Committee</h2>
-        <p>Our Steering Committee consists of renowned experts in neuromorphic engineering who provide guidance and strategic direction for the workshop.</p>
-    </div>
-    <div class="courses2">
-        
-        <div class="course-details2">
-            <img src="./images/TD.jpeg" alt="Tobi Delbruck">
-            <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzQ=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank">Tobi Delbruck</a></h3>
-            <p>ETH Zurich, Switzerland</p>
-        </div>
-        <div class="course-details2">
-            <img src="./images/SCH.jpeg" alt="Shih-Chii Liu">
-            <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzM=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank">Shih-Chii Liu</a></h3>
-            <p>ETH Zurich, Switzerland</p>
-        </div>
-		        <div class="course-details2">
-            <img src="./images/GC.png" alt="Gert Cauwenberghs">
-            <h3><a href="https://jacobsschool.ucsd.edu/node/3271" target="_blank">Gert Cauwenberghs</a></h3>
-            <p>University of California, San Diego, USA</p>
-        </div>
-		        <div class="course-details2">
-            <img src="./images/AA.jpg" alt="Andreas Andreou">
-            <h3><a href="https://engineering.jhu.edu/ece/faculty/andreas-andreou/" target="_blank">Andreas Andreou</a></h3>
-            <p>Johns Hopkins University, USA</p>
-        </div>
-		        <div class="course-details2">
-            <img src="./images/GI.jpeg" alt="Giacomo Indiveri">
-            <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.Nzk0NzU=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank">Giacomo Indiveri</a></h3>
-            <p>ETH Zurich, Switzerland</p>
-        </div>
-		        <div class="course-details2">
-            <img src="./images/REC.jpg" alt="Ralph Etienne-Cummings">
-            <h3><a href="https://engineering.jhu.edu/faculty/ralph-etienne-cummings/" target="_blank">Ralph Etienne-Cummings</a></h3>
-            <p>Johns Hopkins University, USA</p>
-        </div>
-		        <div class="course-details2">
-            <img src="./images/JH.jpeg" alt="Jennifer Hasler">
-            <h3><a href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank">Jennifer Hasler</a></h3>
-            <p>Georgia Tech University, USA</p>
-        </div>
-		        <div class="course-details2">
-            <img src="./images/KB.jpg" alt="Kwabena Boahen">
-            <h3><a href="https://profiles.stanford.edu/kwabena-boahen" target="_blank">Kwabena Boahen</a></h3>
-            <p>Stanford University, USA</p>
-        </div>
-		        <div class="course-details2">
-            <img src="./images/SS.jpg" alt="Shihab Shamma">
-            <h3><a href="https://isr.umd.edu/clark/faculty/476/Shihab-Shamma" target="_blank">Shihab Shamma</a></h3>
-            <p>University of Maryland, USA</p>
-        </div>
-		<div class="course-details2">
-            <img src="./images/RM.jpg" alt="Rajit Manohar">
-            <h3><a href="https://csl.yale.edu/~rajit/" target="_blank">Rajit Manohar</a></h3>
-            <p>Yale University, New Haven, CT, USA</p>
-        </div>
-
-	    <div class="course-details2">
-            <img src="./images/BC.jpg" alt="Barbara Shinn-Cunningham">
-           <h3><a href="https://www.cmu.edu/ni/people/faculty/bshinncunningham.html" target="_blank">Barbara Shinn-Cunningham</a></h3>
-            <p>Carnegie Mellon University, Pittsburgh, USA </p>
-        </div>
-	    
-    </div>
-</section>
-
-
-	
-	
-	
-    <!-- <section class="campus">
-        <div class="heading">
-            <h2>Our Global Campus</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit , veritatis.</p>
-        </div>
-        
-        <div class="all-campus">
-            
-            <div class="campus-details">
-                <img src="https://source.unsplash.com/1600x900/?building?sig=1">
-                <div class="layer">
-                    <h3>LONDON</h3>
-                </div>
-            </div>
-            <div class="campus-details">
-                <img src="https://source.unsplash.com/1600x900/?building?sig=2">
-                <div class="layer">
-                    <h3>NEW YORK</h3>
-                </div>
-            </div>
-            <div class="campus-details">
-                <img src="https://source.unsplash.com/1600x900/?building?sig=3">
-                <div class="layer">
-                    <h3>WASHINGTON</h3>
-                </div>
-            </div>
-            
-        </div>
-    </section> -->
-
-<div class="workshop-structure">
-    <section id="Workshop-Structure">
-        <div class="content">
-                    <div class="content">
-            	<div class="heading">
-        <h2><u>Workshop Structure</u></h2>
-	</div>
-            <p>Immerse yourself in a setting that is as rigorous as it is rewarding, designed to foster innovation and collaboration among participants. Engage with experts and peers to tackle the pressing challenges in neuromorphic engineering.</p>
-            
-            <div class="details columns">
-                <div class="column">
-                    <h3>Interactive Sessions and Talks</h3>
-                    <p>Experience a series of enlightening talks on topics such as neuromorphic sensing, machine learning, neuroscience and chip design, delivered by leading academicians and industry professionals.</p>
-                </div>
-                
-                <div class="column">
-                    <h3>Collaborative Project Work</h3>
-                    <p>Work alongside peers in team meetings, scheduled each afternoon, to brainstorm and develop project ideas. Utilize advanced research facilities to shape and refine your innovative solutions.</p>
-                </div>
-                
-                <div class="column">
-                    <h3>Pre-Workshop Preparation</h3>
-                    <p>Join the dedicated Slack channel a month before the workshop starts to discuss ideas and form teams. This early engagement is crucial for a head start on project collaboration.</p>
-                </div>
-                
-                <div class="column">
-                    <h3>Key Presentation Milestones</h3>
-                    <p>Prepare to present your project progress during an initial review on the 3rd or 4th day of the workshop. Culminate your experience with a final presentation on January 15th, showcasing your team's achievements to the workshop attendees.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
-<div class="Speakers">
-    <section id="Speakers">
-        <div class="content">
-            <div class="heading">
-                <h2><u>Meet Our Speakers</u></h2>
-            </div>
-            <p>We are delighted to feature an exceptional lineup of domain experts who will share their invaluable insights and expertise with us. Each speaker is a leader in their field, ready to offer a wealth of knowledge at the workshop.</p>
-            <div class="speaker-grid">
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://www.iit.it/people-details/-/people/chiara-bartolozzi" target="_blank">Chiara Bartolozzi</a></div>
-                    <div class="speaker-institute">Istituto Italiano di Tecnologia, Italy</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://ee.iisc.ac.in/chandra-sekhar-seelamantula/" target="_blank">Chandra Sekhar Seelamantula</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://sciences.utsa.edu/faculty/profiles/kudithipudi-dhireesha.html" target="_blank">Dhireesha Kudithipudi</a></div>
-                    <div class="speaker-institute">University of Texas at San Antonio, USA</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://eecs.iisc.ac.in/people/chiranjib-bhattacharyya/" target="_blank">Chiranjib Bhattacharyya</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://www.kip.uni-heidelberg.de/people/gruppe.php?action=details&num=298" target="_blank">Johannes Schemmel</a></div>
-                    <div class="speaker-institute">Heidelberg University, Germany</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="http://mbu.iisc.ac.in/~rngrp/" target="_blank">Rishikesh Narayanan</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://krieger.jhu.edu/mbi/directory/ernst-niebur/" target="_blank">Ernst Niebur</a></div>
-                    <div class="speaker-institute">Johns Hopkins University, USA</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://services.ini.uzh.ch/admin/modules/uzh/person.php?id=51835&back=../uzh/people" target="_blank">Elisa Donati</a></div>
-                    <div class="speaker-institute">University of Zurich</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://cns.iisc.ac.in/people/sp-arun/" target="_blank">S P Arun</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://cns.iisc.ac.in/people/supratim-ray/" target="_blank">Supratim Ray</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzQ=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank">Tobi Delbruck</a></div>
-                    <div class="speaker-institute">ETH Zurich, Switzerland</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://cns.iisc.ac.in/people/sridharan-devarajan/" target="_blank">Sridhar Devarajan</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank">Jenifer Hasler</a></div>
-                    <div class="speaker-institute">Georgia Tech University, USA</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://csl.yale.edu/~rajit/" target="_blank">Rajit Manohar</a></div>
-                    <div class="speaker-institute">Yale University, New Haven, CT, USA</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://scholars.cityu.edu.hk/en/persons/arindam-basu(5bd82af7-4b46-4884-9824-7bf23bd00473).html" target="_blank">Arindam Basu</a></div>
-                    <div class="speaker-institute">City University of Hong Kong</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://www.westernsydney.edu.au/icns/about/people/researchers/professor_andre_van_schaik" target="_blank">Andre van Schaik</a></div>
-                    <div class="speaker-institute">Western Sydney University, Australia</div>
-                </div>
-
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://engineering.wustl.edu/faculty/Shantanu-Chakrabartty.html" target="_blank">Shantanu Chakrabartty</a></div>
-                    <div class="speaker-institute">Washington University St. Louis, USA</div>
-                </div>
-				<div class="speaker-card">
-                    <div class="speaker-name"><a href="https://eecs.iisc.ac.in/people/hardik-j-pandya/" target="_blank">Hardik J Pandya</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://personalpages.manchester.ac.uk/staff/p.dudek/pdudek.htm" target="_blank">Piotr Dudek</a></div>
-                    <div class="speaker-institute">University of Manchester, UK</div>
-                </div>
-
-
-
-
-		    <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://chep.iisc.ac.in/Personnel/adpatel.html" target="_blank"> Apoorva D Patel</a></div>
-                    <div class="speaker-institute">Indian Institute of Science</div>
-                </div>
-
-		                    <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://engineering.washu.edu/faculty/Barani-Raman.html" target="_blank">Barani Raman</a></div>
-                    <div class="speaker-institute">Washington University St. Louis</div>
-
-                </div>
-	                    <div class="speaker-card">
-                    <div class="speaker-name"><a href="http://neuron.eei.eng.osaka-u.ac.jp/member_yagi_en.html" target="_blank">Tetsuya Yagi</a></div>
-                    <div class="speaker-institute">Osaka University </div>
-
-                </div>
-
-		    	                    <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://ee-r.ntust.edu.tw/var/file/27/1027/img/3347/sypeng.html" target="_blank">Sheng-Yu Peng</a></div>
-                    <div class="speaker-institute">National Taiwan University of Science and Technology </div>
-
-                </div>
-
-		    		    	                    <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://web.iitd.ac.in/~jayadeva/" target="_blank">Jayadeva </a></div>
-                    <div class="speaker-institute">Indian Institute of Technology Delhi</div>
-
-                </div>
-
-		    		    		    	                    <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://tu-dresden.de/ing/elektrotechnik/iee/hpsn/die-professur/inhaber?set_language=en" target="_blank">Christian Mayr  </a></div>
-                    <div class="speaker-institute">TU Dresden </div>
-
-                </div>
-
-		    	    		    		    	                    <div class="speaker-card">
-                    <div class="speaker-name"><a href="https://sites.psu.edu/sengupta/biography/" target="_blank">Abhronil Sengupta</a></div>
-                    <div class="speaker-institute">The Pennsylvania State University </div>
-
-                </div>
-                <div class="speaker-card">
-                    <div class="speaker-name"><a href="http://www2.imse-cnm.csic.es/~bernabe/" target="_blank">Bernabé Linares-Barranco</a></div>
-                    <div class="speaker-institute">Instituto de Microelectrónica de Sevilla</div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
-
-
-<section id="schedule">
-    <div class="content">
-        <div class="heading">
-            <h2><u>Workshop Schedule</u></h2>
-<p>Each day begins with insightful morning lectures, followed by interactive group sessions tackling real-world challenges. Afternoons feature hands-on tutorials to build practical skills and deepen understanding.</p>
-            
-        </div>
-
-        <!-- Navigation Links -->
-        <div class="navigation-container">
-            <ul class="navigation">
-                <li><a href="#day1">Jan 5</a></li>
-                <li><a href="#day2">Jan 6</a></li>
-                <li><a href="#day3">Jan 7</a></li>
-                <li><a href="#day4">Jan 8</a></li>
-                <li><a href="#day5">Jan 9</a></li>
-                <li><a href="#day6">Jan 10</a></li>
-                <li><a href="#day7">Jan 11</a></li>
-                <li><a href="#day8">Jan 12</a></li>
-                <li><a href="#day9">Jan 13</a></li>
-                <li><a href="#day10">Jan 14</a></li>
-                <li><a href="#day11">Jan 15</a></li>
-            </ul>
-        </div>
-
-        <!-- Schedule Content -->
-        <div class="schedule">
-            <div class="day-content" id="day1">
-                <h3>January 5, 2025 - Welcome Day</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>6:30 PM</td>
-                            <td>Informal Gathering followed by Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="day-content" id="day2">
-                <h3>January 6, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>10:00 AM - 10:30 AM</td>
-                            <td>Inauguration and Welcome Ceremony</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Lecture by Andre van Schaik</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Lecture by Rajit Manohar</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Repeat similar structure for Day 3 to Day 11 -->
-	
-<!-- Day 3 - Jan 7, 2025-->
-            <div class="day-content" id="day3">
-                <h3>January 7, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Lecture by Ernst Niebur</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Lecture by Chiara Bartolozzi</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Lecture by Abhronil Sengupta</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-			 <tr>
-                            <td>5:00 PM - 6:00 PM</td>
-                            <td>Lecture by S P Arun </td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-
-<!-- Day 4 - Jan 8, 2025-->
-            <div class="day-content" id="day4">
-                <h3>January 8, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Lecture by Jennifer Hasler</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Lecture by Sheng-Yu Peng</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Lecture by Piotr Dudek</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-			    			 <tr>
-                            <td>6:00 PM - 7:00 PM</td>
-                            <td>Lecture by Supratim Ray</td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-<!-- Day 5 - Jan 9, 2025-->
-            <div class="day-content" id="day5">
-                <h3>January 9, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Lecture by Shantanu Chakrabartty</td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Lecture by Arindam Basu</td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Lecture by Barani Raman </td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-
-			<tr>
-                            <td>6:00 PM - 7:00 PM</td>
-                            <td>Lecture by ChandraSekhar Seelamantula</td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-<!-- Day 6 - Jan 10, 2025-->
-            <div class="day-content" id="day6">
-                <h3>January 10, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Lecture by Chiranjib Bhattacharyya</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Lecture by Dhireesha Kudithipudi</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Lecture by Christian Mayr</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-			    			 <tr>
-                            <td>6:00 PM - 7:00 PM</td>
-                            <td>Lecture by Rishikesh Narayanan</td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-
-
-
-<!-- Day 7 - Jan 11, 2025-->
-
-            <div class="day-content" id="day7">
-                <h3>January 11, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Lecture by Bernabé Linares-Barranco</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Lecture by Johannes Schemmel</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Lecture by Elisa Donati</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-			 <tr>
-                            <td>6:00 PM - 7:00 PM</td>
-                            <td>Lecture by Hardik J Pandya</td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-<!-- Day 8 - Jan 12, 2025-->
-
-           <div class="day-content" id="day8">
-                <h3>January 12, 2025 - Activity Day</h3>
-            </div>
-
-<!-- Day 9 - Jan 13, 2025-->
-
-                     <div class="day-content" id="day9">
-                <h3>January 13, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Lecture by Apoorva D Patel</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Lecture by Tobi Delbruck</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Lecture by Tetsuya Yagi</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-			    			 <tr>
-                            <td>6:00 PM - 7:00 PM</td>
-                            <td>Lecture by Shridhar Devarajan </td>
-                            <td>Lecture Hall DESE</td>
-                        </tr>
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-<!-- Day 10 - Jan 14, 2025-->
-
-     <div class="day-content" id="day10">
-                <h3>January 14, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering Auditorium</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering Auditorium</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Main Building Lecture Hall</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering Auditorium</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>2:00 PM onwards</td>
-                            <td>Group Activity</td>
-                            <td>Department of Electronic Systems Engineering</td>
-                        </tr>
-                        <tr>
-                            <td>7:30 PM onwards</td>
-                            <td>Dinner</td>
-                            <td>Main Guest House</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-
-
-<!-- Day 11 - Jan 15, 2025-->
-
-     <div class="day-content" id="day11">
-                <h3>January 15, 2025</h3>
-                <table class="schedule-table">
-                    <thead>
-                        <tr>
-                            <th>Time</th>
-                            <th>Activity</th>
-                            <th>Venue</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>8:00 AM - 9:00 AM</td>
-                            <td>Breakfast</td>
-                            <td>Respective Guest House</td>
-                        </tr>
-                        <tr>
-                            <td>9:30 AM - 10:30 AM</td>
-                            <td>Presentation </td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>10:30 AM - 11:30 AM</td>
-                            <td>Presentation</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>11:30 AM - 12:00 PM</td>
-                            <td>Tea Break</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>12:00 PM - 1:00 PM</td>
-                            <td>Presentation</td>
-                            <td>Faculty Hall Main Building</td>
-                        </tr>
-                        <tr>
-                            <td>1:00 PM - 2:00 PM</td>
-                            <td>Lunch Break</td>
-                            <td>Main Guest House</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-          
-
-
-        </div>
-    </div>
-</section>
-
-
-
-<div class="registration-section">
-    <section id="Registration-section">
-        <div class="content">
-            	<div class="heading">
-        <h2><u>Registration Guidelines</u></h2>
-	</div>
-            <p>Registration is required to attend all events and sessions. Follow the guidelines below to secure your spot.</p>
-            
-            <div class="details">
-                <p><strong>Application Period:</strong> Aug 1 - Sept 15, 2024</p>
-                <p><strong>Notification of Acceptance:</strong> By Oct 1, 2024</p>
-                <p><strong>Eligibility:</strong> Open to senior Masters, PhD students, postdocs, and industrial researchers.</p>
-                <p><strong>Application Process:</strong> Complete the registration form. Applicants must upload a CV (maximum of two pages) including academic achievements, CGPA, and publications, and an Expression of Interest (limited to one page) outlining their current research areas, the themes in the workshop they are interested in, any specific problem statement they wish to address during the workshop, and details of two references.  </p>
-                <p><strong>Selection Process:</strong> 
-				The selection committee will create a preliminary list of applicants and send emails to the 
-				references of students for uploading letters of recommendation within 15 days of application submission. 
-				The final list of accepted and waitlisted candidates will be announced by October 1, 2024, 
-				after receiving the letters of recommendation (LoRs).  
-				</p>
-
-                <p><strong>Note:</strong>  The selection process described above is only for students. This process does not apply to industrial researchers, who are only required to fill out the Google form and upload their CV and Expression of Interest</p>
-            </div>
-            
-			<div class="button-container">
-                <a href="" class="btn">REGISTRATION CLOSED</a>
-            </div>
-        </div>
-    </section>
-</div>
-
-<section class="Travel-Housing" id="Travel-Housing-section">
-    <div class="content">
-        <div class="heading">
-            <h2>Travel and Housing Information</h2>
-            <p>Details on how to reach the venue and accommodation arrangements for participants.</p>
-        </div>
-        <div class="travel-info">
-		<div class="heading">
-            <h2>Travel Information</h2>
-			        </div>
-            <div class="travel-grid">
-                <div class="travel-method">
-                    <h4>By Air:</h4>
-                    <p>The nearest airport is <strong>Kempegowda International Airport (BLR)</strong>, located approximately 35 km from IISc. Taxis and airport shuttle services are readily available.</p>
-                </div>
-                <div class="travel-method">
-                    <h4>By Train:</h4>
-                    <p>The nearest major railway station is <strong>Bengaluru City Railway Station (SBC)</strong>, about 7 km from IISc. Auto-rickshaws and taxis are available for a short ride to the campus.</p>
-                </div>
-                <div class="travel-method">
-                    <h4>By Bus:</h4>
-                    <p>The nearest major bus station is <strong>Majestic (Kempegowda Bus Station)</strong>, approximately 7 km from IISc. From there, you can take a taxi or auto-rickshaw to reach the campus.</p>
-                </div>
-                <div class="travel-method">
-                    <h4>By Metro:</h4>
-                    <p>The nearest metro station is <strong>Sandal Soap Factory</strong> on the Green Line, about 3 km from IISc. You can take an auto-rickshaw or taxi from the metro station to the campus.</p>
-                </div>
-            </div>
-            <p>Cab services like Ola, Uber, and Blusmart are widely available in Bengaluru, providing convenient travel options from the airport and other locations.</p>
-        </div>
-        <div class="housing-info">
-		<div class="heading">
-            <h2>Housing Information</h2>
-			        </div>
-            <div class="housing-grid">
-                <div class="housing-details">
-                    <p>Participants of the workshop will be accommodated at one of the guest houses within the IISc campus. The available accommodations are:</p>
-                    <ul>
-                        <li><strong>Centenary Visitors House (CVH)</strong></li>
-                        <li><strong>Hoysala</strong></li>
-                        <li><strong>Main Guest House (MGH)</strong></li>
-                    </ul>
-                </div>
-                <div class="housing-details">
-                    <p>Participants will be provided with single rooms. Detailed accommodation information will be sent to participants via email.</p>
-                    <p>Lunch and dinner will be provided at the workshop venue, while participants are encouraged to have breakfast at either CVH or the Main Guest House.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<section class="Sponsors" id="Sponsors-section">
-    <div class="heading">
-        <h2><u>Sponsors</u></h2>
-        <p>The success of this workshop is attributed to the following esteemed sponsors.</p>
-    </div>
-    <div class="sponsor-logos">
-        <div class="sponsor-logo">
-            <img src="./images/iisc.png" alt="Indian Institute Of Science">
-        </div>
-		
-        <div class="sponsor-logo">
-            <img src="./images/kotak.png" alt="Kotak AI ML">
-        </div>
-				<div class="sponsor-logo">
-            <img src="./images/Sasken.png" alt="Sasken">
-        </div>
-		<div class="sponsor-logo">
-            <img src="./images/TalentSprint-Logo-PNG.png" alt="Talentsprints">
-        </div>
-        <div class="sponsor-logo">
-            <img src="./images/Prathiksha_trust.png" alt="Pratiksha Trust">
-        </div>
-        <div class="sponsor-logo">
-            <img src="./images/CBR.png" alt="Centre For Brain Research">
-        </div>
-
-    </div>
-</section>
-
-
-
-    <div class="tourist-preview">
-	<div class="heading">
-        <h2><u>Discover Bangalore and Beyond</u></h2>
-	</div>
-        <p>Explore the rich tapestry of culture, history, and natural beauty in Bangalore and its surroundings. From the architectural splendor of Bangalore Palace to the serene landscapes of Nandi Hills, there's something for everyone. Venture further to experience the royal heritage of Mysore or the tranquil retreats of Ooty.</p>
-        <a href="full_tourist_info.html" class="btn">Explore More</a>
-    </div>
-	
-<footer class="footer">
-    <div class="container">
-        <div class="heading">
-            <h2>Contact Us</h2>
-            			<p>NeuRonICS Lab, 2nd floor, Department of Electronic Systems Engineering,<br> IISc, Bangalore, Karnataka, India.</p>
-            <p>Email: neuronicslabdese@gmail.com</p>
-			<p>We look forward to your participation in making this workshop a success and contributing to the advancements in neuromorphic engineering. </p>
-		</div>          
-    </div>
-</footer>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
-    <script src="./index.js"></script>
+  </footer>
 </body>
 </html>
