@@ -733,8 +733,13 @@ main {
 }
 
 .committee {
+  background-color: #ffffff;
+}
+
+.committee {
+    
     background: #ffffff; /* Set background color of the committee section to white */
-    padding: 3rem 0 1rem 0; 
+    padding: 0rem 0 0rem 0; 
 }
 
 .committee .heading {
