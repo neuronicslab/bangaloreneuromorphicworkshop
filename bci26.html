@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain-Computer Interfaces (BCI25)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #941236;
+        }
+
+        h2, h3 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section p, .section ul {
+            margin-left: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 15px;
+            background-color: #941236;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-link:hover {
+            background-color: #bd8185;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">Back to Home</a>
+        <h1>Brain-Computer Interfaces (BCI25)</h1>
+
+        <div class="section">
+            <h2>Topic Leaders</h2>
+            <ul>
+                <li>Arindam Basu, City University of Hong Kong</li>
+                <li>Pao-Sheng Vincent Sun, City University of Hong Kong</li>
+				<li> Sridhar Devarajan, Indian Institute of Science </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Goals</h2>
+            <p>The BCI (Brain-Computer Interface) work group focuses on advancing intra-cortical Brain-Machine Interfaces (iBMIs) by addressing key challenges such as mobility and usability. We aim to develop wireless systems to eliminate the need for wired connections, reducing infection risks and enhancing patient mobility. To overcome scalability limitations, we are exploring data compression techniques like compressive sensing (CS) and autoencoders (AE) to enable recording from up to 10,000 neurons. By integrating neuromorphic engineering, we leverage low-power, real-time processing and spiking neural networks (SNNs) that align closely with biological signals. Our projects include developing advanced control systems for prosthetics, enhancing neural decoding algorithms, and creating iBMIs for converting imagined speech to assist those with speech disorders. We also address the challenges of power dissipation and data rates in wireless iBMIs, focusing on sustainable, long-term solutions such as improved battery life and thermal management in cortical implants.</p>
+        </div>
+
+        <div class="section">
+            <h2>Broad Project Themes</h2>
+            <ul>
+                <li>Discussing the entire signal processing chain and its requirements for a typical iBMI system.</li>
+                <li>Exploring level-crossing sampling systems and applying them to pre-recorded neuronal signals.</li>
+                <li>Performing SPICE simulation of the signal acquisition frontend with Level Crossing sampling.</li>
+                <li>Brainstorming novel neural decoding algorithms and comparing their implementations on pre-recorded datasets using Neurobench.</li>
+                <li>Developing microprocessor and FPGA-based implementations of these decoders for visual/auditory attention tasks with potential extensions to closed-loop decoding setups.</li>
+                <li>Investigating solutions to overcome data rate and power dissipation challenges in wireless iBMIs.</li>
+                <li>Brainstorming data compression techniques to support large-scale neural recordings. Comparing various compression methods for their efficacy and scalability.</li>
+                <li>Utilizing spiking neural networks (SNNs) for efficient neural data compression and processing.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
