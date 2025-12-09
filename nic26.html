@@ -4,106 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neuromorphic Integrated Circuits (NIC26)</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f4f4f4;
+            background: #f7f7f7;
             color: #333;
         }
 
         .container {
-            width: 80%;
-            margin: 0 auto;
-            overflow: hidden;
-            padding: 20px;
+            max-width: 900px;
+            margin: 40px auto;
             background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin-top: 20px;
-        }
-
-        h1 {
-            text-align: center;
-            color: #941236;
-        }
-
-        h2, h3 {
-            color: #333;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        .section {
-            margin-bottom: 20px;
-        }
-
-        .section p, .section ul {
-            margin-left: 20px;
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
         }
 
         .back-link {
             display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 15px;
+            margin-bottom: 25px;
+            padding: 10px 18px;
             background-color: #941236;
             color: #fff;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: 0.25s ease;
         }
 
         .back-link:hover {
             background-color: #bd8185;
         }
 
-        @media only screen and (max-width: 768px) {
-            .container {
-                width: 90%;
-                padding: 10px;
-            }
+        h1 {
+            text-align: center;
+            color: #941236;
+            font-size: 2rem;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            font-size: 1.4rem;
+            color: #222;
+            border-left: 4px solid #941236;
+            padding-left: 10px;
+        }
+
+        p {
+            line-height: 1.75;
+            margin-top: 12px;
+            font-size: 1rem;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 25px;
+            margin-top: 12px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        /* Soft highlight areas */
+        .highlight-box {
+            background: #f6eaaf;
+            padding: 18px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 1.6rem; }
+            h2 { font-size: 1.2rem; }
         }
     </style>
 </head>
+
 <body>
     <div class="container">
+
         <a href="index.html" class="back-link">Back to Home</a>
+
         <h1>Neuromorphic Integrated Circuits (NIC26)</h1>
 
         <div class="section">
             <h2>Topic Leaders</h2>
-            <ul>
-                <li>1. Shantanu Chakrabartty, Washington University </li>
-                <li>2. Chetan Singh Thakur, Indian Institute of Science (IISc)</li>
-            </ul>
+            <div class="highlight-box">
+                <ul>
+                    <li>1. Shantanu Chakrabartty, Washington University </li>
+                    <li>2. Chetan Singh Thakur, Indian Institute of Science (IISc)</li>
+                </ul>
+            </div>
         </div>
 
         <div class="section">
             <h2>Goals</h2>
-            <p>The team will investigate cutting-edge neuromorphic designs, components, and devices that can offer a performance advantage over traditional computing platforms such as CPUs and GPUs, with a focus on applications like combinatorial optimization, stochastic simulations, and AI-driven tasks.
-
-We aim to leverage key neuromorphic principles, such as event-based asynchronous processing, mixed-signal computing, stochastic computation, and sparsity-aware design, to develop the next generation of neuromorphic architectures. We will assess how optimization strategies and inherent dynamics can be effectively integrated into neuromorphic hardware, circuits, and systems.</p>
+            <p>
+                The team will investigate cutting-edge neuromorphic designs, components, and devices that can offer a performance advantage over traditional computing platforms such as CPUs and GPUs, with a focus on applications like combinatorial optimization, stochastic simulations, and AI-driven tasks.
+            </p>
+            <p>
+                We aim to leverage key neuromorphic principles, such as event-based asynchronous processing, mixed-signal computing, stochastic computation, and sparsity-aware design, to develop the next generation of neuromorphic architectures. We will assess how optimization strategies and inherent dynamics can be effectively integrated into neuromorphic hardware, circuits, and systems.
+            </p>
         </div>
 
         <div class="section">
             <h2>Broad Project Themes</h2>
-            <ul>
-                <li>• Asynchronous Neuromorphic Accelerators</li>
-                <li>• Analog/Mixed Neuromorphic Accelerators</li>
-                <li>• Neuromorphic Hardware-Algorithm co-design</li>
-                <li>• Event-based sparsity aware architecture</li>
-            </ul>
+            <div class="highlight-box">
+                <ul>
+                    <li>• Asynchronous Neuromorphic Accelerators</li>
+                    <li>• Analog/Mixed Neuromorphic Accelerators</li>
+                    <li>• Neuromorphic Hardware-Algorithm co-design</li>
+                    <li>• Event-based sparsity aware architecture</li>
+                </ul>
+            </div>
         </div>
-        
+
         <div class="section">
             <h2>Proposed Projects</h2>
             <ul>
@@ -113,6 +135,7 @@ We aim to leverage key neuromorphic principles, such as event-based asynchronous
                 <li>• More Project Ideas will be added to this list soon.</li>
             </ul>
         </div>
+
     </div>
 </body>
 </html>
