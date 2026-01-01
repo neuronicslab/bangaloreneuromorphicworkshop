@@ -1486,7 +1486,7 @@ main {
 }
 
 /* Day Content */
-.day-content {
+.day-content1 {
     display: none;
     margin: 20px auto;
     padding: 15px;
@@ -1498,7 +1498,7 @@ main {
     box-sizing: border-box; /* Include padding in width/height */
 }
 
-.day-content h3 {
+.day-content1 h3 {
     color: #941326;
     font-size: 1.5rem; /* Adjust font size for smaller screens */
     font-weight: bold;
@@ -1517,11 +1517,14 @@ main {
 #day8:target,
 #day9:target,
 #day10:target,
-#day11:target {
+#day11:target,
+#day12:target,
+#day13:target {
     display: block;
 }
 
 /* Schedule Table Styling */
+
 .schedule-container {
     overflow-x: auto; /* Add horizontal scrolling for mobile screens */
     margin-top: 20px;
@@ -1546,6 +1549,10 @@ main {
     text-transform: uppercase;
 }
 
+.schedule-table tr {
+    color: black;
+    text-transform: uppercase;
+}
 .schedule-table tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
