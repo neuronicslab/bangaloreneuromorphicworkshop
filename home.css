@@ -499,28 +499,20 @@ body {
   padding: 3.5rem 2.5rem;
 }
 
-/* Organizers: a warmer, richer band so the leads stand out */
+/* Organizers: a soft tinted band so the leads stand out */
 .section--organizers {
-  background: linear-gradient(135deg, #fcefd6 0%, #fae7e3 50%, #f6ead0 100%);
-  border: 1px solid rgba(148, 18, 54, 0.14);
+  background: linear-gradient(135deg, #fbeede 0%, #faece1 100%);
+  border: 1px solid rgba(148, 18, 54, 0.12);
   border-radius: 20px;
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 3.5rem 2.5rem;
 }
-.section--organizers .org-card {
-  background: linear-gradient(180deg, #ffffff 0%, #fff6ee 100%);
-}
-.section--organizers .org-card::before {
-  transform: scaleX(1);            /* accent bar always visible for the leads */
-  height: 5px;
-}
+.section--organizers .org-card { background: #ffffff; }
 .section--organizers .org-photo {
-  width: 140px;
-  height: 140px;
-  box-shadow: 0 8px 24px rgba(148, 18, 54, 0.22);
+  width: 138px;
+  height: 138px;
 }
-.section--organizers .org-card h3 { font-size: 1.18rem; margin-top: 0.2rem; }
 .section-head { max-width: 700px; margin-bottom: 3.5rem; }
 .kicker {
   font-family: var(--font-mono);
@@ -765,21 +757,18 @@ body {
   border-radius: 50%;
   overflow: hidden;
   position: relative;
-  padding: 4px;
-  background: linear-gradient(135deg, var(--maroon) 0%, var(--cream) 100%);
 }
-.org-photo::after { /* inner ring to separate photo from gradient backing */
+.org-photo::after { /* thin maroon ring */
   content: "";
   position: absolute;
-  inset: 4px;
+  inset: 0;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 0 0 3px var(--maroon);
 }
 .org-photo img {
   width: 100%; height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 50%;
 }
 .org-card h3 {
   font-family: var(--font-display);
@@ -797,9 +786,22 @@ body {
 .org-card h3 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.2s;
+  background-image: linear-gradient(var(--maroon), var(--maroon));
+  background-size: 0% 2px;
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  transition: color 0.2s, background-size 0.25s var(--ease);
+  padding-bottom: 2px;
 }
-.org-card h3 a:hover { color: var(--maroon); }
+.org-card h3 a:hover {
+  color: var(--maroon);
+  background-size: 100% 2px;
+}
+.org-card h3 a:focus-visible {
+  outline: 2px solid var(--maroon);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
 
 /* committee: more, smaller cards, centered rows */
 .org-grid--committee {
