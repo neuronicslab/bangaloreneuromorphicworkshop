@@ -498,6 +498,29 @@ body {
   margin-bottom: 1rem;
   padding: 3.5rem 2.5rem;
 }
+
+/* Organizers: a warmer, richer band so the leads stand out */
+.section--organizers {
+  background: linear-gradient(135deg, #fcefd6 0%, #fae7e3 50%, #f6ead0 100%);
+  border: 1px solid rgba(148, 18, 54, 0.14);
+  border-radius: 20px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 3.5rem 2.5rem;
+}
+.section--organizers .org-card {
+  background: linear-gradient(180deg, #ffffff 0%, #fff6ee 100%);
+}
+.section--organizers .org-card::before {
+  transform: scaleX(1);            /* accent bar always visible for the leads */
+  height: 5px;
+}
+.section--organizers .org-photo {
+  width: 140px;
+  height: 140px;
+  box-shadow: 0 8px 24px rgba(148, 18, 54, 0.22);
+}
+.section--organizers .org-card h3 { font-size: 1.18rem; margin-top: 0.2rem; }
 .section-head { max-width: 700px; margin-bottom: 3.5rem; }
 .kicker {
   font-family: var(--font-mono);
