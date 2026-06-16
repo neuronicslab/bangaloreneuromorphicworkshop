@@ -657,48 +657,22 @@ body {
 }
 
 /* ============================================================
-   About — intro + journey timeline
+   About BNEW — intro + identity pillars
    ============================================================ */
 .about-layout {
   display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 4rem;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3.5rem;
   align-items: start;
 }
 .about-intro { position: sticky; top: 90px; }
 .about-lead {
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.12rem;
+  line-height: 1.75;
   color: #4a423d;
   margin: 0.4rem 0 1.8rem;
 }
 .about-pills { display: flex; flex-wrap: wrap; gap: 0.6rem; }
-.about-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin: 0 0 1.8rem;
-  padding: 1.4rem 0;
-  border-top: 1px solid rgba(148, 18, 54, 0.18);
-  border-bottom: 1px solid rgba(148, 18, 54, 0.18);
-}
-.about-stat-num {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 2.1rem;
-  line-height: 1;
-  color: var(--maroon);
-}
-.about-stat-label {
-  display: block;
-  margin-top: 0.4rem;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-}
 .about-pill {
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -710,81 +684,147 @@ body {
   border-radius: 50px;
 }
 
-/* vertical journey timeline */
-.journey {
+/* identity pillar cards */
+.about-pillars { display: flex; flex-direction: column; gap: 1.2rem; }
+.pillar-card {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.6rem 1.7rem;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s;
+}
+.pillar-card:hover {
+  transform: translateX(4px);
+  box-shadow: 0 14px 32px rgba(148, 18, 54, 0.12);
+  border-color: rgba(148, 18, 54, 0.28);
+}
+.pillar-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 11px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--maroon), var(--maroon-bright));
+  color: var(--cream);
+  vertical-align: middle;
+  margin-right: 0.9rem;
+}
+.pillar-icon svg { width: 24px; height: 24px; }
+.pillar-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.7rem;
+}
+.pillar-card h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.pillar-card p {
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   How BNEW has grown — edition timeline with stats
+   ============================================================ */
+.growth {
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
+  max-width: 760px;
 }
-.journey::before {           /* the connecting line */
+.growth::before {            /* connecting line through the year markers */
   content: "";
   position: absolute;
-  left: 7px;
-  top: 8px;
-  bottom: 8px;
+  left: 39px;
+  top: 12px;
+  bottom: 12px;
   width: 2px;
-  background: linear-gradient(180deg, var(--maroon), rgba(148, 18, 54, 0.15));
+  background: linear-gradient(180deg, var(--maroon), rgba(148, 18, 54, 0.2));
 }
-.journey-step {
+.growth-step {
   position: relative;
-  padding: 0 0 2.2rem 2.5rem;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1.6rem;
+  padding-bottom: 1.4rem;
 }
-.journey-step:last-child { padding-bottom: 0; }
-.journey-step::before {      /* node marker */
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--paper);
-  border: 3px solid var(--maroon);
+.growth-step:last-child { padding-bottom: 0; }
+.growth-marker { display: flex; justify-content: center; }
+.growth-year {
+  position: relative;
   z-index: 1;
-}
-.journey-step--now::before {
-  background: var(--maroon);
-  box-shadow: 0 0 0 5px rgba(148, 18, 54, 0.15);
-}
-.journey-year {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-mono);
-  font-size: 0.74rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
   color: var(--maroon);
-  display: block;
-  margin-bottom: 0.3rem;
+  background: var(--paper-card);
+  border: 2px solid var(--maroon);
 }
-.journey-step h3 {
+.growth-step--now .growth-year {
+  color: #fff;
+  background: var(--maroon);
+  box-shadow: 0 0 0 6px rgba(148, 18, 54, 0.14);
+}
+.growth-body {
+  background: var(--paper-card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.6rem 1.8rem;
+  flex: 1;
+}
+.growth-step--now .growth-body {
+  border-color: rgba(148, 18, 54, 0.3);
+  box-shadow: 0 14px 34px rgba(148, 18, 54, 0.12);
+}
+.growth-body h3 {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.24rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
-.journey-step p {
+.growth-body p {
   color: var(--muted);
-  font-size: 0.97rem;
-  line-height: 1.6;
-  max-width: 46ch;
+  font-size: 0.98rem;
+  line-height: 1.65;
+  margin-bottom: 1.3rem;
 }
-.journey-step--now h3 { color: var(--maroon); }
-.journey-chips {
+.growth-stats {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 0.9rem;
+  gap: 2.2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--line);
 }
-.journey-chips span {
+.growth-num {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--maroon);
+}
+.growth-lbl {
+  display: block;
+  margin-top: 0.4rem;
   font-family: var(--font-mono);
   font-size: 0.68rem;
   letter-spacing: 0.06em;
-  color: #6b625b;
-  background: var(--paper-card);
-  border: 1px solid var(--line);
-  padding: 0.3rem 0.7rem;
-  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--muted);
 }
+.growth-cta { margin-top: 0.3rem; }
 
 /* ============================================================
    Mission — maroon full-bleed band
@@ -1045,6 +1085,10 @@ body {
   .mission-net { order: -1; }
   .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .about-intro { position: static; }
+  .growth-step { grid-template-columns: 56px 1fr; gap: 1rem; }
+  .growth-year { width: 56px; height: 56px; font-size: 0.82rem; }
+  .growth::before { left: 27px; }
+  .growth-stats { gap: 1.4rem; }
   .announce { padding: 1.3rem; }
   .announce-inner { flex-direction: column; text-align: center; gap: 0.8rem; }
   .mission-stats { gap: 2.2rem; }
