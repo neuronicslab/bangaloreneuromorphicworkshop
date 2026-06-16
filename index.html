@@ -28,16 +28,49 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">About</a></li>
-      <li><a href="#growth">Story</a></li>
-      <li><a href="#mission">Mission</a></li>
-      <li><a href="#themes">Themes</a></li>
-      <li><a href="#organizers">Organizers</a></li>
-      <li><a href="#committee">Committee</a></li>
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          About <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#about">About BNEW</a></li>
+          <li><a href="#mission">Mission</a></li>
+          <li><a href="#growth">How BNEW has grown</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          Program <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#themes">Themes</a></li>
+          <li><a href="#watch">Lectures</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          People <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="#organizers">Organizers</a></li>
+          <li><a href="#committee">Steering Committee</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          Editions <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="bnew2025.html">BNEW 2025</a></li>
+          <li><a href="bnew2026.html">BNEW 2026</a></li>
+        </ul>
+      </li>
       <li><a href="#register">Register</a></li>
-      <li><a href="bnew2025.html">2025</a></li>
-      <li><a href="bnew2026.html">2026</a></li>
-      <li><a href="impact.html" class="nav-cta">Impact</a></li>
+      <li><a href="research-outcomes.html" class="nav-cta">Research Outcomes</a></li>
     </ul>
   </nav>
 
@@ -58,7 +91,6 @@
         </div>
         <div class="hero-actions">
           <a href="#register" class="btn btn-primary">Register for 2027</a>
-          <a href="#organizers" class="btn btn-ghost">Meet the organizers</a>
         </div>
       </div>
 

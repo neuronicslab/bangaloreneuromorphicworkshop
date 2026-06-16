@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Outcomes | BNEW Bangalore Neuromorphic Engineering Workshop</title>
+  <meta name="description" content="Publications and research outcomes connected to the Bangalore Neuromorphic Engineering Workshop (BNEW), including work by participants and organizers in neuromorphic engineering." />
+  <meta name="author" content="NeuRonICS Lab, IISc Bangalore" />
+  <link rel="stylesheet" href="home.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="site-nav">
+    <a class="brand" href="index.html">
+      <span class="brand-row">
+        <span class="brand-mark">BNEW</span>
+        <span class="brand-year">2027</span>
+      </span>
+      <span class="brand-tag">Neuromorphic Engineering</span>
+    </a>
+    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
+            onclick="const n=document.getElementById('navLinks');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          About <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="index.html#about">About BNEW</a></li>
+          <li><a href="index.html#mission">Mission</a></li>
+          <li><a href="index.html#growth">How BNEW has grown</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          Program <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="index.html#themes">Themes</a></li>
+          <li><a href="index.html#watch">Lectures</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          People <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="index.html#organizers">Organizers</a></li>
+          <li><a href="index.html#committee">Steering Committee</a></li>
+        </ul>
+      </li>
+      <li class="has-dropdown">
+        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
+                onclick="this.closest('.has-dropdown').classList.toggle('open')">
+          Editions <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <ul class="dropdown">
+          <li><a href="bnew2025.html">BNEW 2025</a></li>
+          <li><a href="bnew2026.html">BNEW 2026</a></li>
+        </ul>
+      </li>
+      <li><a href="index.html#register">Register</a></li>
+      <li><a href="research-outcomes.html" class="nav-cta">Research Outcomes</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page hero -->
+  <header class="ro-hero">
+    <div class="ro-hero-inner">
+      <div class="kicker"><span class="spike-mark"></span>Research Outcomes</div>
+      <h1>Research that grew out of BNEW</h1>
+      <p class="ro-lead">
+        The Bangalore Neuromorphic Engineering Workshop brings researchers together to learn,
+        build, and collaborate. The publications below reflect work by our community across
+        neuromorphic circuits, event-based sensing, and brain-computer interfaces.
+      </p>
+      <div class="ro-stats">
+        <div class="ro-stat"><span class="ro-stat-num">5</span><span class="ro-stat-label">Publications</span></div>
+        <div class="ro-stat"><span class="ro-stat-num">3</span><span class="ro-stat-label">Research areas</span></div>
+        <div class="ro-stat"><span class="ro-stat-num">2025&ndash;26</span><span class="ro-stat-label">Recent work</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Publications -->
+  <section class="section" id="publications">
+    <div class="section-head">
+      <div class="kicker"><span class="spike-mark"></span>Publications</div>
+      <h2>Selected publications</h2>
+      <p class="section-sub">Peer-reviewed papers, conference proceedings, and preprints connected to the BNEW community.</p>
+    </div>
+
+    <ol class="pub-list">
+      <li class="pub-card">
+        <span class="pub-index">01</span>
+        <div class="pub-body">
+          <h3>Higher-order neuromorphic Ising machines: autoencoders and Fowler&ndash;Nordheim annealers are all you need for scalability</h3>
+          <p class="pub-authors">Ahsan F, Maiti S, Chen Z, Kaiser J, Nandi A, Srivatsav M, Schemmel J, Andreou AG, Eshraghian J, Thakur CS, Chakrabartty S</p>
+          <div class="pub-meta">
+            <span class="pub-venue">Nature Communications</span>
+            <span class="pub-dot"></span>
+            <span class="pub-year">2026</span>
+            <span class="pub-badge pub-badge--journal">Journal</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <span class="pub-index">02</span>
+        <div class="pub-body">
+          <h3>Asynchronous high-speed tracking of astronomical objects using a neuromorphic camera for edge computing</h3>
+          <p class="pub-authors">Yadav SS, Adithya MD, Seelamantula CS, Thakur CS</p>
+          <div class="pub-meta">
+            <span class="pub-venue">ICASSP 2026, IEEE International Conference on Acoustics, Speech and Signal Processing (pp. 19517&ndash;19521)</span>
+            <span class="pub-dot"></span>
+            <span class="pub-year">2026</span>
+            <span class="pub-badge pub-badge--conf">Conference</span>
+          </div>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <span class="pub-index">03</span>
+        <div class="pub-body">
+          <h3>When routers, switches and interconnects compute: a processing-in-interconnect paradigm for scalable neuromorphic AI</h3>
+          <p class="pub-authors">Srivatsav M, Bhattacharyya C, Chakrabartty S, Thakur CS</p>
+          <div class="pub-meta">
+            <span class="pub-venue">arXiv:2508.19548</span>
+            <span class="pub-dot"></span>
+            <span class="pub-year">2025</span>
+            <span class="pub-badge pub-badge--preprint">Preprint</span>
+          </div>
+          <a class="pub-link" href="https://arxiv.org/abs/2508.19548" target="_blank" rel="noopener">
+            View on arXiv
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <span class="pub-index">04</span>
+        <div class="pub-body">
+          <h3>STEMNIST: spiking tactile extended MNIST neuromorphic dataset</h3>
+          <p class="pub-authors">Tripathi A, Gaishan L, Fu Z, Bartolozzi C, Shi BE, Basu A</p>
+          <div class="pub-meta">
+            <span class="pub-venue">arXiv:2601.01658</span>
+            <span class="pub-dot"></span>
+            <span class="pub-year">2026</span>
+            <span class="pub-badge pub-badge--preprint">Preprint</span>
+          </div>
+          <a class="pub-link" href="https://arxiv.org/abs/2601.01658" target="_blank" rel="noopener">
+            View on arXiv
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </li>
+
+      <li class="pub-card">
+        <span class="pub-index">05</span>
+        <div class="pub-body">
+          <h3>Programmable silicon retina on a pixel processor array</h3>
+          <p class="pub-authors">Lewandowski M, Philip P, Marcireau A, Thakur CS, van Schaik A, Dudek P</p>
+          <div class="pub-meta">
+            <span class="pub-venue">arXiv:2606.08370</span>
+            <span class="pub-dot"></span>
+            <span class="pub-year">2026</span>
+            <span class="pub-badge pub-badge--preprint">Preprint</span>
+          </div>
+          <a class="pub-link" href="https://arxiv.org/abs/2606.08370" target="_blank" rel="noopener">
+            View on arXiv
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Acknowledgement call to action -->
+  <section class="ro-ack" id="acknowledge">
+    <div class="ro-ack-inner">
+      <span class="ro-ack-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
+      </span>
+      <div class="kicker"><span class="spike-mark"></span>Tell us about your work</div>
+      <h2>Did BNEW contribute to your research?</h2>
+      <p>
+        If you have participated in a BNEW workshop and it has contributed to your research, we
+        kindly request that you acknowledge BNEW in your publications and scholarly outputs, and
+        email us so we can record and share these outcomes with the community.
+      </p>
+      <a class="btn btn-primary" href="mailto:bnew.office@gmail.com?subject=BNEW%20Research%20Outcome">Email us your publication</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p><strong>NeuRonICS Lab</strong> · Department of Electronic Systems Engineering · IISc, Bangalore, India</p>
+    <p>Email: <a href="mailto:bnew.office@gmail.com">bnew.office@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
