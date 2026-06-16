@@ -276,21 +276,109 @@
 
     <div class="themes-grid">
       <article class="theme-card">
-        <span class="theme-tag">NIC27</span>
-        <h3>Neuromorphic Integrated Circuits</h3>
-        <p>Exploring novel neuromorphic architectures, circuits, and hardware that demonstrate performance advantages over conventional computing architectures such as CPUs and GPUs.</p>
+        <div class="theme-visual theme-visual--nic" aria-hidden="true">
+          <svg viewBox="0 0 320 130" preserveAspectRatio="xMidYMid meet">
+            <!-- chip package with pins -->
+            <g stroke="currentColor" stroke-width="1.4" opacity="0.45" stroke-linecap="round">
+              <path d="M70 35h-18M70 55h-18M70 75h-18M70 95h-18"/>
+              <path d="M250 35h18M250 55h18M250 75h18M250 95h18"/>
+              <path d="M110 28v-14M160 28v-14M210 28v-14"/>
+              <path d="M110 102v14M160 102v14M210 102v14"/>
+            </g>
+            <rect x="70" y="28" width="180" height="74" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
+            <!-- neurons wired as circuitry inside the die -->
+            <g class="tv-net" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+              <path d="M104 65 H134"/><path d="M158 50 H188"/><path d="M158 80 H188"/><path d="M210 65 H226"/>
+              <path class="tv-edge" d="M104 65 L158 50"/>
+              <path class="tv-edge" d="M104 65 L158 80"/>
+              <path class="tv-edge" d="M158 50 L210 65"/>
+              <path class="tv-edge" d="M158 80 L210 65"/>
+              <!-- dendrite stubs -->
+              <path d="M104 65 l-8 -8M104 65 l-8 8M210 65 l8 -8M210 65 l8 8"/>
+            </g>
+            <g class="tv-neurons" fill="currentColor">
+              <circle cx="104" cy="65" r="6"/>
+              <circle cx="158" cy="50" r="6"/>
+              <circle cx="158" cy="80" r="6"/>
+              <circle cx="210" cy="65" r="6"/>
+            </g>
+          </svg>
+        </div>
+        <div class="theme-body">
+          <span class="theme-tag">NIC27</span>
+          <h3>Neuromorphic Integrated Circuits</h3>
+          <p>Exploring novel neuromorphic architectures, circuits, and hardware that demonstrate performance advantages over conventional computing architectures such as CPUs and GPUs.</p>
+        </div>
       </article>
 
       <article class="theme-card">
-        <span class="theme-tag">EBSC27</span>
-        <h3>Event-based Sensing &amp; Computing</h3>
-        <p>The latest in neuromorphic sensors that mimic the human senses, including dynamic vision sensors, neuromorphic radar, and olfactory sensors, enabling new possibilities for robotics, autonomous systems, healthcare, and the IoT.</p>
+        <div class="theme-visual theme-visual--ebs" aria-hidden="true">
+          <svg viewBox="0 0 320 130" preserveAspectRatio="xMidYMid meet">
+            <!-- moving object emitting light (the scene) -->
+            <circle cx="48" cy="65" r="13" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="48" cy="65" r="4" fill="currentColor"/>
+            <!-- rays of light travelling to the sensor -->
+            <g class="tv-rays" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line class="tv-ray" x1="66" y1="55" x2="150" y2="48"/>
+              <line class="tv-ray" x1="66" y1="65" x2="150" y2="65"/>
+              <line class="tv-ray" x1="66" y1="75" x2="150" y2="82"/>
+            </g>
+            <!-- the sensor: a lens + pixel array (DVS) -->
+            <g class="tv-sensor" stroke="currentColor" stroke-width="2" fill="none">
+              <path d="M150 40 q14 25 0 50" stroke-width="2"/>
+              <rect x="162" y="40" width="50" height="50" rx="5"/>
+              <g class="tv-pixels" stroke-width="1.1" opacity="0.55">
+                <path d="M178 40v50M195 40v50M162 56h50M162 73h50"/>
+              </g>
+            </g>
+            <!-- output: stream of ON/OFF events -->
+            <g class="tv-stream" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="218" y1="65" x2="300" y2="65" stroke-width="1.2" opacity="0.3"/>
+            </g>
+            <g class="tv-events" fill="currentColor">
+              <circle class="tv-ev" cx="236" cy="52" r="3.5"/>
+              <circle class="tv-ev tv-ev--off" cx="252" cy="78" r="3.5"/>
+              <circle class="tv-ev" cx="270" cy="58" r="3.5"/>
+              <circle class="tv-ev tv-ev--off" cx="288" cy="72" r="3.5"/>
+            </g>
+          </svg>
+        </div>
+        <div class="theme-body">
+          <span class="theme-tag">EBSC27</span>
+          <h3>Event-based Sensing &amp; Computing</h3>
+          <p>The latest in neuromorphic sensors that mimic the human senses, including dynamic vision sensors, neuromorphic radar, and olfactory sensors, enabling new possibilities for robotics, autonomous systems, healthcare, and the IoT.</p>
+        </div>
       </article>
 
       <article class="theme-card">
-        <span class="theme-tag">BCI27</span>
-        <h3>Brain&ndash;Computer Interfaces</h3>
-        <p>Unlocking the potential of brain&ndash;computer interfaces through neuromorphic principles, innovative signal-processing algorithms for real-time decoding, and cutting-edge hardware for faster, more accurate communication between brain and machine.</p>
+        <div class="theme-visual theme-visual--bci" aria-hidden="true">
+          <svg viewBox="0 0 320 130" preserveAspectRatio="xMidYMid meet">
+            <!-- brain (left) -->
+            <g class="tv-brain" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M96 44c-9-6-24-3-27 8-9 1-13 12-7 19-4 8 2 18 11 18 2 8 12 12 19 7"/>
+              <path d="M96 44c7-5 18-1 20 8 8 0 13 9 9 16 4 7-1 16-9 17-2 7-11 11-18 6"/>
+              <path d="M96 44v52M84 58c5 2 7 6 6 11M108 60c-5 1-8 5-7 10M88 80c4-1 7 1 8 5"/>
+            </g>
+            <!-- signal bridge -->
+            <g class="tv-link" stroke="currentColor" fill="currentColor">
+              <path class="tv-sig" d="M124 70 H150 l6 -12 6 24 6 -12 H196" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle class="tv-dot" cx="124" cy="70" r="3" stroke="none"/>
+            </g>
+            <!-- compute chip (right) -->
+            <g class="tv-chip" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="200" y="46" width="56" height="48" rx="6"/>
+              <rect x="214" y="60" width="28" height="20" rx="3" stroke-width="1.3" opacity="0.6"/>
+              <g stroke-width="1.4" opacity="0.5" stroke-linecap="round">
+                <path d="M214 46v-8M228 46v-8M242 46v-8M214 94v8M228 94v8M242 94v8M200 60h-8M200 80h-8M256 60h8M256 80h8"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="theme-body">
+          <span class="theme-tag">BCI27</span>
+          <h3>Brain&ndash;Computer Interfaces</h3>
+          <p>Unlocking the potential of brain&ndash;computer interfaces through neuromorphic principles, innovative signal-processing algorithms for real-time decoding, and cutting-edge hardware for faster, more accurate communication between brain and machine.</p>
+        </div>
       </article>
     </div>
   </section>
@@ -436,6 +524,23 @@
           <p>The 2026 edition, with its speakers, topic tracks, and full schedule.</p>
           <span class="past-arrow">View BNEW 2026</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Watch the lectures -->
+  <section class="watch" id="watch">
+    <div class="watch-wrap">
+      <a class="watch-play" href="https://www.youtube.com/@BNEW2025" target="_blank" rel="noopener" aria-label="Watch BNEW lectures on YouTube">
+        <span class="watch-play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+      </a>
+      <div class="watch-text">
+        <div class="kicker"><span class="spike-mark"></span>Lectures</div>
+        <h2>Watch talks from past workshops</h2>
+        <p>Selected talks from past editions are available on our YouTube channel, featuring leading researchers across neuromorphic circuits, event-based sensing, and brain-computer interfaces. Explore the lecture series anytime.</p>
+        <a href="https://www.youtube.com/@BNEW2025" target="_blank" rel="noopener" class="btn btn-primary">Watch on YouTube</a>
       </div>
     </div>
   </section>
