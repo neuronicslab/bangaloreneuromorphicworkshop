@@ -728,6 +728,26 @@ body {
   color: var(--muted);
   text-transform: uppercase;
 }
+.org-card h3 a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.org-card h3 a:hover { color: var(--maroon); }
+
+/* committee: more, smaller cards */
+.org-grid--committee {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+.org-grid--committee .org-photo {
+  width: 104px;
+  height: 104px;
+  margin-bottom: 1rem;
+}
+.org-grid--committee .org-card { padding: 1.8rem 1.2rem; }
+.org-grid--committee .org-card h3 { font-size: 1.02rem; }
+.org-grid--committee .org-card p { font-size: 0.68rem; }
 
 /* ============================================================
    Past workshops
