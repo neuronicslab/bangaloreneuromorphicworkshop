@@ -981,5 +981,26 @@
     }
   })();
   </script>
+  <script>
+  /* ---- Mobile nav: close the menu after a destination is chosen -----
+     The dropdown toggle buttons keep working (they expand submenus
+     inline); only the actual links close the menu and reveal the
+     section underneath. Harmless on desktop, where the menu is always
+     open and the .open class has no effect. */
+  (function () {
+    var nav = document.getElementById('navLinks');
+    if (!nav) return;
+    var burger = document.querySelector('.hamburger');
+    nav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        nav.classList.remove('open');
+        if (burger) burger.setAttribute('aria-expanded', 'false');
+        nav.querySelectorAll('.has-dropdown.open').forEach(function (d) {
+          d.classList.remove('open');
+        });
+      });
+    });
+  })();
+  </script>
 </body>
 </html>
