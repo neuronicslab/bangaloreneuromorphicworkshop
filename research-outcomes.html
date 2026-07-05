@@ -6,99 +6,276 @@
   <title>Research Outcomes | BNEW Bangalore Neuromorphic Engineering Workshop</title>
   <meta name="description" content="Publications and research outcomes connected to the Bangalore Neuromorphic Engineering Workshop (BNEW), including work by participants and organizers in neuromorphic engineering." />
   <meta name="author" content="NeuRonICS Lab, IISc Bangalore" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar {
+      background-color: #2b2b2b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.25rem;
+      row-gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+    }
+    .nav-links li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .nav-links li a:hover {
+      color: #f6eaaf;
+    }
+    header .logo img {
+      height: 50px;
+    }
+    footer {
+      background-color: #2b2b2b;
+      text-align: center;
+      color: #ffffff;
+      padding: 2rem;
+    }
+    footer a { color: #f6eaaf; }
+
+    /* Page hero */
+    .ro-hero {
+      background-color: #111;
+      padding: 70px 20px 60px;
+      text-align: center;
+    }
+    .ro-hero .kicker {
+      color: #f6eaaf;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    .ro-hero h1 {
+      color: #f6eaaf;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin: 0.6rem 0 1rem;
+    }
+    .ro-hero p {
+      max-width: 780px;
+      margin: 0 auto;
+      color: #eee;
+      line-height: 1.7;
+    }
+    .ro-stats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 2.5rem;
+    }
+    .ro-stat-num {
+      display: block;
+      color: #f6eaaf;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .ro-stat-label {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    /* Publications */
+    .pub-section {
+      background-color: #f6f6f6;
+      color: #000;
+      padding: 60px 20px;
+    }
+    .pub-section h2 {
+      text-align: center;
+      color: #1f1f1f;
+      font-size: 2rem;
+      font-weight: 700;
+      text-decoration: underline;
+      margin-bottom: 0.5rem;
+    }
+    .pub-section .sub {
+      text-align: center;
+      color: #555;
+      max-width: 720px;
+      margin: 0 auto 2.5rem;
+    }
+    .pub-list {
+      list-style: none;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .pub-card {
+      display: flex;
+      gap: 1.25rem;
+      background-color: #f6eaaf;
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+    .pub-index {
+      flex: 0 0 42px;
+      height: 42px;
+      width: 42px;
+      background-color: #941236;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+    .pub-body h3 {
+      color: #1f1f1f;
+      font-size: 1.08rem;
+      margin: 0.15rem 0 0.6rem;
+      line-height: 1.4;
+    }
+    .pub-authors {
+      color: #444;
+      font-size: 0.92rem;
+      margin: 0 0 0.75rem;
+    }
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      color: #941236;
+    }
+    .pub-venue { font-weight: 500; }
+    .pub-dot {
+      width: 5px; height: 5px; border-radius: 50%;
+      background-color: #941236; display: inline-block;
+    }
+    .pub-badge {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.15rem 0.6rem;
+      border-radius: 20px;
+      color: #fff;
+    }
+    .pub-badge--journal { background-color: #941236; }
+    .pub-badge--conf { background-color: #b8562c; }
+    .pub-badge--preprint { background-color: #556; }
+    .pub-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.85rem;
+      color: #941236;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+    .pub-link:hover { text-decoration: underline; }
+    .pub-link svg { width: 14px; height: 14px; }
+
+    /* Acknowledgement CTA */
+    .ro-ack {
+      background-color: #ffffff;
+      color: #000;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .ro-ack-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      background-color: #f6eaaf;
+      border-radius: 18px;
+      padding: 2.75rem 2rem;
+    }
+    .ro-ack .kicker {
+      color: #941236;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
+    }
+    .ro-ack h2 {
+      color: #941236;
+      font-size: 1.6rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .ro-ack p {
+      color: #333;
+      line-height: 1.7;
+      margin: 0 auto 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 26px;
+      background-color: #941236;
+      color: #fff;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="site-nav">
-    <a class="brand" href="index.html">
-      <span class="brand-row">
-        <span class="brand-mark">BNEW</span>
-        <span class="brand-year">2027</span>
-      </span>
-      <span class="brand-tag">Neuromorphic Engineering</span>
-    </a>
-    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-            onclick="const n=document.getElementById('navLinks');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          About <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="index.html#about">About BNEW</a></li>
-          <li><a href="index.html#mission">Mission</a></li>
-          <li><a href="index.html#growth">How BNEW has grown</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          Program <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="index.html#themes">Themes</a></li>
-          <li><a href="index.html#watch">Lectures</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          People <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="index.html#organizers">Organizers</a></li>
-          <li><a href="index.html#committee">Steering Committee</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          Editions <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="bnew2025.html">BNEW 2025</a></li>
-          <li><a href="bnew2026.html">BNEW 2026</a></li>
-        </ul>
-      </li>
-      <li><a href="index.html#register">Register</a></li>
-      <li><a href="research-outcomes.html" class="nav-cta">Research Outcomes</a></li>
-    </ul>
-  </nav>
-
-  <!-- Page hero -->
-  <header class="ro-hero">
-    <div class="ro-hero-inner">
-      <div class="kicker"><span class="spike-mark"></span>Research Outcomes</div>
-      <h1>Research that grew out of BNEW</h1>
-      <p class="ro-lead">
-        The Bangalore Neuromorphic Engineering Workshop brings researchers together to learn,
-        build, and collaborate. The publications below reflect work by our community across
-        neuromorphic circuits, event-based sensing, and brain-computer interfaces.
-      </p>
-      <div class="ro-stats">
-        <div class="ro-stat"><span class="ro-stat-num">5</span><span class="ro-stat-label">Publications</span></div>
-        <div class="ro-stat"><span class="ro-stat-num">3</span><span class="ro-stat-label">Research areas</span></div>
-        <div class="ro-stat"><span class="ro-stat-num">2025&ndash;26</span><span class="ro-stat-label">Recent work</span></div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./images/BNEW_Logo.png" alt="BNEW Logo" />
       </div>
-    </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About BNEW</a></li>
+        <li><a href="index.html#speakers">Speakers</a></li>
+        <li><a href="index.html#organizers">Organizers</a></li>
+        <li><a href="index.html#committee-section">Steering Committee</a></li>
+        <li><a href="bnew2025.html">BNEW 2025</a></li>
+        <li><a href="bnew2026.html">BNEW 2026</a></li>
+        <li><a href="research-outcomes.html">Research Outcomes</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- Publications -->
-  <section class="section" id="publications">
-    <div class="section-head">
-      <div class="kicker"><span class="spike-mark"></span>Publications</div>
-      <h2>Selected publications</h2>
-      <p class="section-sub">Peer-reviewed papers, conference proceedings, and preprints connected to the BNEW community.</p>
+  <!-- Page hero -->
+  <section class="ro-hero">
+    <div class="kicker">Research Outcomes</div>
+    <h1>Research that grew out of BNEW</h1>
+    <p>
+      The Bangalore Neuromorphic Engineering Workshop brings researchers together to learn,
+      build, and collaborate. The publications below reflect work by our community across
+      neuromorphic circuits, event-based sensing, and brain&ndash;computer interfaces.
+    </p>
+    <div class="ro-stats">
+      <div><span class="ro-stat-num">5</span><span class="ro-stat-label">Publications</span></div>
+      <div><span class="ro-stat-num">3</span><span class="ro-stat-label">Research areas</span></div>
+      <div><span class="ro-stat-num">2025&ndash;26</span><span class="ro-stat-label">Recent work</span></div>
     </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="pub-section" id="publications">
+    <h2>Selected Publications</h2>
+    <p class="sub">Peer-reviewed papers, conference proceedings, and preprints connected to the BNEW community.</p>
 
     <ol class="pub-list">
       <li class="pub-card">
@@ -188,25 +365,25 @@
   <!-- Acknowledgement call to action -->
   <section class="ro-ack" id="acknowledge">
     <div class="ro-ack-inner">
-      <span class="ro-ack-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5a2 2 0 0 1 2-2h9l5 5v11a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg>
-      </span>
-      <div class="kicker"><span class="spike-mark"></span>Tell us about your work</div>
+      <div class="kicker">Tell us about your work</div>
       <h2>Did BNEW contribute to your research?</h2>
       <p>
         If you have participated in a BNEW workshop and it has contributed to your research, we
         kindly request that you acknowledge BNEW in your publications and scholarly outputs, and
         email us so we can record and share these outcomes with the community.
       </p>
-      <a class="btn btn-primary" href="mailto:bnew.office@gmail.com?subject=BNEW%20Research%20Outcome">Email us your publication</a>
+      <a class="btn" href="mailto:bnew.office@gmail.com?subject=BNEW%20Research%20Outcome">Email us your publication</a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="site-footer">
-    <p><strong>NeuRonICS Lab</strong> · Department of Electronic Systems Engineering · IISc, Bangalore, India</p>
-    <p>Email: <a href="mailto:bnew.office@gmail.com">bnew.office@gmail.com</a></p>
+  <footer id="contact">
+    <div>
+      <h2 style="color: #f6eaaf;">Contact Us</h2>
+      <p>NeuRonICS Lab, Department of Electronic Systems Engineering,<br />IISc, Bangalore, Karnataka, India.</p>
+      <p>Email: bnew.office@gmail.com</p>
+      <p>We look forward to your participation in BNEW 2027.</p>
+    </div>
   </footer>
-
 </body>
 </html>

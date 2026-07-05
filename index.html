@@ -4,1003 +4,717 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BNEW 2027 | Bangalore Neuromorphic Engineering Workshop</title>
-  <meta name="description" content="Bangalore Neuromorphic Engineering Workshop (BNEW) 2027 at IISc Bangalore. Advanced training in neuromorphic engineering and brain-inspired computing, 04 to 17 January 2027." />
+  <meta name="description" content="Join BNEW 2027 at IISc Bangalore for advanced training in neuromorphic engineering. Explore AI, brain-inspired circuits, and more." />
   <meta name="author" content="NeuRonICS Lab, IISc Bangalore" />
-  <link rel="stylesheet" href="home.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
+  <style>
+    body { 
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+    .navbar {
+      background-color: #2b2b2b;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links li a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+    .nav-links li a:hover {
+      color: #f6eaaf;
+    }
+    header .logo img {
+      height: 50px;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      padding: 2rem;
+      z-index: 2;
+    }
+    .content h1 {
+      color: #f6eaaf;
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .content p {
+      color: #ffffff;
+      max-width: 800px;
+      margin: 1rem auto;
+      font-size: 1rem;
+    }
+    .content h3 {
+      color: #f6eaaf;
+      font-weight: 700;
+    }
+    #background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -2;
+      object-fit: cover;
+    }
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+    section {
+      padding: 4rem 2rem;
+    }
+    .heading h2 {
+      text-align: center;
+      color: #f6eaaf;
+      font-size: 2rem;
+    }
+    .workshop-details h4 {
+      color: #f6eaaf;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #941236;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 10px;
+    }
+    footer {
+      background-color: #2b2b2b;
+      text-align: center;
+      color: #ffffff;
+      padding: 2rem;
+    }
+    /* --- layout tidy-ups (2027) --- */
+    .navbar { flex-wrap: wrap; gap: 1rem; }
+    .nav-links { flex-wrap: wrap; gap: 1.25rem; row-gap: 0.5rem; }
+
+    /* Organizers: keep all four on one row on desktop */
+    #organizers .workshop-details { max-width: 1300px !important; gap: 1.5rem !important; }
+    #organizers .workshop-content { width: auto !important; flex: 1 1 220px !important; max-width: 300px; }
+    @media (max-width: 1000px) { #organizers .workshop-content { flex-basis: 45% !important; } }
+    @media (max-width: 620px)  { #organizers .workshop-content { flex-basis: 100% !important; } }
+
+    /* Speakers: center every row, including a lone last card */
+    #speakers .speaker-grid { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 24px; }
+    #speakers .speaker-card { width: 260px; box-sizing: border-box; }
+
+    /* Steering Committee: neat 5-per-row so 10 members form two even rows */
+    .committee .course-details2 { width: calc(20% - 20px); }
+    @media (max-width: 1200px) { .committee .course-details2 { width: calc(33.33% - 20px); } }
+    @media (max-width: 768px)  { .committee .course-details2 { width: calc(50% - 20px); } }
+    @media (max-width: 576px)  { .committee .course-details2 { width: calc(100% - 20px); } }
+  </style>
 </head>
 <body>
-
-  <!-- Navbar -->
-  <nav class="site-nav">
-    <a class="brand" href="index.html">
-      <span class="brand-row">
-        <span class="brand-mark">BNEW</span>
-        <span class="brand-year">2027</span>
-      </span>
-      <span class="brand-tag">Neuromorphic Engineering</span>
-    </a>
-    <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false"
-            onclick="const n=document.getElementById('navLinks');n.classList.toggle('open');this.setAttribute('aria-expanded',n.classList.contains('open'))">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="nav-links" id="navLinks">
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          About <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="#about">About BNEW</a></li>
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#growth">How BNEW has grown</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          Program <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="#themes">Themes</a></li>
-          <li><a href="#watch">Lectures</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          People <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="#speakers">Speakers</a></li>
-          <li><a href="#organizers">Organizers</a></li>
-          <li><a href="#committee">Steering Committee</a></li>
-        </ul>
-      </li>
-      <li class="has-dropdown">
-        <button class="nav-top" aria-haspopup="true" aria-expanded="false"
-                onclick="this.closest('.has-dropdown').classList.toggle('open')">
-          Editions <svg class="nav-chevron" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <ul class="dropdown">
-          <li><a href="bnew2025.html">BNEW 2025</a></li>
-          <li><a href="bnew2026.html">BNEW 2026</a></li>
-        </ul>
-      </li>
-      <li><a href="#register">Register</a></li>
-      <li><a href="research-outcomes.html" class="nav-cta">Research Outcomes</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <div class="hero-grid">
-      <div class="hero-inner">
-        <div class="hero-eyebrow"><span class="spike-mark"></span>Bangalore · IISc · Asia-Pacific</div>
-        <h1>Bangalore Neuromorphic <span class="accent">Engineering Workshop</span></h1>
-        <p class="hero-lead">
-          Two weeks at IISc Bangalore, building the future of brain-inspired computing.
-          A sister workshop to Telluride and Capo Caccia, carrying their legacy of
-          discovery to a new generation of engineers.
-        </p>
-        <div class="hero-meta">
-          <span class="date-pill"><span class="date-dot"></span>04/01/2027 to 17/01/2027</span>
-          <span class="venue">Indian Institute of Science, Bangalore</span>
-        </div>
-        <div class="hero-actions">
-          <a href="#register" class="btn btn-primary">Register for 2027</a>
-        </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="./images/BNEW 2027.png" alt="BNEW Logo" />
       </div>
-
-      <!-- Silicon neuron: a chip whose traces grow into dendrites.
-           Circuit near the die (vias, right-angle traces) becoming organic
-           tendrils at the tips. Spikes flow in, the core integrates and
-           fires, a shockwave radiates out. No labels — the form carries it. -->
-      <div class="hero-net" aria-hidden="true">
-        <svg class="neuron-chip" viewBox="0 0 560 560">
-          <defs>
-            <filter id="nglow" x="-60%" y="-60%" width="220%" height="220%">
-              <feGaussianBlur stdDeviation="3" result="b"/>
-              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-            </filter>
-            <radialGradient id="coreGrad" cx="50%" cy="50%" r="50%">
-              <stop offset="0%"  stop-color="#fff7d8"/>
-              <stop offset="45%" stop-color="#f6eaaf"/>
-              <stop offset="100%" stop-color="#c0224c"/>
-            </radialGradient>
-            <radialGradient id="dieSheen" cx="35%" cy="30%" r="80%">
-              <stop offset="0%"  stop-color="rgba(246,234,175,0.10)"/>
-              <stop offset="100%" stop-color="rgba(246,234,175,0)"/>
-            </radialGradient>
-            <linearGradient id="traceGrad" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%"  stop-color="rgba(246,234,175,0.55)"/>
-              <stop offset="100%" stop-color="rgba(246,234,175,0.18)"/>
-            </linearGradient>
-          </defs>
-
-          <g class="dendrites"></g>   <!-- built by script -->
-          <g class="spikes-in"></g>   <!-- inputs travelling toward core -->
-
-          <!-- the die (chip body) -->
-          <g class="die">
-            <rect class="die-body"  x="210" y="210" width="140" height="140" rx="20"/>
-            <rect class="die-sheen" x="210" y="210" width="140" height="140" rx="20"/>
-            <rect class="die-inner" x="228" y="228" width="104" height="104" rx="14"/>
-            <rect class="die-inner die-inner2" x="244" y="244" width="72" height="72" rx="10"/>
-            <!-- internal circuit traces -->
-            <path class="die-trace" d="M280,244 V228 M280,316 V332 M244,280 H228 M316,280 H332"/>
-            <path class="die-trace" d="M256,256 L246,246 M304,256 L314,246 M256,304 L246,314 M304,304 L314,314"/>
-            <!-- corner marks -->
-            <path class="mark" d="M222,222 h13 M222,222 v13"/>
-            <path class="mark" d="M338,222 h-13 M338,222 v13"/>
-            <path class="mark" d="M222,338 h13 M222,338 v-13"/>
-            <path class="mark" d="M338,338 h-13 M338,338 v-13"/>
-          </g>
-
-          <!-- glowing core + fire shockwave (on top) -->
-          <circle class="shockwave" cx="280" cy="280" r="0"/>
-          <circle class="core" cx="280" cy="280" r="12" fill="url(#coreGrad)" filter="url(#nglow)"/>
-          <g class="spikes-out"></g>  <!-- output spikes radiating after a fire -->
-        </svg>
-      </div>
-      </div>
-    </div>
-
-    <!-- Signature: a spike train (action potentials) along the hero floor -->
-    <svg class="spike-trace" viewBox="0 0 1440 130" preserveAspectRatio="none" aria-hidden="true">
-      <line class="trace-baseline" x1="0" y1="96" x2="1440" y2="96" />
-      <polyline class="trace-line" points="0,96 180,96 190,96 198,30 206,96 360,96 370,96 378,44 386,96 540,96 550,96 558,22 566,96 720,96 730,96 738,50 746,96 900,96 910,96 918,34 926,96 1080,96 1090,96 1098,26 1106,96 1260,96 1270,96 1278,40 1286,96 1440,96" />
-      <circle class="live-dot" cx="1440" cy="96" r="5" />
-    </svg>
+            <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About BNEW</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#committee-section">Steering Committee</a></li>
+        <li><a href="bnew2025.html">BNEW 2025</a></li>
+        <li><a href="bnew2026.html">BNEW 2026</a></li>
+        <li><a href="research-outcomes.html">Research Outcomes</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-
-  <!-- 2027 announcement -->
-  <section class="announce">
-    <div class="announce-inner">
-      <span class="announce-tag"><span class="live-dot-led"></span>Now Open · 2027</span>
-      <div class="ticker" aria-label="BNEW 2027 announcement">
-        <div class="ticker-track">
-          <span class="ticker-item">BNEW 2027 at IISc Bangalore</span>
-          <span class="ticker-sep"></span>
-          <span class="ticker-item">04/01/2027 to 17/01/2027</span>
-          <span class="ticker-sep"></span>
-          <span class="ticker-item">Two weeks of talks, hands-on sessions &amp; projects</span>
-          <span class="ticker-sep"></span>
-          <span class="ticker-item">Registration opening soon</span>
-          <span class="ticker-sep"></span>
-          <!-- duplicate for seamless loop -->
-          <span class="ticker-item">BNEW 2027 at IISc Bangalore</span>
-          <span class="ticker-sep"></span>
-          <span class="ticker-item">04/01/2027 to 17/01/2027</span>
-          <span class="ticker-sep"></span>
-          <span class="ticker-item">Two weeks of talks, hands-on sessions &amp; projects</span>
-          <span class="ticker-sep"></span>
-          <span class="ticker-item">Registration opening soon</span>
-          <span class="ticker-sep"></span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section class="section" id="about">
-    <div class="section-head section-head--center">
-      <div class="kicker"><span class="spike-mark"></span>About BNEW</div>
-      <h2>A workshop built to grow a community</h2>
-      <p class="section-sub">
-        Neuromorphic engineering has thrived in the US and Europe, nurtured for decades by
-        workshops like Telluride and Capo Caccia. BNEW brings that same hands-on training,
-        mentorship, and collaboration to the Asia-Pacific region, equipping a new generation
-        to design brain-inspired hardware.
+  <main>
+    <video autoplay muted loop id="background-video">
+      <source src="./videos/iisc.mp4" type="video/mp4" />
+    </video>
+    <div class="video-overlay"></div>
+    <div class="content">
+      <h1>Bangalore Neuromorphic Engineering Workshop</h1>
+      <p>
+        Be part of a global movement shaping the future of neuromorphic engineering.
+As a sister workshop to the renowned Telluride and Capo Caccia programs, this initiative brings their legacy of innovation and collaboration to the Asia-Pacific region. Our mission is to equip the next generation with essential skills in neuromorphic engineering and drive forward global progress in the field.
       </p>
+      <h3>January 4 - January 17, 2027</h3>
+      <h3>Venue: Indian Institute of Science, Bangalore</h3>
     </div>
+  </main>
 
-    <div class="feature-grid">
-      <article class="feature-card">
-        <span class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 9l10 6 10-6-10-6Z"/><path d="m2 15 10 6 10-6"/></svg>
-        </span>
-        <h3>Immersive training</h3>
-        <p>Two weeks of talks, hands-on sessions, and collaborative projects each January at IISc Bangalore, learning by building real neuromorphic systems.</p>
-      </article>
 
-      <article class="feature-card">
-        <span class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-3.5 3.6-6 8-6s8 2.5 8 6"/></svg>
-        </span>
-        <h3>World-class mentors</h3>
-        <p>A sister workshop to Telluride and Capo Caccia, bringing their legacy of innovation and direct mentorship from leading researchers in the field.</p>
-      </article>
 
-      <article class="feature-card">
-        <span class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg>
-        </span>
-        <h3>Three core tracks</h3>
-        <p>Neuromorphic integrated circuits, event-based sensing and computing, and brain-computer interfaces, the cutting edge of brain-inspired hardware.</p>
-      </article>
+<section id="about" style="background-color: #f6f6f6; padding: 60px 20px; color: black;">
+  <div class="heading">
+    <h2 style="color: #1f1f1f; text-align: center; font-size: 2.2rem; font-weight: 700; text-decoration: underline;">About Bangalore Neuromorphic Engineering Workshop</h2>
+  </div>
+  <div class="workshop-details" style="display: flex; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1400px; margin: 40px auto;">
+    <div class="workshop-content" style="background-color: #f6eaaf; border-radius: 20px; padding: 30px; flex: 1 1 300px; max-width: 420px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h4 style="color: #941236; text-align: center; font-size: 1.2rem; font-weight: 700;">Aim and Vision</h4>
+      <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">The Bangalore Neuromorphic Engineering Workshop is designed to provide first-rate training to upcoming researchers in neuromorphic technologies, building upon the legacy of influential workshops like Telluride and Capo Caccia. These workshops have significantly contributed to the development of vibrant research communities in the US and Europe. Our goal is to replicate this success in the Asia-Pacific region. We aim to equip participants with advanced skills in neuromorphic engineering and to enhance the growth of this critical field on an international scale.</p>
     </div>
+    <div class="workshop-content" style="background-color: #f6eaaf; border-radius: 20px; padding: 30px; flex: 1 1 300px; max-width: 420px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h4 style="color: #941236; text-align: center; font-size: 1.2rem; font-weight: 700;">Neuromorphic Engineering Origins</h4>
+      <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">Originating from the innovative work of Carver Mead and Misha Mahowald at Caltech in the 1990s, neuromorphic started with creating brain-like models of neural computation and sensing using traditional VLSI CMOS technologies. The field has expanded to include studies on new memory technologies, development of large-scale spiking neural network chips for advanced computing, and exploring theories of plasticity, learning, and both artificial and natural intelligence.</p>
+    </div>
+    <div class="workshop-content" style="background-color: #f6eaaf; border-radius: 20px; padding: 30px; flex: 1 1 300px; max-width: 420px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+      <h4 style="color: #941236; text-align: center; font-size: 1.2rem; font-weight: 700;">Industry and Academic Impact</h4>
+      <p style="text-align: justify; font-size: 0.95rem; line-height: 1.6;">Today, the field of neuromorphic engineering is experiencing widespread adoption by major corporations such as Samsung, Sony, Intel, and IBM, alongside significant support from governmental funding agencies. Recognized as a promising avenue for developing AI computing technologies, neuromorphic approaches offer potential solutions to the inherent limitations and critical challenges faced by conventional computing systems and deep learning methodologies. By leveraging principles inspired by the brain's architecture, neuromorphic engineering endeavors to revolutionize the landscape of artificial intelligence, paving the way for more efficient, adaptive, and intelligent computing systems.</p>
+    </div>
+  </div>
   </section>
 
-  <!-- How BNEW has grown -->
-  <section class="section section--tint" id="growth">
-    <div class="section-head section-head--center">
-      <h2>How BNEW has grown</h2>
-      <p class="section-sub">From a first gathering to an annual fixture for neuromorphic engineering in the Asia-Pacific.</p>
+<section class="topic-areas">
+  <h2><strong>Topic Areas of BNEW–2027</strong></h2>
+  <p>Get ready for an immersive experience at the Bangalore Neuromorphic Engineering Workshop, where you'll engage in lively discussions, hands-on sessions, and much more, exploring cutting-edge topics like:</p>
+
+  <div class="topics-grid">
+
+    <div class="topic-card">
+      <h3>Neuromorphic Integrated Circuits (NIC27)</h3>
+      <p>Exploring novel neuromorphic architectures, circuits, and hardware that could demonstrate neuromorphic performance advantages when compared to conventional computing architectures like central processing units (CPUs), graphical processing units (GPUs).</p>
     </div>
 
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-node"><span class="timeline-year">2025</span></div>
-        <div class="timeline-card">
-          <h3>The inaugural edition</h3>
-          <p>The first BNEW brought the Telluride and Capo Caccia model to the Asia-Pacific region, with keynote talks, hands-on demonstrations, and collaborative projects.</p>
-          <div class="timeline-stats">
-            <div><span class="timeline-num">75+</span><span class="timeline-lbl">Participants</span></div>
-            <div><span class="timeline-num">25+</span><span class="timeline-lbl">Universities</span></div>
-            <div><span class="timeline-num">15+</span><span class="timeline-lbl">Countries</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="timeline-node"><span class="timeline-year">2026</span></div>
-        <div class="timeline-card">
-          <h3>Growing further</h3>
-          <p>The second edition expanded its reach, drawing more participants and institutions across a wider programme of topic tracks, speakers, and projects.</p>
-          <div class="timeline-stats">
-            <div><span class="timeline-num">14</span><span class="timeline-lbl">Days</span></div>
-            <div><span class="timeline-num">20+</span><span class="timeline-lbl">Lectures</span></div>
-            <div><span class="timeline-num">3</span><span class="timeline-lbl">Tracks</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="timeline-item timeline-item--now">
-        <div class="timeline-node"><span class="timeline-year">2027</span></div>
-        <div class="timeline-card">
-          <h3>The next edition</h3>
-          <p>BNEW returns from 04/01/2027 to 17/01/2027 at IISc Bangalore, training the researchers who will carry the field forward.</p>
-          <div class="timeline-cta">
-            <a href="#register" class="btn btn-primary">Register for 2027</a>
-          </div>
-        </div>
-      </div>
+    <div class="topic-card">
+      <h3>Event-based Sensing and Computing (EBSC27)</h3>
+      <p>Explore the latest developments in neuromorphic sensors that mimic the human senses, including dynamic vision sensors, neuromorphic radar, olfactory sensors, and more. These innovative sensors are transforming industries and applications by providing more efficient, adaptive, and human-like sensing capabilities, enabling new possibilities for robotics, autonomous systems, healthcare, and the Internet of Things (IoT).</p>
     </div>
+
+    <div class="topic-card">
+      <h3>Brain–Computer Interfaces (BCI27)</h3>
+      <p>Unlock the potential of brain–computer interfaces through the application of neuromorphic principles, innovative signal processing algorithms for real-time decoding, and cutting-edge hardware development, enabling faster and more accurate communication between the human brain and machines.</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+    <section id="organizers" style="background-color: #f6f6f6; padding: 00px -1px; color: black;">
+  <div class="heading">
+    <h2 style="color: #1f1f1f; text-align: center; font-size: 2rem; font-weight: 700; margin-top: 1rem;">Organizers</h2>
+     <p>BNEW is led by a distinguished team of organizers who bring global academic and industry experience to curate the workshop's content and direction.</p>
+  </div>
+  <div class="workshop-details" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 40px auto;">
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/AB.jpg" alt="Arindam Basu" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://scholars.cityu.edu.hk/en/persons/arindam-basu(5bd82af7-4b46-4884-9824-7bf23bd00473).html" target="_blank" style="color: #941236; text-decoration: none;">Arindam Basu</a></h4>
+      <p style="text-align: center;">City University of Hong Kong</p>
+    </div>
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/AVS.jpg" alt="Andre van Schaik" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://research.manchester.ac.uk/en/persons/andré-van-schaik" target="_blank" style="color: #941236; text-decoration: none;">Andre van Schaik</a></h4>
+      <p style="text-align: center;">The University of Manchester, UK</p>
+    </div>
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/CST.jpg" alt="Chetan Singh Thakur" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://eecs.iisc.ac.in/people/chetan-singh-thakur/" target="_blank" style="color: #941236; text-decoration: none;">Chetan Singh Thakur</a></h4>
+      <p style="text-align: center;">Indian Institute of Science, India</p>
+    </div>
+    <div class="workshop-content" style="background-color: #ead3c1; border-radius: 20px; padding: 20px; text-align: center; width: 300px;">
+      <img src="./images/SC.jpg" alt="Shantanu Chakrabartty" style="width: 100%; border-radius: 10px;" />
+      <h4 style="color: #941236; margin-top: 15px;"><a href="https://engineering.wustl.edu/faculty/Shantanu-Chakrabartty.html" target="_blank" style="color: #941236; text-decoration: none;">Shantanu Chakrabartty</a></h4>
+      <p style="text-align: center;">Washington University St. Louis, USA</p>
+    </div>
+  </div>
   </section>
 
-  <!-- Mission -->
-  <section class="mission" id="mission">
-    <div class="mission-wrap">
-      <div class="mission-text">
-        <div class="kicker"><span class="spike-mark"></span>Our Mission</div>
-        <h2>Skills brought together, shared, and carried forward.</h2>
-        <p>
-          BNEW brings researchers from across the world to IISc Bangalore, where expertise
-          converges, mixes, and sparks new collaboration. Our mission is to equip the next
-          generation with essential skills in neuromorphic engineering, and send that knowledge
-          back out to push the boundaries of brain-inspired computing.
+  <section class="committee" id="committee-section">
+    <div class="heading">
+        <h2>Steering Committee</h2>
+        <p>Our Steering Committee consists of renowned experts in neuromorphic engineering who provide guidance and strategic direction for the workshop.</p>
+    </div>
+    <div class="courses2">
+        
+        <div class="course-details2">
+            <img src="./images/TD.jpeg" alt="Tobi Delbruck">
+            <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzQ=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank">Tobi Delbruck</a></h3>
+            <p>ETH Zurich, Switzerland</p>
+        </div>
+        <div class="course-details2">
+            <img src="./images/SCH.jpeg" alt="Shih-Chii Liu">
+            <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzM=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank">Shih-Chii Liu</a></h3>
+            <p>ETH Zurich, Switzerland</p>
+        </div>
+		        <div class="course-details2">
+            <img src="./images/GC.png" alt="Gert Cauwenberghs">
+            <h3><a href="https://jacobsschool.ucsd.edu/node/3271" target="_blank">Gert Cauwenberghs</a></h3>
+            <p>University of California, San Diego, USA</p>
+        </div>
+		        <div class="course-details2">
+            <img src="./images/AA.jpg" alt="Andreas Andreou">
+            <h3><a href="https://engineering.jhu.edu/ece/faculty/andreas-andreou/" target="_blank">Andreas Andreou</a></h3>
+            <p>Johns Hopkins University, USA</p>
+        </div>
+		        <div class="course-details2">
+            <img src="./images/GI.jpeg" alt="Giacomo Indiveri">
+            <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.Nzk0NzU=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank">Giacomo Indiveri</a></h3>
+            <p>ETH Zurich, Switzerland</p>
+        </div>
+		        <div class="course-details2">
+            <img src="./images/REC.jpg" alt="Ralph Etienne-Cummings">
+            <h3><a href="https://engineering.jhu.edu/faculty/ralph-etienne-cummings/" target="_blank">Ralph Etienne-Cummings</a></h3>
+            <p>Johns Hopkins University, USA</p>
+        </div>
+		        <div class="course-details2">
+            <img src="./images/JH.jpeg" alt="Jennifer Hasler">
+            <h3><a href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank">Jennifer Hasler</a></h3>
+            <p>Georgia Tech University, USA</p>
+        </div>
+		        <div class="course-details2">
+            <img src="./images/KB.jpg" alt="Kwabena Boahen">
+            <h3><a href="https://profiles.stanford.edu/kwabena-boahen" target="_blank">Kwabena Boahen</a></h3>
+            <p>Stanford University, USA</p>
+        </div>
+		        <div class="course-details2">
+            <img src="./images/SS.jpg" alt="Shihab Shamma">
+            <h3><a href="https://isr.umd.edu/clark/faculty/476/Shihab-Shamma" target="_blank">Shihab Shamma</a></h3>
+            <p>University of Maryland, USA</p>
+        </div>
+		<div class="course-details2">
+            <img src="./images/RM.jpg" alt="Rajit Manohar">
+            <h3><a href="https://csl.yale.edu/~rajit/" target="_blank">Rajit Manohar</a></h3>
+            <p>Yale University, New Haven, CT, USA</p>
+        </div>
+
+
+	    
+    </div>
+</section>
+
+
+<section class="workshop-structure">
+  <div class="structure-container">
+    <h2 class="structure-title">Workshop Structure</h2>
+    <p class="structure-intro">
+      Immerse yourself in a setting that is as rigorous as it is rewarding, designed to foster innovation and collaboration among participants. Engage with experts and peers to tackle the pressing challenges in neuromorphic engineering.
+    </p>
+
+    <div class="structure-grid">
+      <div class="structure-card">
+        <h3 class="structure-heading">Interactive Sessions and Talks</h3>
+        <p class="structure-text">
+          Experience a series of enlightening talks on topics such as neuromorphic sensing, machine learning, neuroscience and chip design, delivered by leading academicians and industry professionals.
         </p>
-        <div class="mission-stats">
-          <div class="stat"><span class="stat-num">14</span><span class="stat-label">Days of immersion</span></div>
-          <div class="stat"><span class="stat-num">20+</span><span class="stat-label">Expert speakers</span></div>
-          <div class="stat"><span class="stat-num">3</span><span class="stat-label">Core topic tracks</span></div>
-        </div>
       </div>
 
-      <!-- World converging on Bangalore: skills arrive, mix, and radiate back out -->
-      <div class="mission-net" aria-hidden="true">
-        <canvas id="missionMap" width="900" height="480"></canvas>
+      <div class="structure-card">
+        <h3 class="structure-heading">Collaborative Project Work</h3>
+        <p class="structure-text">
+          Work alongside peers in team meetings, scheduled each afternoon, to brainstorm and develop project ideas. Utilize advanced research facilities to shape and refine your innovative solutions.
+        </p>
+      </div>
+
+      <div class="structure-card">
+        <h3 class="structure-heading">Pre-Workshop Preparation</h3>
+        <p class="structure-text">
+          Join the dedicated Slack channel a month before the workshop starts to discuss ideas and form teams. This early engagement is crucial for a head start on project collaboration.
+        </p>
+      </div>
+
+      <div class="structure-card">
+        <h3 class="structure-heading">Key Presentation Milestones</h3>
+        <p class="structure-text">
+          Prepare to present your project progress during an initial review on the 3rd or 4th day of the workshop. Culminate your experience with a final presentation on January 17th, showcasing your team's achievements to the workshop attendees.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Themes 2027 -->
-  <section class="section" id="themes">
-    <div class="section-head">
-      <div class="kicker"><span class="spike-mark"></span>Themes</div>
-      <h2>Topic areas of BNEW 2027</h2>
-      <p class="section-sub">Three core tracks of lively discussion, hands-on sessions, and collaborative projects across cutting-edge neuromorphic engineering.</p>
-    </div>
 
-    <div class="themes-grid">
-      <article class="theme-card">
-        <div class="theme-visual theme-visual--nic" aria-hidden="true">
-          <svg viewBox="0 0 320 130" preserveAspectRatio="xMidYMid meet">
-            <!-- chip package with pins -->
-            <g stroke="currentColor" stroke-width="1.4" opacity="0.45" stroke-linecap="round">
-              <path d="M70 35h-18M70 55h-18M70 75h-18M70 95h-18"/>
-              <path d="M250 35h18M250 55h18M250 75h18M250 95h18"/>
-              <path d="M110 28v-14M160 28v-14M210 28v-14"/>
-              <path d="M110 102v14M160 102v14M210 102v14"/>
-            </g>
-            <rect x="70" y="28" width="180" height="74" rx="8" fill="none" stroke="currentColor" stroke-width="2"/>
-            <!-- neurons wired as circuitry inside the die -->
-            <g class="tv-net" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
-              <path d="M104 65 H134"/><path d="M158 50 H188"/><path d="M158 80 H188"/><path d="M210 65 H226"/>
-              <path class="tv-edge" d="M104 65 L158 50"/>
-              <path class="tv-edge" d="M104 65 L158 80"/>
-              <path class="tv-edge" d="M158 50 L210 65"/>
-              <path class="tv-edge" d="M158 80 L210 65"/>
-              <!-- dendrite stubs -->
-              <path d="M104 65 l-8 -8M104 65 l-8 8M210 65 l8 -8M210 65 l8 8"/>
-            </g>
-            <g class="tv-neurons" fill="currentColor">
-              <circle cx="104" cy="65" r="6"/>
-              <circle cx="158" cy="50" r="6"/>
-              <circle cx="158" cy="80" r="6"/>
-              <circle cx="210" cy="65" r="6"/>
-            </g>
-          </svg>
-        </div>
-        <div class="theme-body">
-          <span class="theme-tag">NIC27</span>
-          <h3>Neuromorphic Integrated Circuits</h3>
-          <p>Exploring novel neuromorphic architectures, circuits, and hardware that demonstrate performance advantages over conventional computing architectures such as CPUs and GPUs.</p>
-        </div>
-      </article>
 
-      <article class="theme-card">
-        <div class="theme-visual theme-visual--ebs" aria-hidden="true">
-          <svg viewBox="0 0 320 130" preserveAspectRatio="xMidYMid meet">
-            <!-- moving object emitting light (the scene) -->
-            <circle cx="48" cy="65" r="13" fill="none" stroke="currentColor" stroke-width="2"/>
-            <circle cx="48" cy="65" r="4" fill="currentColor"/>
-            <!-- rays of light travelling to the sensor -->
-            <g class="tv-rays" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <line class="tv-ray" x1="66" y1="55" x2="150" y2="48"/>
-              <line class="tv-ray" x1="66" y1="65" x2="150" y2="65"/>
-              <line class="tv-ray" x1="66" y1="75" x2="150" y2="82"/>
-            </g>
-            <!-- the sensor: a lens + pixel array (DVS) -->
-            <g class="tv-sensor" stroke="currentColor" stroke-width="2" fill="none">
-              <path d="M150 40 q14 25 0 50" stroke-width="2"/>
-              <rect x="162" y="40" width="50" height="50" rx="5"/>
-              <g class="tv-pixels" stroke-width="1.1" opacity="0.55">
-                <path d="M178 40v50M195 40v50M162 56h50M162 73h50"/>
-              </g>
-            </g>
-            <!-- output: stream of ON/OFF events -->
-            <g class="tv-stream" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-              <line x1="218" y1="65" x2="300" y2="65" stroke-width="1.2" opacity="0.3"/>
-            </g>
-            <g class="tv-events" fill="currentColor">
-              <circle class="tv-ev" cx="236" cy="52" r="3.5"/>
-              <circle class="tv-ev tv-ev--off" cx="252" cy="78" r="3.5"/>
-              <circle class="tv-ev" cx="270" cy="58" r="3.5"/>
-              <circle class="tv-ev tv-ev--off" cx="288" cy="72" r="3.5"/>
-            </g>
-          </svg>
-        </div>
-        <div class="theme-body">
-          <span class="theme-tag">EBSC27</span>
-          <h3>Event-based Sensing &amp; Computing</h3>
-          <p>The latest in neuromorphic sensors that mimic the human senses, including dynamic vision sensors, neuromorphic radar, and olfactory sensors, enabling new possibilities for robotics, autonomous systems, healthcare, and the IoT.</p>
-        </div>
-      </article>
 
-      <article class="theme-card">
-        <div class="theme-visual theme-visual--bci" aria-hidden="true">
-          <svg viewBox="0 0 320 130" preserveAspectRatio="xMidYMid meet">
-            <!-- brain (left) -->
-            <g class="tv-brain" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M96 44c-9-6-24-3-27 8-9 1-13 12-7 19-4 8 2 18 11 18 2 8 12 12 19 7"/>
-              <path d="M96 44c7-5 18-1 20 8 8 0 13 9 9 16 4 7-1 16-9 17-2 7-11 11-18 6"/>
-              <path d="M96 44v52M84 58c5 2 7 6 6 11M108 60c-5 1-8 5-7 10M88 80c4-1 7 1 8 5"/>
-            </g>
-            <!-- signal bridge -->
-            <g class="tv-link" stroke="currentColor" fill="currentColor">
-              <path class="tv-sig" d="M124 70 H150 l6 -12 6 24 6 -12 H196" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle class="tv-dot" cx="124" cy="70" r="3" stroke="none"/>
-            </g>
-            <!-- compute chip (right) -->
-            <g class="tv-chip" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="200" y="46" width="56" height="48" rx="6"/>
-              <rect x="214" y="60" width="28" height="20" rx="3" stroke-width="1.3" opacity="0.6"/>
-              <g stroke-width="1.4" opacity="0.5" stroke-linecap="round">
-                <path d="M214 46v-8M228 46v-8M242 46v-8M214 94v8M228 94v8M242 94v8M200 60h-8M200 80h-8M256 60h8M256 80h8"/>
-              </g>
-            </g>
-          </svg>
-        </div>
-        <div class="theme-body">
-          <span class="theme-tag">BCI27</span>
-          <h3>Brain&ndash;Computer Interfaces</h3>
-          <p>Unlocking the potential of brain&ndash;computer interfaces through neuromorphic principles, innovative signal-processing algorithms for real-time decoding, and cutting-edge hardware for faster, more accurate communication between brain and machine.</p>
-        </div>
-      </article>
-    </div>
-  </section>
 
-  <!-- Speakers -->
-  <section class="section" id="speakers">
-    <div class="section-head">
-      <div class="kicker"><span class="spike-mark"></span>The Lineup</div>
-      <h2>Speakers</h2>
-      <p class="section-sub">Leading researchers and practitioners across neuromorphic circuits, event-based sensing, and brain-computer interfaces, joining us at IISc Bangalore for BNEW 2027.</p>
-      <span class="update-pill"><span class="live-dot-led"></span>Updated as speakers are confirmed</span>
-    </div>
 
-    <div class="speakers-grid">
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://csl.yale.edu/~rajit/" target="_blank" rel="noopener">Rajit Manohar</a>
-        <p class="speaker-aff">Yale University, USA</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://engineering.washu.edu/faculty/Shantanu-Chakrabartty.html" target="_blank" rel="noopener">Shantanu Chakrabartty</a>
-        <p class="speaker-aff">Washington University in St. Louis, USA</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://scholars.cityu.edu.hk/en/persons/arinbasu" target="_blank" rel="noopener">Arindam Basu</a>
-        <p class="speaker-aff">City University of Hong Kong</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank" rel="noopener">Jennifer Hasler</a>
-        <p class="speaker-aff">Georgia Tech University, USA</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://research.manchester.ac.uk/en/persons/andré-van-schaik" target="_blank" rel="noopener">Andre van Schaik</a>
-        <p class="speaker-aff">University of Manchester, UK</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://krieger.jhu.edu/mbi/directory/ernst-niebur/" target="_blank" rel="noopener">Ernst Niebur</a>
-        <p class="speaker-aff">Johns Hopkins University, USA</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://le.ac.uk/people/tim-pearce" target="_blank" rel="noopener">Tim Pearce</a>
-        <p class="speaker-aff">University of Leicester, UK</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://www.kip.uni-heidelberg.de/people/gruppe.php?action=details&amp;num=298" target="_blank" rel="noopener">Johannes Schemmel</a>
-        <p class="speaker-aff">Heidelberg University, Germany</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://www.fz-juelich.de/profile/neftci_e" target="_blank" rel="noopener">Emre Neftci</a>
-        <p class="speaker-aff">Forschungszentrum Jülich, Germany</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://physics.washu.edu/people/zohar-nussinov" target="_blank" rel="noopener">Zohar Nussinov</a>
-        <p class="speaker-aff">Washington University in St. Louis, USA</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://profiles.ucl.ac.uk/9384-maneesh-sahani" target="_blank" rel="noopener">Maneesh Sahani</a>
-        <p class="speaker-aff">University College London, UK</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://www.cs.washington.edu/people/faculty/rao-rajesh-p-n/" target="_blank" rel="noopener">Rajesh Rao</a>
-        <p class="speaker-aff">University of Washington, USA</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://iece.dee.nycu.edu.tw/teachers.php?pa=getItem&amp;teacher_id=518&amp;locale=en" target="_blank" rel="noopener">Sheng-Yu Peng</a>
-        <p class="speaker-aff">National Yang Ming Chiao Tung University, Taiwan</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://www.engineering.pitt.edu/people/faculty/rajkumar-kubendran/" target="_blank" rel="noopener">Raj Kubendran</a>
-        <p class="speaker-aff">University of Pittsburgh, USA</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://www.linkedin.com/in/alexandre-marcireau-6a634b6b/" target="_blank" rel="noopener">Alexandre Marcireau</a>
-        <p class="speaker-aff">University of Manchester, UK</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://www.iiserpune.ac.in/research/department/biology/people/faculty/regular-faculty/collins-assisi/5" target="_blank" rel="noopener">Collins Assisi</a>
-        <p class="speaker-aff">IISER Pune, India</p>
-      </article>
-      <article class="speaker-card">
-        <a class="speaker-name" href="https://www.ncbs.res.in/faculty/bhalla" target="_blank" rel="noopener">Upinder S. Bhalla</a>
-        <p class="speaker-aff">National Centre for Biological Sciences, India</p>
-      </article>
-      <article class="speaker-card speaker-card--more">
-        <span class="more-title">More to be announced</span>
-        <span class="more-sub">The lineup is updated regularly</span>
-      </article>
-    </div>
-  </section>
+<section class="speakers-section" id="speakers">
+  <div class="speakers-container">
+    <h2 class="speakers-title">Speakers</h2>
+    <p class="speakers-intro">
+      The workshop will feature talks and sessions by leading researchers and pioneers in the field of neuromorphic engineering, joining us at IISc Bangalore for BNEW 2027.
+    </p>
 
-  <!-- Organizers -->
-  <section class="section section--organizers" id="organizers">
-    <div class="section-head">
-      <div class="kicker"><span class="spike-mark"></span>The Team</div>
-      <h2>Organizers</h2>
-      <p class="section-sub">A distinguished team bringing global academic and industry experience.</p>
-    </div>
+    <div class="speaker-grid">
 
-    <div class="org-grid">
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/AB.jpg" alt="Arindam Basu" /></div>
-        <h3><a href="https://scholars.cityu.edu.hk/en/persons/arindam-basu(5bd82af7-4b46-4884-9824-7bf23bd00473).html" target="_blank" rel="noopener">Arindam Basu</a></h3>
-        <p>City University of Hong Kong</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/AVS.jpg" alt="Andre van Schaik" /></div>
-        <h3><a href="https://research.manchester.ac.uk/en/persons/andré-van-schaik" target="_blank" rel="noopener">Andre van Schaik</a></h3>
-        <p>University of Manchester</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/CST.jpg" alt="Chetan Singh Thakur" /></div>
-        <h3><a href="https://eecs.iisc.ac.in/people/chetan-singh-thakur/" target="_blank" rel="noopener">Chetan Singh Thakur</a></h3>
-        <p>IISc Bangalore</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/SC.jpg" alt="Shantanu Chakrabartty" /></div>
-        <h3><a href="https://engineering.wustl.edu/faculty/Shantanu-Chakrabartty.html" target="_blank" rel="noopener">Shantanu Chakrabartty</a></h3>
-        <p>WashU St. Louis</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Steering Committee -->
-  <section class="section section--tint" id="committee">
-    <div class="section-head">
-      <div class="kicker"><span class="spike-mark"></span>Guidance</div>
-      <h2>Steering Committee</h2>
-      <p class="section-sub">Renowned experts in neuromorphic engineering who provide guidance and strategic direction for the workshop.</p>
-    </div>
-
-    <div class="org-grid org-grid--committee">
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/TD.jpeg" alt="Tobi Delbruck" /></div>
-        <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzQ=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank" rel="noopener">Tobi Delbruck</a></h3>
-        <p>ETH Zurich, Switzerland</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/SCH.jpeg" alt="Shih-Chii Liu" /></div>
-        <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.OTIxMzM=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank" rel="noopener">Shih-Chii Liu</a></h3>
-        <p>ETH Zurich, Switzerland</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/GC.png" alt="Gert Cauwenberghs" /></div>
-        <h3><a href="https://jacobsschool.ucsd.edu/node/3271" target="_blank" rel="noopener">Gert Cauwenberghs</a></h3>
-        <p>University of California, San Diego, USA</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/AA.jpg" alt="Andreas Andreou" /></div>
-        <h3><a href="https://engineering.jhu.edu/ece/faculty/andreas-andreou/" target="_blank" rel="noopener">Andreas Andreou</a></h3>
-        <p>Johns Hopkins University, USA</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/GI.jpeg" alt="Giacomo Indiveri" /></div>
-        <h3><a href="https://ee.ethz.ch/the-department/people-a-z/person-detail.Nzk0NzU=.TGlzdC8zMjc5LC0xNjUwNTg5ODIw.html" target="_blank" rel="noopener">Giacomo Indiveri</a></h3>
-        <p>ETH Zurich, Switzerland</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/REC.jpg" alt="Ralph Etienne-Cummings" /></div>
-        <h3><a href="https://engineering.jhu.edu/faculty/ralph-etienne-cummings/" target="_blank" rel="noopener">Ralph Etienne-Cummings</a></h3>
-        <p>Johns Hopkins University, USA</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/JH.jpeg" alt="Jennifer Hasler" /></div>
-        <h3><a href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank" rel="noopener">Jennifer Hasler</a></h3>
-        <p>Georgia Tech University, USA</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/KB.jpg" alt="Kwabena Boahen" /></div>
-        <h3><a href="https://profiles.stanford.edu/kwabena-boahen" target="_blank" rel="noopener">Kwabena Boahen</a></h3>
-        <p>Stanford University, USA</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/SS.jpg" alt="Shihab Shamma" /></div>
-        <h3><a href="https://isr.umd.edu/clark/faculty/476/Shihab-Shamma" target="_blank" rel="noopener">Shihab Shamma</a></h3>
-        <p>University of Maryland, USA</p>
-      </article>
-      <article class="org-card">
-        <div class="org-photo"><img src="./images/RM.jpg" alt="Rajit Manohar" /></div>
-        <h3><a href="https://csl.yale.edu/~rajit/" target="_blank" rel="noopener">Rajit Manohar</a></h3>
-        <p>Yale University, USA</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- What's coming for 2027 -->
-  <section class="section" id="register">
-    <div class="section-head">
-      <div class="kicker"><span class="spike-mark"></span>What's Next</div>
-      <h2>Getting ready for BNEW 2027</h2>
-      <p class="section-sub">Here's what's on the way. Details will be announced over the coming weeks.</p>
-    </div>
-
-    <div class="soon-grid">
-      <article class="soon-card soon-card--lead">
-        <span class="soon-status">Opening soon</span>
-        <h3>Registration</h3>
-        <p>Applications for BNEW 2027 will open soon. Open to senior Master's students, PhD scholars, postdoctoral researchers, and industry professionals.</p>
-        <span class="soon-meta soon-meta--light">Check back here for updates</span>
-      </article>
-
-      <a class="soon-card" href="full_tourist_info.html">
-        <span class="soon-status">Plan ahead</span>
-        <h3>Explore Bangalore</h3>
-        <p>While you are here for BNEW 2027, discover the city's heritage, food, and attractions near IISc Bangalore.</p>
-        <span class="soon-meta">Heritage, food, and things to do</span>
-      </a>
-
-      <article class="soon-card">
-        <span class="soon-status">To be announced</span>
-        <h3>Schedule</h3>
-        <p>The full two-week programme of talks, hands-on sessions, and project work will be published ahead of the workshop.</p>
-        <span class="soon-meta">04/01/2027 to 17/01/2027</span>
-      </article>
-    </div>
-  </section>
-
-  <section class="past">
-    <div class="past-wrap">
-      <div class="kicker"><span class="spike-mark"></span>Archive</div>
-      <h2>Past workshops</h2>
-      <div class="past-grid">
-        <a href="bnew2025.html" class="past-card">
-          <h3>BNEW 2025</h3>
-          <p>The inaugural edition. Talks, projects, and highlights from the first workshop.</p>
-          <span class="past-arrow">View BNEW 2025</span>
+      <div class="speaker-card">
+        <a href="https://personalpages.manchester.ac.uk/staff/steve.furber/" target="_blank" class="speaker-name">
+           Steve Furber
         </a>
-        <a href="bnew2026.html" class="past-card">
-          <h3>BNEW 2026</h3>
-          <p>The 2026 edition, with its speakers, topic tracks, and full schedule.</p>
-          <span class="past-arrow">View BNEW 2026</span>
+        <p class="speaker-affiliation">University of Manchester, UK</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://csl.yale.edu/~rajit/" target="_blank" class="speaker-name">
+           Rajit Manohar
         </a>
+        <p class="speaker-affiliation">Yale University, USA</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://engineering.washu.edu/faculty/Shantanu-Chakrabartty.html" target="_blank" class="speaker-name">
+           Shantanu Chakrabartty
+        </a>
+        <p class="speaker-affiliation">Washington University in St. Louis, USA</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://scholars.cityu.edu.hk/en/persons/arinbasu" target="_blank" class="speaker-name">
+           Arindam Basu
+        </a>
+        <p class="speaker-affiliation">City University of Hong Kong</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank" class="speaker-name">
+           Jennifer Hasler
+        </a>
+        <p class="speaker-affiliation">Georgia Tech University, USA</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://research.manchester.ac.uk/en/persons/andré-van-schaik" target="_blank" class="speaker-name">
+           Andre van Schaik
+        </a>
+        <p class="speaker-affiliation">University of Manchester, UK</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://krieger.jhu.edu/mbi/directory/ernst-niebur/" target="_blank" class="speaker-name">
+           Ernst Niebur
+        </a>
+        <p class="speaker-affiliation">Johns Hopkins University, USA</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://le.ac.uk/people/tim-pearce" target="_blank" class="speaker-name">
+           Tim Pearce
+        </a>
+        <p class="speaker-affiliation">University of Leicester, UK</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.kip.uni-heidelberg.de/people/gruppe.php?action=details&num=298" target="_blank" class="speaker-name">
+           Johannes Schemmel
+        </a>
+        <p class="speaker-affiliation">Heidelberg University, Germany</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.fz-juelich.de/profile/neftci_e" target="_blank" class="speaker-name">
+           Emre Neftci
+        </a>
+        <p class="speaker-affiliation">Forschungszentrum Jülich, Germany</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://physics.washu.edu/people/zohar-nussinov" target="_blank" class="speaker-name">
+           Zohar Nussinov
+        </a>
+        <p class="speaker-affiliation">Washington University in St. Louis, USA</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://profiles.ucl.ac.uk/9384-maneesh-sahani" target="_blank" class="speaker-name">
+           Maneesh Sahani
+        </a>
+        <p class="speaker-affiliation">University College London, UK</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.cs.washington.edu/people/faculty/rao-rajesh-p-n/" target="_blank" class="speaker-name">
+           Rajesh Rao
+        </a>
+        <p class="speaker-affiliation">University of Washington, USA</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://iece.dee.nycu.edu.tw/teachers.php?pa=getItem&teacher_id=518&locale=en" target="_blank" class="speaker-name">
+           Sheng-Yu Peng
+        </a>
+        <p class="speaker-affiliation">National Yang Ming Chiao Tung University, Taiwan</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.engineering.pitt.edu/people/faculty/rajkumar-kubendran/" target="_blank" class="speaker-name">
+           Raj Kubendran
+        </a>
+        <p class="speaker-affiliation">University of Pittsburgh, USA</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.linkedin.com/in/alexandre-marcireau-6a634b6b/" target="_blank" class="speaker-name">
+           Alexandre Marcireau
+        </a>
+        <p class="speaker-affiliation">University of Manchester, UK</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.iiserpune.ac.in/research/department/biology/people/faculty/regular-faculty/collins-assisi/5" target="_blank" class="speaker-name">
+           Collins Assisi
+        </a>
+        <p class="speaker-affiliation">IISER Pune, India</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.ncbs.res.in/faculty/bhalla" target="_blank" class="speaker-name">
+           Upinder S. Bhalla
+        </a>
+        <p class="speaker-affiliation">National Centre for Biological Sciences, India</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://chep.iisc.ac.in/Personnel/adpatel.html" target="_blank" class="speaker-name">
+           Apoorva Patel
+        </a>
+        <p class="speaker-affiliation">Indian Institute of Science, India</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://www.icts.res.in/people/sarthak-chandra" target="_blank" class="speaker-name">
+           Sarthak Chandra
+        </a>
+        <p class="speaker-affiliation">ICTS-TIFR, Bangalore, India</p>
+      </div>
+      <div class="speaker-card">
+        <a href="https://en.wikipedia.org/wiki/Lov_Grover" target="_blank" class="speaker-name">
+           Lov Grover
+        </a>
+        <p class="speaker-affiliation">Bell Labs (retired), USA</p>
+      </div>
+      <div class="speaker-card">
+        <span class="speaker-name">More to be announced</span>
+        <p class="speaker-affiliation">The lineup is updated as speakers are confirmed</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="schedule" style="background-color:#111; color:#fff; padding:60px 20px;">
+  <div class="heading">
+    <h2 style="color:#f6eaaf; text-align:center; font-size:2.2rem; font-weight:700; text-decoration:underline;">Workshop Schedule</h2>
+  </div>
+  <div style="max-width:620px; margin:2.5rem auto 0; background-color:#f6eaaf; border-radius:18px; padding:2.75rem 2rem; text-align:center; box-shadow:0 6px 24px rgba(0,0,0,0.25);">
+    <span style="display:inline-flex; align-items:center; justify-content:center; width:64px; height:64px; background-color:#941236; border-radius:50%; margin-bottom:1.1rem;">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+    </span>
+    <h3 style="color:#941236; font-size:1.5rem; font-weight:700; margin:0 0 0.6rem;">To Be Announced</h3>
+    <p style="color:#1f1f1f; font-size:1rem; line-height:1.6; margin:0;">
+      The full day-by-day schedule for BNEW 2027 (04&nbsp;&ndash;&nbsp;17 January 2027) will be published here closer to the workshop. Please check back soon.
+    </p>
+  </div>
+</section>
+
+<section class="registration-modern">
+  <div class="reg-wrapper">
+    <h2 class="reg-title">Registration Guidelines</h2>
+    <p class="reg-intro">
+      Registration is required to attend all sessions of the Bangalore Neuromorphic Engineering Workshop 2027. Please review the guidelines below.
+      
+    </p>
+
+    <div class="reg-dates">
+      <p><strong>Application Period:</strong> To be announced</p>
+      <p><strong>Notification of Acceptance:</strong> To be announced</p>
+      <p><strong>Registration Fee:</strong> To be announced. Open to senior Master's students, PhD scholars, postdoctoral researchers, and industry professionals.</p>
+    </div>
+
+    <p class="reg-section"><strong>Eligibility:</strong><br>
+      Open to senior Master's students, PhD scholars, postdoctoral researchers, and industry professionals.
+    </p>
+
+    <div class="reg-section">
+      <p><strong>Application Process:</strong></p>
+      <ul>
+        <li>CV (Max 2 pages) highlighting academic achievements, CGPA, and publications</li>
+        <li>Expression of Interest (max 1 page) describing research focus, workshop themes of interest, any specific problem you wish to explore, and names of two references</li>
+      </ul>
+    </div>
+
+    <p class="reg-section"><strong>Selection Process:</strong><br>
+      Shortlisted applicants will have their references contacted within 15 days of submission. Final decisions will be shared after receipt of Letters of Recommendation.
+    </p>
+
+    <p class="reg-section"><strong>Note:</strong><br>
+      Industry applicants do not require Letters of Recommendation. Simply complete the form and upload the required documents.
+    </p>
+
+<div class="reg-button">
+  <a href="#" target="_blank">
+    <button>Registration &mdash; Opening Soon</button>
+  </a>
+</div>
+  </div>
+</section>
+
+<section class="travel-housing" style="background-color: #ffffff; color: #000000; padding: 60px 20px;">
+  <div class="structure-container">
+    <h2 class="structure-title" style="color: #941236;">Travel and Housing Information</h2>
+    <p class="structure-intro" style="text-align: center;">
+      Details on how to reach the venue and accommodation arrangements for participants.
+    </p>
+
+    <!-- Travel Section -->
+    <h3 class="structure-heading" style="color: #941236; text-align: center; margin-top: 2rem; text-decoration: underline; font-size: 1.8rem;">
+      Travel
+    </h3>
+    <div class="structure-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 1rem;">
+      <!-- By Air -->
+      <div class="structure-card" style="background-color: #f6f6f6; color: #000;">
+        <h4 class="structure-heading" style="color: #941236;">By Air</h4>
+        <p class="structure-text">
+          The nearest airport is <strong>Kempegowda International Airport (BLR)</strong>, located ~35 km from IISc. 
+          Taxis and airport shuttle services are readily available.
+        </p>
+      </div>
+
+      <!-- By Train -->
+      <div class="structure-card" style="background-color: #f6f6f6; color: #000;">
+        <h4 class="structure-heading" style="color: #941236;">By Train</h4>
+        <p class="structure-text">
+          The nearest major railway station is <strong>Bengaluru City Railway Station (SBC)</strong>, about 7 km from IISc. 
+          Auto-rickshaws and taxis are available for a short ride to the campus.
+        </p>
+      </div>
+
+      <!-- By Bus -->
+      <div class="structure-card" style="background-color: #f6f6f6; color: #000;">
+        <h4 class="structure-heading" style="color: #941236;">By Bus</h4>
+        <p class="structure-text">
+          The nearest major bus station is <strong>Majestic (Kempegowda Bus Station)</strong>, approximately 7 km from IISc. 
+          From there, you can take a taxi or auto-rickshaw to reach the campus.
+        </p>
+      </div>
+
+      <!-- By Metro -->
+      <div class="structure-card" style="background-color: #f6f6f6; color: #000;">
+        <h4 class="structure-heading" style="color: #941236;">By Metro</h4>
+        <p class="structure-text">
+          The nearest metro station is <strong>Sandal Soap Factory</strong> on the Green Line, about 3 km from IISc. 
+          You can take an auto-rickshaw or taxi from the metro station to the campus.
+        </p>
       </div>
     </div>
-  </section>
 
-  <!-- Watch the lectures -->
-  <section class="watch" id="watch">
-    <div class="watch-wrap">
-      <a class="watch-play" href="https://www.youtube.com/@BNEW2025" target="_blank" rel="noopener" aria-label="Watch BNEW lectures on YouTube">
-        <span class="watch-play-btn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-        </span>
-      </a>
-      <div class="watch-text">
-        <div class="kicker"><span class="spike-mark"></span>Lectures</div>
-        <h2>Watch talks from past workshops</h2>
-        <p>Selected talks from past editions are available on our YouTube channel, featuring leading researchers across neuromorphic circuits, event-based sensing, and brain-computer interfaces. Explore the lecture series anytime.</p>
-        <a href="https://www.youtube.com/@BNEW2025" target="_blank" rel="noopener" class="btn btn-primary">Watch on YouTube</a>
+    <!-- Cab Services Note -->
+    <p class="structure-text" style="text-align: center; margin-top: 1rem; font-style: italic; color: #333;">
+      Cab services like Ola, Uber, and BluSmart are widely available in Bengaluru, 
+      providing convenient travel options from the airport and other locations.
+    </p>
+  </div>
+
+<!-- Housing Info -->
+ <h3 class="structure-heading" style="color: #941236; text-align: center; margin-top: 2rem; text-decoration: underline; font-size: 1.8rem;">
+      Housing
+    </h3>
+<div class="structure-card" 
+     style="margin-top: 2rem; background-color: #f6f6f6; color: #000;
+            max-width: 600px; margin-left: auto; margin-right: auto;">
+  <p class="structure-text">
+    Participants will be accommodated at one of the IISc guest houses: 
+    <strong>Centenary Visitors House (CVH)</strong>, <strong>Hoysala</strong>, or 
+    <strong>Main Guest House (MGH)</strong>. 
+  </p>
+  <p class="structure-text">
+    Single rooms will be provided, with details shared via email.
+  </p>
+  <p class="structure-text">
+    Lunch and dinner will be provided at the workshop venue, 
+    while participants are encouraged to have breakfast at CVH or MGH.
+  </p>
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section id="research" style="background-color:#f6f6f6; color:#000; padding:60px 20px;">
+  <div class="heading">
+    <h2 style="color:#1f1f1f; text-align:center; font-size:2.2rem; font-weight:700; text-decoration:underline;">Research Outcomes</h2>
+  </div>
+  <div style="max-width:820px; margin:1.5rem auto 0; text-align:center;">
+    <p style="font-size:1rem; line-height:1.7; color:#333;">
+      BNEW brings researchers together to learn, build, and collaborate. Explore the peer-reviewed papers, conference proceedings, and preprints produced by our community across neuromorphic circuits, event-based sensing, and brain&ndash;computer interfaces.
+    </p>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2.5rem; margin:2rem 0;">
+      <div><div style="color:#941236; font-size:2rem; font-weight:700;">5</div><div style="color:#555; font-size:0.95rem;">Publications</div></div>
+      <div><div style="color:#941236; font-size:2rem; font-weight:700;">3</div><div style="color:#555; font-size:0.95rem;">Research areas</div></div>
+      <div><div style="color:#941236; font-size:2rem; font-weight:700;">2025&ndash;26</div><div style="color:#555; font-size:0.95rem;">Recent work</div></div>
+    </div>
+    <a href="research-outcomes.html" class="btn" style="display:inline-block; padding:12px 28px; background-color:#941236; color:#fff; text-decoration:none; border-radius:6px; font-weight:600;">View Research Outcomes</a>
+  </div>
+</section>
+
+<section id="lookback" class="previous-bnew" style="background-color: #111; color: white; padding: 60px 20px;">
+  <div class="heading">
+    <h2 style="color: #f6eaaf; text-align: center; font-size: 2.2rem; font-weight: 700;">Look Back at Past Editions</h2>
+  </div>
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <p style="font-size: 1rem; line-height: 1.7; margin: 16px auto 0; max-width: 820px; color: #eee;">
+      Across BNEW 2025 and 2026, the workshop has grown from its inaugural gathering into an annual fixture for brain-inspired computing in the Asia-Pacific &mdash; bringing together researchers, students, and industry professionals for keynote talks, hands-on sessions, and collaborative projects.
+    </p>
+    <div class="carousel" style="position: relative; overflow: hidden; border-radius: 12px; margin: 36px auto; max-width: 1000px;">
+      <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
+        <img src="./images/bnew2025-1.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-2.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-3.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-4.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-5.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/bnew2025-6.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
       </div>
     </div>
-  </section>
+    <div>
+      <a href="bnew2025.html" class="btn" style="display: inline-block; margin: 10px; padding: 12px 24px; background-color: #f6eaaf; color: #111; text-decoration: none; border-radius: 6px; font-weight: 600;">Visit BNEW 2025 Website</a>
+      <a href="bnew2026.html" class="btn" style="display: inline-block; margin: 10px; padding: 12px 24px; background-color: #f6eaaf; color: #111; text-decoration: none; border-radius: 6px; font-weight: 600;">Visit BNEW 2026 Website</a>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p><strong>NeuRonICS Lab</strong> · Department of Electronic Systems Engineering · IISc, Bangalore, India</p>
-    <p>Email: <a href="mailto:bnew.office@gmail.com">bnew.office@gmail.com</a></p>
+<script>
+  const track = document.querySelector('.carousel-track');
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % 6;
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }, 8000);
+</script>
+<section id="youtube" style="background-color:#000; color:#fff; text-align:center; padding:60px 20px;">
+  <div style="max-width:760px; margin:0 auto;">
+    <span style="display:inline-flex; align-items:center; justify-content:center; width:72px; height:72px; background-color:#941236; border-radius:50%; margin-bottom:1rem;">
+      <svg viewBox="0 0 24 24" width="34" height="34" fill="#fff" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    </span>
+    <h2 style="color:#f6eaaf; font-size:2rem; font-weight:700; margin:0.25rem 0;">Watch the Lectures</h2>
+    <p style="color:#eee; line-height:1.6; margin:1rem auto; max-width:640px;">
+      Selected talks from past editions are available on the BNEW YouTube channel, featuring leading researchers across neuromorphic circuits, event-based sensing, and brain&ndash;computer interfaces. Explore the lecture series anytime.
+    </p>
+    <a href="https://www.youtube.com/@BNEW2025" target="_blank" class="btn" style="display:inline-block; margin-top:0.5rem; padding:12px 28px; background-color:#941236; color:#fff; text-decoration:none; border-radius:6px; font-weight:600;">Visit our YouTube Channel</a>
+  </div>
+</section>
+
+
+
+
+
+  <footer id="contact">
+    <div>
+      <h2 style="color: #f6eaaf;">Contact Us</h2>
+      <p>NeuRonICS Lab, Department of Electronic Systems Engineering,<br />IISc, Bangalore, Karnataka, India.</p>
+      <p>Email: bnew.office@gmail.com</p>
+      <p>We look forward to your participation in BNEW 2027.</p>
+    </div>
   </footer>
-
-  <script>
-  /* ---- Silicon neuron --------------------------------------------
-     Procedurally grows a dendritic arbor off a chip die: each branch
-     starts as an axis-aligned circuit trace with a via, then curves
-     into an organic tendril ending in a bouton. A leaky integrate-and-
-     fire core collects incoming spikes, glows as it charges, and emits
-     a radiating shockwave + output spikes when it fires. */
-  (function () {
-    var svg = document.querySelector('.neuron-chip');
-    if (!svg) return;
-    var NS = 'http://www.w3.org/2000/svg';
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    var CX = 280, CY = 280, HALF = 70;     // die half-size
-    var gDend = svg.querySelector('.dendrites');
-    var gIn = svg.querySelector('.spikes-in');
-    var gOut = svg.querySelector('.spikes-out');
-    var core = svg.querySelector('.core');
-    var shock = svg.querySelector('.shockwave');
-
-    function el(tag, attrs) {
-      var e = document.createElementNS(NS, tag);
-      for (var k in attrs) e.setAttribute(k, attrs[k]);
-      return e;
-    }
-    function rand(a, b) { return a + Math.random() * (b - a); }
-
-    // build dendrites: each trunk grows a recursively branching, tapering tree
-    var N = 12;
-    var routes = [];   // full root→leaf paths used for spike travel
-
-    function grow(x, y, ang, len, width, depth, prefix) {
-      // one curved segment
-      var ex = x + Math.cos(ang) * len;
-      var ey = y + Math.sin(ang) * len;
-      var bend = rand(-0.5, 0.5);                       // organic curve
-      var mx = (x + ex) / 2 + Math.cos(ang + Math.PI / 2) * len * bend;
-      var my = (y + ey) / 2 + Math.sin(ang + Math.PI / 2) * len * bend;
-      var seg = ' Q' + mx + ',' + my + ' ' + ex + ',' + ey;
-      var route = prefix + seg;
-
-      gDend.appendChild(el('path', {
-        class: 'd-seg', d: 'M' + x + ',' + y + seg,
-        'stroke-width': width.toFixed(2)
-      }));
-
-      if (depth <= 0) {
-        gDend.appendChild(el('circle', { class: 'd-bouton', cx: ex, cy: ey, r: Math.max(1.6, width * 0.9) }));
-        var rp = el('path', { class: 'route', d: route });
-        gDend.appendChild(rp);
-        routes.push({ path: rp, len: rp.getTotalLength() });
-        return;
-      }
-      // bifurcate (sometimes trifurcate) with a spread of angles
-      var kids = Math.random() < 0.78 ? 2 : (Math.random() < 0.5 ? 1 : 3);
-      var spread = rand(0.35, 0.65);
-      for (var k = 0; k < kids; k++) {
-        var off = kids === 1 ? rand(-0.25, 0.25)
-                             : (k / (kids - 1) - 0.5) * 2 * spread;
-        grow(ex, ey, ang + off + rand(-0.08, 0.08),
-             len * rand(0.68, 0.82), width * 0.66, depth - 1, route);
-      }
-    }
-
-    for (var i = 0; i < N; i++) {
-      var ang = (i / N) * Math.PI * 2 + rand(-0.05, 0.05);
-      var dx = Math.cos(ang), dy = Math.sin(ang);
-      var t = HALF / Math.max(Math.abs(dx), Math.abs(dy));
-      var p0 = { x: CX + dx * t, y: CY + dy * t };          // die-edge exit
-      var nrm = Math.abs(dx) > Math.abs(dy)
-        ? { x: Math.sign(dx), y: 0 } : { x: 0, y: Math.sign(dy) };
-      var via = { x: p0.x + nrm.x * rand(16, 24), y: p0.y + nrm.y * rand(16, 24) };
-
-      // engineering: straight circuit stub + via pad from the die to the trunk base
-      gDend.appendChild(el('path', { class: 'd-stub',
-        d: 'M' + p0.x + ',' + p0.y + ' L' + via.x + ',' + via.y }));
-      gDend.appendChild(el('circle', { class: 'd-via', cx: via.x, cy: via.y, r: 2.6 }));
-
-      // neuron: a tapering branch tree grows outward from the via
-      var outAng = Math.atan2(via.y - CY, via.x - CX);
-      grow(via.x, via.y, outAng, rand(40, 52), 3.4, 3,
-           'M' + via.x + ',' + via.y);
-    }
-
-    var dendrites = routes;   // spikes travel along full root→leaf routes
-
-    // integrate-and-fire state
-    var V = 0, THRESH = 1, LEAK = 0.18, refractory = 0, flash = 0;
-    var inputs = [], outputs = [], wave = null;
-    var emitAcc = 0;
-
-    function pulse(g, cls) { var c = el('circle', { class: cls, r: cls === 'p-out' ? 4.5 : 3.4 }); g.appendChild(c); return c; }
-    function at(el2, path, dist) { var p = path.getPointAtLength(dist); el2.setAttribute('cx', p.x); el2.setAttribute('cy', p.y); }
-
-    function fire() {
-      flash = 1; refractory = 0.16; V = 0;
-      wave = { r: 14, a: 0.8 };
-      for (var k = 0; k < dendrites.length; k++)
-        if (Math.random() < 0.7) outputs.push({ d: dendrites[k], dist: dendrites[k].len, el: pulse(gOut, 'p-out') });
-    }
-
-    var last = performance.now();
-    function frame(now) {
-      var dt = Math.min(0.05, (now - last) / 1000); last = now;
-
-      if (refractory <= 0) { emitAcc += dt * 9; while (emitAcc >= 1) {
-        var d = dendrites[(Math.random() * dendrites.length) | 0];
-        inputs.push({ d: d, dist: d.len, el: pulse(gIn, 'p-in') }); emitAcc -= 1;
-      } } else refractory -= dt;
-
-      // inputs travel inward (tip → core)
-      for (var i = inputs.length - 1; i >= 0; i--) {
-        var s = inputs[i]; s.dist -= rand(150, 210) * dt;
-        if (s.dist <= 0) { V += 0.15 + Math.random() * 0.05; s.el.remove(); inputs.splice(i, 1); }
-        else at(s.el, s.d.path, s.dist);
-      }
-
-      V -= LEAK * dt; if (V < 0) V = 0;
-      if (V >= THRESH && refractory <= 0) fire();
-
-      // outputs travel outward (core → tip)
-      for (var o = outputs.length - 1; o >= 0; o--) {
-        var os = outputs[o]; os.dist += rand(240, 320) * dt;
-        if (os.dist >= os.d.len) { os.el.remove(); outputs.splice(o, 1); }
-        else at(os.el, os.d.path, os.dist);
-      }
-
-      // core glow tracks V; brief flash on fire
-      var rr = 11 + V * 9 + flash * 14;
-      core.setAttribute('r', rr);
-      core.style.opacity = 0.7 + V * 0.3;
-      if (flash > 0) flash = Math.max(0, flash - dt / 0.3);
-
-      // shockwave ring
-      if (wave) {
-        wave.r += 360 * dt; wave.a -= dt / 0.5;
-        if (wave.a <= 0) { wave = null; shock.setAttribute('r', 0); shock.style.opacity = 0; }
-        else { shock.setAttribute('r', wave.r); shock.style.opacity = wave.a; }
-      }
-
-      requestAnimationFrame(frame);
-    }
-
-    if (reduce) {
-      core.setAttribute('r', 16); core.style.opacity = 0.9;
-      dendrites.slice(0, 5).forEach(function (d) { var c = pulse(gIn, 'p-in'); at(c, d.path, d.len * 0.5); });
-    } else {
-      requestAnimationFrame(frame);
-    }
-  })();
-  </script>
-  <script>
-  /* ---- Mission map: the world converges on Bangalore -------------
-     A dotted world map (real Natural Earth land). Skills arrive on
-     glowing arcs from partner institutions worldwide, converge on the
-     IISc Bangalore hub, then radiate back out as new collaboration. */
-  (function () {
-    var cv = document.getElementById('missionMap');
-    if (!cv) return;
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    var ctx = cv.getContext('2d');
-    var W = cv.width, H = cv.height;
-
-    // real land grid (1 = land), equirectangular, generated from Natural Earth
-    var GRID = "0000000000000001001101111101111111111111100000000011000000000000000000000001000000000000000000000000|0000000000000011100111111000000111111111100000000000000000000001000000001111111000000110000000000000|0000000000001111110110110100000011111111000000000000000000000000001000111111111111100011000000000000|0111111101111111110101010011000001111111000000000000111110000000101011111111111111111111111111011000|1111111111111111111111100011110011111000111000000011111111111111111111111111111111111111111111111000|0111111111111111111111000001100001100000000000000111011111111111111111111111111111111111111111111000|1011000111111111111100000111000000000000000000001111000111111111111111111111111111111111110010100000|0010000000111111111111000011110000000000000001000110011111111111111111111111111111111100001100000000|0000000000011111111111110111111000000000000010100111111111111111111111111111111111111100001100000000|0000000000001111111111111111110000000000000001011111111111111111111111111111111111111100000000000000|0000000000001111111111111111100100000000000000111111111111111111111111111111111111111100000000000000|0000000000001111111111111111100000000000000000011101111000110111111111111111111111111010000000000000|0000000000001111111111111110000000000000000011110010111010111011111111111111111111100000000000000000|0000000000000111111111111100000000000000000011100000011111111011111111111111111100100000000000000000|0000000000000111111111111100000000000000000001111100000001111111111111111111111100101100000000000000|0000000000000011111111110000000000000000000011111110010001111111111111111111111110010000000000000000|0000000000000000111100000000000000000000000011111111111111110111111111111111111110000000000000000000|0000000000000000111100001000000000000000000111111111111101111001111111111111111100000000000000000000|0000000000000000011100001000000000000000001111111111111110111110001111111111111000000000000000000000|0001000000000000001100000010000000000000001111111111111110111110000111100111110000000000000000000000|0000000000000000000111000000000000000000001111111111111111011100000111000111100000000000000000000000|0000000000000000000000110000000000000000001111111111111111110000000010000011100001000000000000000000|0000000000000000000000010011000000000000000111111111111111111000000010000010100001000000000000000000|0000000000000000000000000111111000000000000111111111111111111000000001000000000000000000000000000000|0000000000000000000000000111111100000000000000000111111111110000000000000001000100000000000000000000|0000000000000000000000000111111110000000000000000011111111100000000000000001011100000000000000000000|0000000000000000000000001111111111000000000000000011111111000000000000000001001010000100000000000000|0000000000000000000000001111111111111000000000000011111111000000000000000000000010000111000000000000|0000000000000000000000000111111111111000000000000001111111000000000000000000001000000110000100000000|0000000000000000000000000111111111111000000000000001111111000000000000000000000000000000000000000000|0000000000000000000000000011111111110000000000000011111111001000000000000000000000111010000000000000|0000000000000000000000000001111111110000000000000011111111011000000000000000000001111111000000000000|0000000000000000000000000001111111110000000000000001111110010000000000000000000011111111000000000000|0000000000000000000000000001111111000000000000000001111110010000000000000000000111111111100000000000|0000000000000000000000000001111110000000000000000001111100000000000000000000000111111111110000000000|0000000000000000000000000001111110000000000000000000111100000000000000000000000111111111110000000000|0000000000000000000000000001111100000000000000000000111000000000000000000000000111001111100000000000|0000000000000000000000000001111000000000000000000000000000000000000000000000000000000011100000010000|0000000000000000000000000011110000000000000000000000000000000000000000000000000000000000000000001000|0000000000000000000000000011100000000000000000000000000000000000000000000000000000000000000000010000|0000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000100000|0000000000000000000000000011000000000000000000000000000000000000000000000000000000000000000000000000|0000000000000000000000000011001000000000000000000000000000000000000000000000000000000000000000000000|0000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000".split("|");
-    var ROWS = GRID.length, COLS = GRID[0].length;
-    // grid covers this lon/lat window:
-    var GLON0 = -168, GLON1 = 190, GLAT0 = 80, GLAT1 = -56;
-
-    var PAD_X = 6, PAD_Y = 16;
-    function proj(lon, lat) {
-      return {
-        x: PAD_X + (lon - GLON0) / (GLON1 - GLON0) * (W - PAD_X * 2),
-        y: PAD_Y + (GLAT0 - lat) / (GLAT0 - GLAT1) * (H - PAD_Y * 2)
-      };
-    }
-
-    // build dots from the land grid; flag India cells for emphasis
-    var cellW = (W - PAD_X * 2) / COLS, cellH = (H - PAD_Y * 2) / ROWS;
-    var dotR = Math.min(cellW, cellH) * 0.42;
-    var dots = [];
-    for (var r = 0; r < ROWS; r++) {
-      for (var c = 0; c < COLS; c++) {
-        if (GRID[r][c] !== '1') continue;
-        var lon = GLON0 + (GLON1 - GLON0) * (c + 0.5) / COLS;
-        var lat = GLAT0 + (GLAT1 - GLAT0) * (r + 0.5) / ROWS;
-        var india = (lon > 68 && lon < 90 && lat > 7 && lat < 31);
-        dots.push({ x: PAD_X + (c + 0.5) * cellW, y: PAD_Y + (r + 0.5) * cellH, india: india });
-      }
-    }
-
-    // hub + partner origins spread across the globe (real institutions)
-    var hub = proj(77.6, 13.0);                       // IISc Bangalore
-    var origins = [
-      proj(-122.2, 37.4),  // Stanford, USA (west)
-      proj(-90.2, 38.6),   // WashU St. Louis, USA (central)
-      proj(-76.6, 39.3),   // Johns Hopkins, USA (east)
-      proj(-43.2, -22.9),  // Rio, Brazil (S. America)
-      proj(-2.2, 53.5),    // Manchester, UK
-      proj(8.5, 47.4),     // ETH Zurich
-      proj(18.4, -33.9),   // Cape Town (Africa, south)
-      proj(114.2, 22.3),   // City University of Hong Kong
-      proj(120.9, 24.8),   // NYCU, Taiwan
-      proj(139.7, 35.7),   // Tokyo, Japan
-      proj(151.2, -33.8)   // Western Sydney, Australia
-    ];
-
-    function arc(a, b) {
-      var mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
-      var dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy);
-      var nx = -dy / d, ny = dx / d;
-      if (ny > 0) { nx = -nx; ny = -ny; }     // bulge poleward (up)
-      var k = d * 0.26;
-      return { a: a, b: b, cx: mx + nx * k, cy: my + ny * k };
-    }
-    function bez(A, t) {
-      var u = 1 - t;
-      return { x: u*u*A.a.x + 2*u*t*A.cx + t*t*A.b.x,
-               y: u*u*A.a.y + 2*u*t*A.cy + t*t*A.b.y };
-    }
-
-    var arcsIn = origins.map(function (o) { return arc(o, hub); });
-    var inSpikes = [], outSpikes = [], hubPulse = 0, emitAcc = 0, outClock = 0;
-
-    function draw() {
-      ctx.clearRect(0, 0, W, H);
-
-      // dotted world
-      for (var i = 0; i < dots.length; i++) {
-        var d = dots[i];
-        ctx.beginPath();
-        ctx.arc(d.x, d.y, d.india ? dotR * 1.25 : dotR, 0, 6.2832);
-        ctx.fillStyle = d.india ? 'rgba(246,234,175,0.85)' : 'rgba(246,234,175,0.38)';
-        ctx.fill();
-      }
-
-      // inbound arcs + origin nodes
-      ctx.lineWidth = 1;
-      for (var a = 0; a < arcsIn.length; a++) {
-        var A = arcsIn[a];
-        ctx.beginPath();
-        ctx.moveTo(A.a.x, A.a.y);
-        ctx.quadraticCurveTo(A.cx, A.cy, A.b.x, A.b.y);
-        ctx.strokeStyle = 'rgba(246,234,175,0.28)';
-        ctx.stroke();
-        ctx.beginPath(); ctx.arc(A.a.x, A.a.y, 2.6, 0, 6.2832);
-        ctx.fillStyle = 'rgba(246,234,175,0.8)'; ctx.fill();
-      }
-
-      // inbound spikes (cream)
-      for (var s = inSpikes.length - 1; s >= 0; s--) {
-        var sp = inSpikes[s]; sp.t += sp.v / 60;
-        if (sp.t >= 1) { inSpikes.splice(s, 1); hubPulse = 1; continue; }
-        var pt = bez(sp.arc, sp.t);
-        ctx.beginPath(); ctx.arc(pt.x, pt.y, 2.8, 0, 6.2832);
-        ctx.fillStyle = '#fff7e0';
-        ctx.shadowColor = 'rgba(246,234,175,0.95)'; ctx.shadowBlur = 9;
-        ctx.fill(); ctx.shadowBlur = 0;
-      }
-
-      // outbound spikes (maroon)
-      for (var o = outSpikes.length - 1; o >= 0; o--) {
-        var op = outSpikes[o]; op.t += op.v / 60;
-        if (op.t >= 1) { outSpikes.splice(o, 1); continue; }
-        var pp = bez(op.arc, op.t);
-        ctx.beginPath(); ctx.arc(pp.x, pp.y, 2.8, 0, 6.2832);
-        ctx.fillStyle = '#ef6b88';
-        ctx.shadowColor = 'rgba(232,90,122,0.95)'; ctx.shadowBlur = 9;
-        ctx.fill(); ctx.shadowBlur = 0;
-      }
-
-      // hub (Bangalore)
-      var pr = 5 + hubPulse * 6;
-      if (hubPulse > 0) {
-        ctx.beginPath(); ctx.arc(hub.x, hub.y, pr + 7, 0, 6.2832);
-        ctx.strokeStyle = 'rgba(255,180,200,' + (hubPulse * 0.7) + ')';
-        ctx.lineWidth = 2; ctx.stroke();
-        hubPulse = Math.max(0, hubPulse - 1 / 38);
-      }
-      ctx.beginPath(); ctx.arc(hub.x, hub.y, pr, 0, 6.2832);
-      ctx.fillStyle = '#fff3cf';
-      ctx.shadowColor = 'rgba(246,234,175,1)'; ctx.shadowBlur = 16;
-      ctx.fill(); ctx.shadowBlur = 0;
-      ctx.beginPath(); ctx.arc(hub.x, hub.y, pr * 0.5, 0, 6.2832);
-      ctx.fillStyle = '#c0224c'; ctx.fill();
-
-      if (!reduce) {
-        emitAcc += 1 / 60 * 3;
-        while (emitAcc >= 1) {
-          inSpikes.push({ arc: arcsIn[(Math.random()*arcsIn.length)|0], t: 0, v: 0.26 + Math.random()*0.12 });
-          emitAcc -= 1;
-        }
-        outClock += 1 / 60;
-        if (outClock > 2.8) {
-          outClock = 0;
-          for (var q = 0; q < arcsIn.length; q++)
-            if (Math.random() < 0.55)
-              outSpikes.push({ arc: { a: hub, b: arcsIn[q].a, cx: arcsIn[q].cx, cy: arcsIn[q].cy }, t: 0, v: 0.28 + Math.random()*0.12 });
-          hubPulse = 1;
-        }
-        requestAnimationFrame(draw);
-      }
-    }
-
-    if (reduce) {
-      inSpikes = arcsIn.slice(0, 5).map(function (A) { return { arc: A, t: 0.5, v: 0 }; });
-      draw();
-    } else {
-      requestAnimationFrame(draw);
-    }
-  })();
-  </script>
-  <script>
-  /* ---- Mobile nav: close the menu after a destination is chosen -----
-     The dropdown toggle buttons keep working (they expand submenus
-     inline); only the actual links close the menu and reveal the
-     section underneath. Harmless on desktop, where the menu is always
-     open and the .open class has no effect. */
-  (function () {
-    var nav = document.getElementById('navLinks');
-    if (!nav) return;
-    var burger = document.querySelector('.hamburger');
-    nav.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        nav.classList.remove('open');
-        if (burger) burger.setAttribute('aria-expanded', 'false');
-        nav.querySelectorAll('.has-dropdown.open').forEach(function (d) {
-          d.classList.remove('open');
-        });
-      });
-    });
-  })();
-  </script>
 </body>
 </html>
