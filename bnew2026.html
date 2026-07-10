@@ -37,6 +37,17 @@
     .nav-links li a:hover {
       color: #f6eaaf;
     }
+    .nav-links a.current-edition {
+      background-color: #941236;
+      color: #ffffff;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+    .nav-links a.current-edition:hover {
+      background-color: #b21744;
+      color: #ffffff;
+    }
     header .logo img {
       height: 50px;
     }
@@ -118,12 +129,13 @@
         <img src="./images/BNEW 2026.png" alt="BNEW Logo" />
       </div>
       <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#about">About BNEW</a></li>
         <li><a href="#organizers">Organizers</a></li>
+        <li><a href="#speakers">Speakers</a></li>
         <li><a href="#committee-section">Steering Committee</a></li>
-        <li><a href="#bnew2025">BNEW 2025</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="research-outcomes.html">Research Outcomes</a></li>
+        <li><a href="bnew2025.html">BNEW 2025</a></li>
+        <li><a href="bnew2026.html">BNEW 2026</a></li>
+        <li><a href="index.html" class="current-edition">This Edition</a></li>
       </ul>
     </nav>
   </header>
@@ -135,18 +147,15 @@
     <div class="video-overlay"></div>
     <div class="content">
       <h1>Bangalore Neuromorphic Engineering Workshop</h1>
+      <p style="display:inline-block; background-color:#941236; color:#ffffff; padding:0.5rem 1.2rem; border-radius:8px; font-size:1.2rem; font-weight:600; margin:0.5rem auto 1rem;">&#10003; This edition has concluded &mdash; successfully held on January 4&ndash;17, 2026.</p>
       <p>
         Be part of a global movement shaping the future of neuromorphic engineering.
 As a sister workshop to the renowned Telluride and Capo Caccia programs, this initiative brings their legacy of innovation and collaboration to the Asia-Pacific region. Our mission is to equip the next generation with essential skills in neuromorphic engineering and drive forward global progress in the field.
       </p>
-      <h3>January 4 -January 17,  2026</h3>
+      <h3>January 4 &ndash; 17, 2026</h3>
       <h3>Venue: Indian Institute of Science, Bangalore</h3>
     </div>
   </main>
-
-<section id="announcement" style="background-color: #941236; color: white; text-align: center; padding: 1rem 2rem; font-size: 5rem;">
-  <p><strong>BNEW 2026 has successfully concluded.</strong> Thank you to all our participants, speakers, and organizers for making it a memorable workshop.</p>
-</section>
 
 
 <section id="about" style="background-color: #f6f6f6; padding: 60px 20px; color: black;">
@@ -351,7 +360,7 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
 
 
 
-<section class="speakers-section">
+<section class="speakers-section" id="speakers">
   <div class="speakers-container">
     <h2 class="speakers-title">Speakers</h2>
     <p class="speakers-intro">

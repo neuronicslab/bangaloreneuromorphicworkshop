@@ -40,7 +40,7 @@
     header .logo img {
       height: 50px;
     }
-    .content {
+    main .content {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -49,18 +49,18 @@
       padding: 2rem;
       z-index: 2;
     }
-    .content h1 {
+    main .content h1 {
       color: #f6eaaf;
       font-size: 2.5rem;
       font-weight: 700;
     }
-    .content p {
+    main .content p {
       color: #ffffff;
       max-width: 800px;
       margin: 1rem auto;
       font-size: 1rem;
     }
-    .content h3 {
+    main .content h3 {
       color: #f6eaaf;
       font-weight: 700;
     }
@@ -118,16 +118,6 @@
     #organizers .workshop-content { width: auto !important; flex: 1 1 220px !important; max-width: 300px; }
     @media (max-width: 1000px) { #organizers .workshop-content { flex-basis: 45% !important; } }
     @media (max-width: 620px)  { #organizers .workshop-content { flex-basis: 100% !important; } }
-
-    /* Speakers: center every row, including a lone last card */
-    #speakers .speaker-grid { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 24px; }
-    #speakers .speaker-card { width: 260px; box-sizing: border-box; }
-
-    /* Steering Committee: neat 5-per-row so 10 members form two even rows */
-    .committee .course-details2 { width: calc(20% - 20px); }
-    @media (max-width: 1200px) { .committee .course-details2 { width: calc(33.33% - 20px); } }
-    @media (max-width: 768px)  { .committee .course-details2 { width: calc(50% - 20px); } }
-    @media (max-width: 576px)  { .committee .course-details2 { width: calc(100% - 20px); } }
   </style>
 </head>
 <body>
@@ -311,39 +301,33 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
 
 
 <section class="workshop-structure">
-  <div class="structure-container">
-    <h2 class="structure-title">Workshop Structure</h2>
-    <p class="structure-intro">
+  <div class="content">
+    <div class="heading">
+      <h2 style="color:#2c3e50;"><u>Workshop Structure</u></h2>
+    </div>
+    <p>
       Immerse yourself in a setting that is as rigorous as it is rewarding, designed to foster innovation and collaboration among participants. Engage with experts and peers to tackle the pressing challenges in neuromorphic engineering.
     </p>
 
-    <div class="structure-grid">
-      <div class="structure-card">
-        <h3 class="structure-heading">Interactive Sessions and Talks</h3>
-        <p class="structure-text">
-          Experience a series of enlightening talks on topics such as neuromorphic sensing, machine learning, neuroscience and chip design, delivered by leading academicians and industry professionals.
-        </p>
+    <div class="details columns">
+      <div class="column">
+        <h3>Interactive Sessions and Talks</h3>
+        <p>Experience a series of enlightening talks on topics such as neuromorphic sensing, machine learning, neuroscience and chip design, delivered by leading academicians and industry professionals.</p>
       </div>
 
-      <div class="structure-card">
-        <h3 class="structure-heading">Collaborative Project Work</h3>
-        <p class="structure-text">
-          Work alongside peers in team meetings, scheduled each afternoon, to brainstorm and develop project ideas. Utilize advanced research facilities to shape and refine your innovative solutions.
-        </p>
+      <div class="column">
+        <h3>Collaborative Project Work</h3>
+        <p>Work alongside peers in team meetings, scheduled each afternoon, to brainstorm and develop project ideas. Utilize advanced research facilities to shape and refine your innovative solutions.</p>
       </div>
 
-      <div class="structure-card">
-        <h3 class="structure-heading">Pre-Workshop Preparation</h3>
-        <p class="structure-text">
-          Join the dedicated Slack channel a month before the workshop starts to discuss ideas and form teams. This early engagement is crucial for a head start on project collaboration.
-        </p>
+      <div class="column">
+        <h3>Pre-Workshop Preparation</h3>
+        <p>Join the dedicated Slack channel a month before the workshop starts to discuss ideas and form teams. This early engagement is crucial for a head start on project collaboration.</p>
       </div>
 
-      <div class="structure-card">
-        <h3 class="structure-heading">Key Presentation Milestones</h3>
-        <p class="structure-text">
-          Prepare to present your project progress during an initial review on the 3rd or 4th day of the workshop. Culminate your experience with a final presentation on January 17th, showcasing your team's achievements to the workshop attendees.
-        </p>
+      <div class="column">
+        <h3>Key Presentation Milestones</h3>
+        <p>Prepare to present your project progress during an initial review on the 3rd or 4th day of the workshop. Culminate your experience with a final presentation on January 17th, showcasing your team's achievements to the workshop attendees.</p>
       </div>
     </div>
   </div>
@@ -354,149 +338,107 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
 
 
 
-<section class="speakers-section" id="speakers">
-  <div class="speakers-container">
-    <h2 class="speakers-title">Speakers</h2>
-    <p class="speakers-intro">
-      The workshop will feature talks and sessions by leading researchers and pioneers in the field of neuromorphic engineering, joining us at IISc Bangalore for BNEW 2027.
-    </p>
+<div class="Speakers">
+    <section id="speakers">
+        <div class="content">
+            <div class="heading">
+                <h2><u>Speakers</u></h2>
+            </div>
+            <p>The workshop will feature talks and sessions by leading researchers and pioneers in the field of neuromorphic engineering, joining us at IISc Bangalore for BNEW 2027.</p>
+            <div class="speaker-grid">
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://personalpages.manchester.ac.uk/staff/steve.furber/" target="_blank">Steve Furber</a></div>
+                    <div class="speaker-institute">University of Manchester, UK</div>
+                </div>
+                                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://chep.iisc.ac.in/Personnel/adpatel.html" target="_blank">Apoorva Patel</a></div>
+                    <div class="speaker-institute">Indian Institute of Science, India</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.ncbs.res.in/faculty/bhalla" target="_blank">Upinder S. Bhalla</a></div>
+                    <div class="speaker-institute">National Centre for Biological Sciences, India</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://en.wikipedia.org/wiki/Lov_Grover" target="_blank">Lov Grover</a></div>
+                    <div class="speaker-institute">Bell Labs, USA</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://csl.yale.edu/~rajit/" target="_blank">Rajit Manohar</a></div>
+                    <div class="speaker-institute">Yale University, USA</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://engineering.washu.edu/faculty/Shantanu-Chakrabartty.html" target="_blank">Shantanu Chakrabartty</a></div>
+                    <div class="speaker-institute">Washington University in St. Louis, USA</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://scholars.cityu.edu.hk/en/persons/arinbasu" target="_blank">Arindam Basu</a></div>
+                    <div class="speaker-institute">City University of Hong Kong</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank">Jennifer Hasler</a></div>
+                    <div class="speaker-institute">Georgia Tech University, USA</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://research.manchester.ac.uk/en/persons/andré-van-schaik" target="_blank">Andre van Schaik</a></div>
+                    <div class="speaker-institute">University of Manchester, UK</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://krieger.jhu.edu/mbi/directory/ernst-niebur/" target="_blank">Ernst Niebur</a></div>
+                    <div class="speaker-institute">Johns Hopkins University, USA</div>
+                </div>
 
-    <div class="speaker-grid">
-
-      <div class="speaker-card">
-        <a href="https://personalpages.manchester.ac.uk/staff/steve.furber/" target="_blank" class="speaker-name">
-           Steve Furber
-        </a>
-        <p class="speaker-affiliation">University of Manchester, UK</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://csl.yale.edu/~rajit/" target="_blank" class="speaker-name">
-           Rajit Manohar
-        </a>
-        <p class="speaker-affiliation">Yale University, USA</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://engineering.washu.edu/faculty/Shantanu-Chakrabartty.html" target="_blank" class="speaker-name">
-           Shantanu Chakrabartty
-        </a>
-        <p class="speaker-affiliation">Washington University in St. Louis, USA</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://scholars.cityu.edu.hk/en/persons/arinbasu" target="_blank" class="speaker-name">
-           Arindam Basu
-        </a>
-        <p class="speaker-affiliation">City University of Hong Kong</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://ece.gatech.edu/directory/jennifer-olson-hasler" target="_blank" class="speaker-name">
-           Jennifer Hasler
-        </a>
-        <p class="speaker-affiliation">Georgia Tech University, USA</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://research.manchester.ac.uk/en/persons/andré-van-schaik" target="_blank" class="speaker-name">
-           Andre van Schaik
-        </a>
-        <p class="speaker-affiliation">University of Manchester, UK</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://krieger.jhu.edu/mbi/directory/ernst-niebur/" target="_blank" class="speaker-name">
-           Ernst Niebur
-        </a>
-        <p class="speaker-affiliation">Johns Hopkins University, USA</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://le.ac.uk/people/tim-pearce" target="_blank" class="speaker-name">
-           Tim Pearce
-        </a>
-        <p class="speaker-affiliation">University of Leicester, UK</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.kip.uni-heidelberg.de/people/gruppe.php?action=details&num=298" target="_blank" class="speaker-name">
-           Johannes Schemmel
-        </a>
-        <p class="speaker-affiliation">Heidelberg University, Germany</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.fz-juelich.de/profile/neftci_e" target="_blank" class="speaker-name">
-           Emre Neftci
-        </a>
-        <p class="speaker-affiliation">Forschungszentrum Jülich, Germany</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://physics.washu.edu/people/zohar-nussinov" target="_blank" class="speaker-name">
-           Zohar Nussinov
-        </a>
-        <p class="speaker-affiliation">Washington University in St. Louis, USA</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://profiles.ucl.ac.uk/9384-maneesh-sahani" target="_blank" class="speaker-name">
-           Maneesh Sahani
-        </a>
-        <p class="speaker-affiliation">University College London, UK</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.cs.washington.edu/people/faculty/rao-rajesh-p-n/" target="_blank" class="speaker-name">
-           Rajesh Rao
-        </a>
-        <p class="speaker-affiliation">University of Washington, USA</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://iece.dee.nycu.edu.tw/teachers.php?pa=getItem&teacher_id=518&locale=en" target="_blank" class="speaker-name">
-           Sheng-Yu Peng
-        </a>
-        <p class="speaker-affiliation">National Yang Ming Chiao Tung University, Taiwan</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.engineering.pitt.edu/people/faculty/rajkumar-kubendran/" target="_blank" class="speaker-name">
-           Raj Kubendran
-        </a>
-        <p class="speaker-affiliation">University of Pittsburgh, USA</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.linkedin.com/in/alexandre-marcireau-6a634b6b/" target="_blank" class="speaker-name">
-           Alexandre Marcireau
-        </a>
-        <p class="speaker-affiliation">University of Manchester, UK</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.iiserpune.ac.in/research/department/biology/people/faculty/regular-faculty/collins-assisi/5" target="_blank" class="speaker-name">
-           Collins Assisi
-        </a>
-        <p class="speaker-affiliation">IISER Pune, India</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.ncbs.res.in/faculty/bhalla" target="_blank" class="speaker-name">
-           Upinder S. Bhalla
-        </a>
-        <p class="speaker-affiliation">National Centre for Biological Sciences, India</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://chep.iisc.ac.in/Personnel/adpatel.html" target="_blank" class="speaker-name">
-           Apoorva Patel
-        </a>
-        <p class="speaker-affiliation">Indian Institute of Science, India</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://www.icts.res.in/people/sarthak-chandra" target="_blank" class="speaker-name">
-           Sarthak Chandra
-        </a>
-        <p class="speaker-affiliation">ICTS-TIFR, Bangalore, India</p>
-      </div>
-      <div class="speaker-card">
-        <a href="https://en.wikipedia.org/wiki/Lov_Grover" target="_blank" class="speaker-name">
-           Lov Grover
-        </a>
-        <p class="speaker-affiliation">Bell Labs (retired), USA</p>
-      </div>
-      <div class="speaker-card">
-        <span class="speaker-name">More to be announced</span>
-        <p class="speaker-affiliation">The lineup is updated as speakers are confirmed</p>
-      </div>
-
-    </div>
-  </div>
-</section>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://le.ac.uk/people/tim-pearce" target="_blank">Tim Pearce</a></div>
+                    <div class="speaker-institute">University of Leicester, UK</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.kip.uni-heidelberg.de/people/gruppe.php?action=details&amp;num=298" target="_blank">Johannes Schemmel</a></div>
+                    <div class="speaker-institute">Heidelberg University, Germany</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.fz-juelich.de/profile/neftci_e" target="_blank">Emre Neftci</a></div>
+                    <div class="speaker-institute">Forschungszentrum Jülich, Germany</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://physics.washu.edu/people/zohar-nussinov" target="_blank">Zohar Nussinov</a></div>
+                    <div class="speaker-institute">Washington University in St. Louis, USA</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://profiles.ucl.ac.uk/9384-maneesh-sahani" target="_blank">Maneesh Sahani</a></div>
+                    <div class="speaker-institute">University College London, UK</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.cs.washington.edu/people/faculty/rao-rajesh-p-n/" target="_blank">Rajesh Rao</a></div>
+                    <div class="speaker-institute">University of Washington, USA</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://iece.dee.nycu.edu.tw/teachers.php?pa=getItem&amp;teacher_id=518&amp;locale=en" target="_blank">Sheng-Yu Peng</a></div>
+                    <div class="speaker-institute">National Yang Ming Chiao Tung University, Taiwan</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.engineering.pitt.edu/people/faculty/rajkumar-kubendran/" target="_blank">Raj Kubendran</a></div>
+                    <div class="speaker-institute">University of Pittsburgh, USA</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.linkedin.com/in/alexandre-marcireau-6a634b6b/" target="_blank">Alexandre Marcireau</a></div>
+                    <div class="speaker-institute">University of Manchester, UK</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.iiserpune.ac.in/research/department/biology/people/faculty/regular-faculty/collins-assisi/5" target="_blank">Collins Assisi</a></div>
+                    <div class="speaker-institute">IISER Pune, India</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name"><a href="https://www.icts.res.in/people/sarthak-chandra" target="_blank">Sarthak Chandra</a></div>
+                    <div class="speaker-institute">ICTS-TIFR, Bangalore, India</div>
+                </div>
+                <div class="speaker-card">
+                    <div class="speaker-name">More to be announced</div>
+                    <div class="speaker-institute">The lineup is updated as speakers are confirmed</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
 
 
 <section id="schedule" style="background-color:#111; color:#fff; padding:60px 20px;">
@@ -523,8 +465,8 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
     </p>
 
     <div class="reg-dates">
-      <p><strong>Application Period:</strong> To be announced</p>
-      <p><strong>Notification of Acceptance:</strong> To be announced</p>
+      <p><strong>Application Period:</strong> July 10 &ndash; August 20, 2026</p>
+      <p><strong>Notification of Acceptance:</strong> September 1, 2026</p>
       <p><strong>Registration Fee:</strong>The registration fee for BNEW 2027 is $200 + GST for students/postdocs and $500 + GST for faculty/industry participants, payable only after selection </p>
     </div>
 
@@ -668,8 +610,7 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
     </p>
     <div class="carousel" style="position: relative; overflow: hidden; border-radius: 12px; margin: 36px auto; max-width: 1000px;">
       <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
-        <img src="./images/bnew2025-1.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
-        <img src="./images/bnew2025-2.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+                <img src="./images/bnew2025-2.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
         <img src="./images/bnew2025-3.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
         <img src="./images/bnew2025-4.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
         <img src="./images/bnew2025-5.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
@@ -707,6 +648,21 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
 
 
 
+
+  <section class="Sponsors" id="Sponsors-section">
+    <div class="heading">
+      <h2 style="color:#333;"><u>Sponsors</u></h2>
+      <p>The success of this workshop is attributed to the following esteemed sponsors.</p>
+    </div>
+    <div class="sponsor-logos">
+      <div class="sponsor-logo">
+        <img src="./images/iisc.png" alt="Indian Institute of Science">
+      </div>
+      <div class="sponsor-logo">
+        <img src="./images/Prathiksha_trust.png" alt="Pratiksha Trust">
+      </div>
+    </div>
+  </section>
 
   <footer id="contact">
     <div>

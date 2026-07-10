@@ -61,6 +61,63 @@
       }
     }
     </script>
+
+    <!-- Unified navigation bar styling (matches the current edition / index) -->
+    <style>
+      .navbar {
+        position: static;
+        background-color: #2b2b2b;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .nav-links {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        row-gap: 0.5rem;
+        margin-left: auto;
+      }
+      .nav-links li { position: relative; width: auto; }
+      .nav-links a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 1rem;
+        padding: 0;
+        display: inline;
+      }
+      .nav-links a:hover { color: #f6eaaf; background: transparent; }
+      .nav-links a.current-edition {
+        background-color: #941236;
+        color: #ffffff;
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+        font-weight: 700;
+      }
+      .nav-links a.current-edition:hover {
+        background-color: #b21744;
+        color: #ffffff;
+      }
+      .logo img { width: auto; height: 50px; }
+      main { margin-top: 0; }
+
+      /* Keep the nav visible and inline on small screens (no hamburger) */
+      @media (max-width: 768px) {
+        .nav-links {
+          position: static;
+          transform: none;
+          flex-direction: row;
+          width: auto;
+          background: transparent;
+        }
+        .nav-links li { width: auto; }
+      }
+    </style>
 </head>
 <body>
    <header>
@@ -68,42 +125,18 @@
             <div class="logo">
                 <img src="./images/BNEW_Logo.png" alt="BNEW Logo" />
             </div>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="hamburger-menu">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </label>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#workshop-description">About BNEW</a></li>
-                <li class="dropdown">
-                    <a href="#courses-section" class="dropdown-toggle">Topic Areas</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="nic25.html">Neuromorphic Integrated Circuits (NIC25)</a></li>
-                        <li><a href="ebs25.html">Event-based Sensing (EBS25)</a></li>
-                        <li><a href="bci25.html">Brain-Computer Interfaces (BCI25)</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#courses-section1" class="dropdown-toggle">People</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#courses-section1">Organizers</a></li>
-                        <li><a href="#committee-section">Steering Committee</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#Workshop-Structure" class="dropdown-toggle">Workshop Details</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="#Workshop-Structure">Workshop Structure</a></li>
-                        <li><a href="#Speakers">Speakers</a></li>
-                    </ul>
-                </li>
-                <li><a href="#Registration-section">Registration</a></li>
-                <li><a href="#Sponsors-section">Sponsors</a></li>
+                <li><a href="#courses-section1">Organizers</a></li>
+                <li><a href="#Speakers">Speakers</a></li>
+                <li><a href="#committee-section">Steering Committee</a></li>
+                <li><a href="research-outcomes.html">Research Outcomes</a></li>
+                <li><a href="bnew2025.html">BNEW 2025</a></li>
+                <li><a href="bnew2026.html">BNEW 2026</a></li>
+                <li><a href="index.html" class="current-edition">This Edition</a></li>
             </ul>
         </nav>
     </header>
+
 <main>
     <video autoplay muted loop id="background-video">
         <source src="./videos/iisc.mp4" type="video/mp4">
@@ -112,8 +145,9 @@
     <div class="overlay"></div>
     <div class="content">
         <h1>Bangalore Neuromorphic Engineering Workshop</h1>
+        <p style="display:inline-block; background-color:#941236; color:#ffffff; padding:0.5rem 1.2rem; border-radius:8px; font-size:1.2rem; font-weight:600; margin:0.5rem auto 1rem;">&#10003; This edition has concluded &mdash; successfully held on January 5&ndash;15, 2025.</p>
         <p>Top-tier training awaits the next generation of researchers. Inspired by Telluride (est. 1993) and Capo Caccia (est. 2007), we aim to expand their legacy into Asia-Pacific. Our objective: equip individuals with essential neuromorphic engineering skills and foster global advancement.</p>
-        <h3>Date: Jan 5 - Jan 15, 2025</h3>
+        <h3>January 5 &ndash; 15, 2025</h3>
         <h3>Venue: Indian Institute of Science, Bangalore</h3>
     </div>
 </main>
