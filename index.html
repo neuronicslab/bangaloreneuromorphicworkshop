@@ -134,6 +134,7 @@
         <li><a href="#committee-section">Steering Committee</a></li>
         <li><a href="bnew2025.html">BNEW 2025</a></li>
         <li><a href="bnew2026.html">BNEW 2026</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="research-outcomes.html">Research Outcomes</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -610,16 +611,22 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
     </p>
     <div class="carousel" style="position: relative; overflow: hidden; border-radius: 12px; margin: 36px auto; max-width: 1000px;">
       <div class="carousel-track" style="display: flex; transition: transform 0.5s ease;">
-                <img src="./images/bnew2025-2.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
-        <img src="./images/bnew2025-3.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
-        <img src="./images/bnew2025-4.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
-        <img src="./images/bnew2025-5.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
-        <img src="./images/bnew2025-6.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+                <img src="./images/BNEW25_Gallery/bnew2025-2.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW25_Gallery/bnew2025-3.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW25_Gallery/bnew2025-4.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW25_Gallery/bnew2025-5.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW25_Gallery/bnew2025-6.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW26_Gallery/bnew2026-1.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW26_Gallery/bnew2026-2.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW26_Gallery/bnew2026-5.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW26_Gallery/bnew2026-6.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
+        <img src="./images/BNEW26_Gallery/bnew2026-7.jpg" style="width: 100%; max-width: 1000px; height: auto;" />
       </div>
     </div>
     <div>
       <a href="bnew2025.html" class="btn" style="display: inline-block; margin: 10px; padding: 12px 24px; background-color: #f6eaaf; color: #111; text-decoration: none; border-radius: 6px; font-weight: 600;">Visit BNEW 2025 Website</a>
       <a href="bnew2026.html" class="btn" style="display: inline-block; margin: 10px; padding: 12px 24px; background-color: #f6eaaf; color: #111; text-decoration: none; border-radius: 6px; font-weight: 600;">Visit BNEW 2026 Website</a>
+      <a href="gallery.html" class="btn" style="display: inline-block; margin: 10px; padding: 12px 24px; background-color: #941236; color: #fff; text-decoration: none; border-radius: 6px; font-weight: 600;">View Full Gallery</a>
     </div>
   </div>
 </section>
@@ -628,7 +635,7 @@ As a sister workshop to the renowned Telluride and Capo Caccia programs, this in
   const track = document.querySelector('.carousel-track');
   let index = 0;
   setInterval(() => {
-    index = (index + 1) % 6;
+    index = (index + 1) % 10;
     track.style.transform = `translateX(-${index * 100}%)`;
   }, 8000);
 </script>
